@@ -1,0 +1,2620 @@
+  
+ PROBPRB
+   Sample problems for the PROB routines.
+  
+ TEST201
+   For the Anglit PDF:
+   ANGLIT_CDF evaluates the CDF;
+   ANGLIT_CDF_INV inverts the CDF.
+   ANGLIT_PDF evaluates the PDF;
+  
+   PDF argument X =               0.5
+   PDF value =                    0.977061272
+   CDF value =                    0.920735478
+   CDF_INV value X =              0.49999994
+  
+ TEST202
+   For the Anglit PDF:
+   ANGLIT_MEAN computes the mean;
+   ANGLIT_SAMPLE samples;
+   ANGLIT_VARIANCE computes the variance.
+  
+   Initial random number seed is  1139447848
+   PDF mean =                     0.E+0
+   PDF variance =                 0.116850317
+  
+   Sample size =      1000
+   Sample mean =      2.645244356E-3
+   Sample variance =  0.122540362
+   Sample maximum =   0.765900791
+   Sample minimum =   -0.768579125
+  
+ TEST001
+   For the Arcsin PDF:
+   ARCSIN_CDF evaluates the CDF;
+   ARCSIN_CDF_INV inverts the CDF.
+   ARCSIN_PDF evaluates the PDF;
+  
+   PDF argument X =               0.5
+   PDF value =                    0.636619747
+   CDF value =                    0.333333343
+   CDF_INV value X =              0.5
+  
+ TEST003
+   For the Arcsin PDF:
+   ARCSIN_MEAN computes the mean;
+   ARCSIN_SAMPLE samples;
+   ARCSIN_VARIANCE computes the variance.
+  
+   Initial random number seed is  1157361458
+   PDF mean =                     0.5
+   PDF variance =                 0.125
+  
+   Sample size =      1000
+   Sample mean =      0.632382274
+   Sample variance =  9.581251442E-2
+   Sample maximum =   0.999999702
+   Sample minimum =   5.276346579E-3
+  
+ TEST004
+   For the Benford PDF:
+   BENFORD_PDF evaluates the PDF.
+  
+   N    PDF(N)
+  
+     1  0.301030    
+     2  0.176091    
+     3  0.124939    
+     4  0.969100E-01
+     5  0.791813E-01
+     6  0.669468E-01
+     7  0.579920E-01
+     8  0.511525E-01
+     9  0.457575E-01
+    10  0.413927E-01
+    11  0.377886E-01
+    12  0.347621E-01
+    13  0.321847E-01
+    14  0.299632E-01
+    15  0.280287E-01
+    16  0.263289E-01
+    17  0.248236E-01
+    18  0.234811E-01
+    19  0.222764E-01
+  
+ TEST005
+   For the Bernoulli PDF,
+   BERNOULLI_CDF evaluates the CDF;
+   BERNOULLI_CDF_INV inverts the CDF.
+  
+   CDF_INV argument CDF =         0.5
+   PDF parameter A =              0.75
+   CDF_INV value X =              1
+  
+   (Expected answer is 0)
+  
+   PDF argument X =               1
+   CDF value =                    1.
+  
+   (Expected answer is 0.75)
+  
+ TEST006
+   For the Bernoulli PDF:
+   BERNOULLI_MEAN computes the mean;
+   BERNOULLI_SAMPLE samples;
+   BERNOULLI_VARIANCE computes the variance.
+  
+   Initial random number seed is  1169542714
+   PDF parameter A =              0.75
+   PDF mean =                     0.75
+   PDF variance =                 0.1875
+  
+   Sample size =      1000
+   Sample mean =      0.730000019
+   Sample variance =  0.197298214
+   Sample maximum =   1
+   Sample minimum =   0
+  
+ TEST007
+   For the Bernoulli PDF:
+   BERNOULLI_PDF evaluates the PDF.
+   BERNOULLI_CDF evaluates the CDF.
+  
+   PDF parameter A =              0.75
+  
+      X      PDF(X)      CDF(X)
+  
+     0  0.250000      0.250000    
+     1  0.750000       1.00000    
+  
+ TEST008
+   BETA evaluates the Beta function;
+   GAMMA evaluates the Gamma function.
+  
+   Argument A =                    2.20000005
+   Argument B =                    3.70000005
+   Beta(A,B) =                     4.537597671E-2
+   (Expected value = 0.0454 )
+  
+   Gamma(A)*Gamma(B)/Gamma(A+B) =  4.537597671E-2
+  
+ TEST009
+   For the Beta PDF:
+   BETA_CDF evaluates the CDF;
+   BETA_CDF_INV inverts the CDF.
+   BETA_PDF evaluates the PDF;
+  
+   PDF argument X =         0.600000024
+   PDF parameter A =        12.
+   PDF parameter B =        12.
+   PDF value =              2.46892333
+   CDF value =              0.836356163
+   CDF_INV value X =        0.599998474
+  
+ TEST010
+   BETA_INC evaluates the incomplete Beta
+     function.
+  
+   X =  0.610000014
+   A =  2.20000005
+   B =  3.70000005
+   BETA_INC(X,A,B) =  0.882171869
+   (Expected value = 0.8822 )
+  
+ TEST011
+   For the Beta PDF:
+   BETA_MEAN computes the mean;
+   BETA_SAMPLE samples;
+   BETA_VARIANCE computes the variance.
+  
+   Initial random number seed is  1182798785
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF mean =                     0.400000006
+   PDF variance =                 3.999999911E-2
+  
+   Sample size =      1000
+   Sample mean =      0.388288736
+   Sample variance =  4.058531672E-2
+   Sample maximum =   0.936151624
+   Sample minimum =   7.805258036E-3
+  
+ TEST013
+   For the Beta Binomial PDF,
+   BETA_BINOMIAL_CDF evaluates the CDF;
+   BETA_BINOMIAL_CDF_INV inverts the CDF.
+   BETA_BINOMIAL_PDF evaluates the PDF;
+  
+   PDF argument X =               2
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF parameter C =              4
+   PDF value =                    0.257142544
+   CDF value =                    0.757141829
+   CDF_INV value =                2
+  
+ TEST014
+   For the Beta Binomial PDF:
+   BETA_BINOMIAL_MEAN computes the mean;
+   BETA_BINOMIAL_SAMPLE samples;
+   BETA_BINOMIAL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1198921035
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF parameter C =              4
+   PDF mean =                     1.60000002
+   PDF variance =                 1.44000006
+  
+   Sample size =      1000
+   Sample mean =      1.56099999
+   Sample variance =  1.40168011
+   Sample maximum =   4
+   Sample minimum =   0
+  
+ TEST015
+   For the Beta Binomial PDF:
+   BETA_BINOMIAL_PDF evaluates the PDF;
+   BETA_BINOMIAL_CDF evaluates the CDF.
+  
+   PDF parameter A =   2.
+   PDF parameter B =   3.
+   PDF parameter C =   4
+  
+      X     PDF(X)     CDF(X)
+  
+     0  0.214285      0.214285    
+     1  0.285714      0.499999    
+     2  0.257143      0.757142    
+     3  0.171428      0.928570    
+     4  0.714284E-01   1.00000    
+  
+ TEST016
+   For the Beta Pascal PDF:
+   BETA_PASCAL_CDF evaluates the CDF;
+   BETA_PASCAL_CDF_INV inverts the CDF.
+   BETA_PASCAL_PDF evaluates the PDF;
+  
+   PDF argument X =               7
+   PDF parameter A =              5
+   PDF parameter B =              3.
+   PDF parameter C =              4.
+   PDF value =                    1.785714552E-2
+   CDF value =                    0.101190433
+   CDF_INV value =                7
+  
+ TEST017
+   For the Beta Pascal PDF:
+   BETA_PASCAL_MEAN computes the mean;
+   BETA_PASCAL_SAMPLE samples;
+   BETA_PASCAL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1337930654
+   PDF parameter A =              5
+   PDF parameter B =              3.
+   PDF parameter C =              4.
+   PDF mean =                     7.5
+   PDF variance =                 26.25
+  
+ TEST017 - DEBUG - 
+   BETA_PASCAL_SAMPLE is still goofy!
+  
+ TEST018
+   For the Beta Pascal PDF:
+   BETA_PASCAL_PDF evaluates the PDF;
+   BETA_PASCAL_CDF evaluates the CDF.
+  
+   PDF parameter A =   5
+   PDF parameter B =   3.
+   PDF parameter C =   4.
+  
+      X      PDF(X)      CDF(X)
+  
+     5  0.535714E-01  0.535714E-01
+     6  0.297619E-01  0.833333E-01
+     7  0.178571E-01  0.101190    
+     8  0.113636E-01  0.112554    
+     9  0.757575E-02  0.120130    
+    10  0.524475E-02  0.125375    
+    11  0.374624E-02  0.129121    
+    12  0.274725E-02  0.131868    
+    13  0.206044E-02  0.133928    
+    14  0.157563E-02  0.135504    
+    15  0.122549E-02  0.136730    
+  
+ TEST019
+   For the Binomial PDF:
+   BINOMIAL_CDF evaluates the CDF;
+   BINOMIAL_CDF_INV inverts the CDF.
+   BINOMIAL_PDF evaluates the PDF;
+  
+   PDF argument X =         3
+   PDF parameter A =        5
+   PDF parameter B =        0.949999988
+   PDF value =              2.143438347E-2
+   CDF value =              2.259250917E-2
+   CDF_INV value X =        3
+  
+ TEST020
+   BINOMIAL_COEF evaluates binomial coefficients.
+   BINOMIAL_COEF_LOG evaluates the logarithm.
+  
+ N, K, C(N,K)
+  
+     0     0     1   1.00000    
+     1     0     1   1.00000    
+     1     1     1   1.00000    
+     2     0     1   1.00000    
+     2     1     2   2.00000    
+     2     2     1   1.00000    
+     3     0     1   1.00000    
+     3     1     3   3.00000    
+     3     2     3   3.00000    
+     3     3     1   1.00000    
+     4     0     1   1.00000    
+     4     1     4   4.00000    
+     4     2     6   6.00000    
+     4     3     4   4.00000    
+     4     4     1   1.00000    
+  
+ TEST021
+   For the Binomial PDF:
+   BINOMIAL_MEAN computes the mean;
+   BINOMIAL_SAMPLE samples;
+   BINOMIAL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1354411176
+   PDF parameter A =              5
+   PDF parameter B =              0.300000012
+   PDF mean =                     1.5
+   PDF variance =                 1.04999995
+  
+   Sample size =      1000
+   Sample mean =      1.50199997
+   Sample variance =  1.05505037
+   Sample maximum =   5
+   Sample minimum =   0
+  
+ TEST022
+   For the Binomial PDF:
+   BINOMIAL_PDF evaluates the PDF.
+   BINOMIAL_CDF evaluates the CDF.
+  
+   PDF parameter A =  5
+   PDF parameter B =  0.949999988
+  
+   X     PDF(X)    CDF(X)
+  
+    -1   0.00000       0.00000    
+     0  0.312500E-06  0.312500E-06
+     1  0.296875E-04  0.300000E-04
+     2  0.112813E-02  0.115813E-02
+     3  0.214344E-01  0.225925E-01
+     4  0.203627      0.226219    
+     5  0.773781       1.00000    
+     6   0.00000       1.00000    
+  
+ TEST220
+   For the Bradford PDF:
+   BRADFORD_CDF evaluates the CDF;
+   BRADFORD_CDF_INV inverts the CDF.
+   BRADFORD_PDF evaluates the PDF;
+  
+   PDF argument X =               1.25
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3.
+   PDF value =                    1.23659575
+   CDF value =                    0.403677464
+   CDF_INV value X =              1.25
+  
+ TEST221
+   For the Bradford PDF:
+   BRADFORD_MEAN computes the mean;
+   BRADFORD_SAMPLE samples;
+   BRADFORD_VARIANCE computes the variance.
+  
+   Initial random number seed is  1367308975
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3.
+   PDF mean =                     1.3880142
+   PDF variance =                 8.07806924E-2
+  
+   Sample size =      1000
+   Sample mean =      1.3718586
+   Sample variance =  7.681056857E-2
+   Sample maximum =   1.99843359
+   Sample minimum =   1.00235271
+  
+ TEST023
+   For the Burr PDF:
+   BURR_CDF evaluates the CDF;
+   BURR_CDF_INV inverts the CDF.
+   BURR_PDF evaluates the PDF;
+  
+   PDF argument X =               3.
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3.
+   PDF parameter D =              2.
+   PDF value =                    0.375
+   CDF value =                    0.25
+   CDF_INV value X =              3.
+  
+ TEST024
+   For the Burr PDF:
+   BURR_MEAN computes the mean;
+   BURR_VARIANCE computes the variance;
+   BURR_SAMPLE samples;
+  
+   Initial random number seed is  1379490231
+   PDF parameter A =          1.
+   PDF parameter B =          2.
+   PDF parameter C =          3.
+   PDF parameter D =          2.
+   PDF mean =                 4.22453213
+   PDF variance =             5.72505569
+  
+   Sample size =      1000
+   Sample mean =      4.24629354
+   Sample variance =  3.70389915
+   Sample maximum =   20.921629
+   Sample minimum =   1.6665318
+  
+ TEST026
+   For the Cauchy PDF:
+   CAUCHY_CDF evaluates the CDF;
+   CAUCHY_CDF_INV inverts the CDF.
+   CAUCHY_PDF evaluates the PDF;
+  
+   PDF argument X =               0.75
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF value =                    9.040753543E-2
+   CDF value =                    0.374334097
+   CDF_INV value X =              0.75
+  
+ TEST027
+   For the Cauchy PDF:
+   CAUCHY_MEAN computes the mean;
+   CAUCHY_VARIANCE computes the variance;
+   CAUCHY_SAMPLE samples.
+  
+   Initial random number seed is  1393104575
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF mean =                     2.
+   PDF mean =                     3.402823466E+38
+  
+   Sample size =      1000
+   Sample mean =      -46.7470932
+   Sample variance =  2407053.5
+   Sample maximum =   880.05896
+   Sample minimum =   -48993.6992
+  
+ TEST028
+   For the Chi PDF:
+   CHI_CDF evaluates the CDF.
+   CHI_CDF_INV inverts the CDF.
+   CHI_PDF evaluates the PDF.
+  
+   PDF argument X =               2.
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3.
+   PDF value =                    8.80163312E-2
+   CDF value =                    3.085958958E-2
+   CDF_INV value =                2.
+  
+ TEST527
+   For the Chi PDF:
+   CHI_MEAN computes the mean;
+   CHI_VARIANCE computes the variance;
+   CHI_SAMPLE samples.
+  
+   Initial random number seed is  1396687297
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3.
+   PDF mean =                     4.19153786
+   PDF mean =                     1.81408501
+  
+   Sample size =      1000
+   Sample mean =      4.2601161
+   Sample variance =  1.83575118
+   Sample maximum =   9.23084927
+   Sample minimum =   1.40015686
+  
+ TEST030
+   For the central chi square PDF:
+   CHISQUARE_CENTRAL_CDF evaluates the CDF;
+   CHISQUARE_CENTRAL_CDF_INV inverts the CDF.
+   CHISQUARE_CENTRAL_PDF evaluates the PDF;
+  
+   PDF argument X =               6.
+   PDF parameter A =              4.
+   PDF value =                    7.468059659E-2
+   CDF value =                    0.800851703
+   CDF_INV value X =              5.99999952
+  
+ TEST031
+   For the central chi square PDF:
+   CHISQUARE_CENTRAL_MEAN computes the mean;
+   CHISQUARE_CENTRAL_SAMPLE samples;
+   CHISQUARE_CENTRAL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1414242635
+   PDF parameter A =              10.
+   PDF mean =                     10.
+   PDF variance =                 20.
+  
+   Sample size =      1000
+   Sample mean =      10.0109491
+   Sample variance =  19.7923241
+   Sample maximum =   35.0912018
+   Sample minimum =   1.03784239
+  
+ TEST033
+   For the noncentral chi square PDF:
+   CHISQUARE_NONCENTRAL_SAMPLE samples.
+  
+   Initial random number seed is  1110045237
+   PDF parameter A =              3.
+   PDF parameter B =              2.
+   PDF mean =                     5.
+   PDF variance =                 14.
+  
+   Sample size =      1000
+   Sample mean =      4.81001234
+   Sample variance =  13.1776419
+   Sample maximum =   21.1453362
+   Sample minimum =   6.084256805E-3
+  
+ TEST909
+   CIRCLE_SAMPLE samples points in a circle.
+  
+   Initial random number seed is  1126884031
+   X coordinate of center is A =  10.
+   Y coordinate of center is B =  4.
+   Radius is C =                  3.
+  
+   Sample size =      1000
+   Sample mean =      9.99183559,  3.91709423
+   Sample variance =  2.31783104,  2.24881053
+   Sample maximum =   12.9875269,  6.91032219
+   Sample minimum =   7.01098013,  1.04839516
+  
+ TEST034
+   For the Circular Normal 01 PDF:
+   CIRCULAR_NORMAL_01_MEAN computes the mean;
+   CIRCULAR_NORMAL_01_SAMPLE samples;
+   CIRCULAR_NORMAL_01_VARIANCE computes variance.
+  
+   Initial random number seed is  1145514186
+   PDF means =                2*0.E+0
+   PDF variances =            2*1.
+  
+   Sample size =      1000
+   Sample mean =      3.371147439E-2,  6.105044112E-2
+   Sample variance =  0.913010418,  0.960973859
+   Sample maximum =   2.81845593,  3.22088146
+   Sample minimum =   -2.76365733,  -3.11977696
+  
+ TEST224
+   For the Cosine PDF:
+   COSINE_CDF evaluates the CDF.
+   COSINE_CDF_INV inverts the CDF.
+   COSINE_PDF evaluates the PDF.
+  
+   PDF argument X =           1.
+   PDF parameter A =          2.
+   PDF parameter B =          1.
+   PDF value                  8.599177748E-2
+   CDF value                  0.206920803
+   CDF_INV value              0.999844432
+  
+ TEST225
+   For the Cosine PDF:
+   COSINE_MEAN computes the mean;
+   COSINE_SAMPLE samples;
+   COSINE_VARIANCE computes the variance.
+  
+   Initial random number seed is  1150529997
+   PDF parameter A =              2.
+   PDF parameter B =              1.
+   PDF mean =                     2.
+   PDF variance =                 1.28986835
+  
+   Sample size =      1000
+   Sample mean =      2.06757236
+   Sample variance =  1.39299345
+   Sample maximum =   4.7734375
+   Sample minimum =   -0.847068429
+  
+ TEST226
+   COUPON_SIMULATE simulates the coupon collector's problem.
+  
+   Using random seed ISEED =  1187790307
+  
+   Number of coupon types is  5
+   Expected wait is about  8.04718971
+  
+    1   11
+    2    5
+    3   26
+    4    7
+    5    7
+    6   13
+    7   15
+    8    6
+    9   11
+   10   11
+  
+   Average wait was  11.1999998
+  
+   Number of coupon types is  10
+   Expected wait is about  23.0258522
+  
+    1   24
+    2   48
+    3   32
+    4   26
+    5   22
+    6   41
+    7   20
+    8   36
+    9   21
+   10   18
+  
+   Average wait was  28.7999992
+  
+   Number of coupon types is  15
+   Expected wait is about  40.6207542
+  
+    1   33
+    2   84
+    3   71
+    4   39
+    5   59
+    6   55
+    7   31
+    8   26
+    9   38
+   10   51
+  
+   Average wait was  48.7000008
+  
+   Number of coupon types is  20
+   Expected wait is about  59.9146461
+  
+    1   51
+    2   42
+    3   71
+    4   55
+    5   75
+    6   79
+    7  101
+    8   85
+    9   65
+   10   44
+  
+   Average wait was  66.8000031
+  
+   Number of coupon types is  25
+   Expected wait is about  80.4718933
+  
+    1   63
+    2  104
+    3  115
+    4   77
+    5  130
+    6  131
+    7   86
+    8   97
+    9   88
+   10   73
+  
+   Average wait was  96.4000015
+  
+ TEST035
+   For the Deranged PDF:
+   DERANGED_CDF evaluates the CDF;
+   DERANGED_CDF_INV inverts the CDF.
+   DERANGED_PDF evaluates the PDF;
+  
+   PDF argument X =         3
+   PDF parameter A =        7
+   PDF value =              6.25E-2
+   CDF value =              0.981746018
+   CDF_INV value X =        3
+  
+ TEST036
+   For the Deranged PDF:
+   DERANGED_PDF evaluates the PDF.
+   DERANGED_CDF evaluates the CDF.
+  
+   PDF parameter A =  7
+  
+   X    PDF(X)      CDF(X)
+  
+     0  0.367857      0.367857    
+     1  0.368056      0.735913    
+     2  0.183333      0.919246    
+     3  0.625000E-01  0.981746    
+     4  0.138889E-01  0.995635    
+     5  0.416667E-02  0.999802    
+     6   0.00000      0.999802    
+     7  0.198413E-03   1.00000    
+  
+ TEST037
+   For the Deranged PDF:
+   DERANGED_MEAN computes the mean.
+   DERANGED_VARIANCE computes the variance.
+   DERANGED_SAMPLE samples.
+  
+   Initial random number seed is  1201762923
+   PDF parameter A =              7
+   PDF mean =                     1.
+   PDF variance =                 0.632142842
+  
+   Sample size =      1000
+   Sample mean =      0.995000005
+   Sample variance =  0.997971475
+   Sample maximum =   5
+   Sample minimum =   0
+  
+ TEST038
+   For the Dipole PDF:
+   DIPOLE_CDF evaluates the CDF.
+   DIPOLE_CDF_INV inverts the CDF.
+   DIPOLE_PDF evaluates the PDF.
+  
+   PDF argument X =         0.600000024
+   PDF parameter A =        0.E+0
+   PDF parameter B =        1.
+   PDF value =              0.536674142
+   CDF value =              0.812451661
+   CDF_INV value =          0.600097656
+  
+   PDF argument X =         0.600000024
+   PDF parameter A =        0.785398185
+   PDF parameter B =        0.5
+   PDF value =              0.282171607
+   CDF value =              0.613507986
+   CDF_INV value =          0.600097656
+  
+   PDF argument X =         0.600000024
+   PDF parameter A =        1.57079637
+   PDF parameter B =        0.E+0
+   PDF value =              0.234051377
+   CDF value =              0.672020853
+   CDF_INV value =          0.599609375
+  
+ TEST040
+   For the Dipole PDF:
+   DIPOLE_SAMPLE samples.
+  
+   Initial random number seed is  1222900984
+   PDF parameter A =              0.E+0
+   PDF parameter B =              1.
+  
+   Sample size =      1000
+   Sample mean =      -9.448221885E-3
+   Sample variance =  0.913167655
+   Sample maximum =   4.85361767
+   Sample minimum =   -6.49970961
+  
+   Initial random number seed is  1239023233
+   PDF parameter A =              0.785398185
+   PDF parameter B =              0.5
+  
+   Sample size =      1000
+   Sample mean =      0.364074588
+   Sample variance =  4604.36279
+   Sample maximum =   1510.27637
+   Sample minimum =   -1113.3053
+  
+   Initial random number seed is  1243322500
+   PDF parameter A =              1.57079637
+   PDF parameter B =              0.E+0
+  
+   Sample size =      1000
+   Sample mean =      10.8409319
+   Sample variance =  55435.9414
+   Sample maximum =   5589.34131
+   Sample minimum =   -99.3697586
+  
+ TEST041
+   For the Dirichlet PDF:
+   DIRICHLET_SAMPLE samples;
+   DIRICHLET_MEAN computes the mean;
+   DIRICHLET_VARIANCE computes the variance.
+  
+   Initial random number seed is    1259444750
+   Number of components N =         3
+   PDF parameters A(I), I = 1 to N:
+  
+     1  0.250000    
+     2  0.500000    
+     3   1.25000    
+  
+   PDF mean, variance:
+  
+     1  0.125000      0.364583E-01
+     2  0.250000      0.625000E-01
+     3  0.625000      0.781250E-01
+  
+   Second moments:
+  
+  0.520833E-01  0.208333E-01  0.520833E-01
+  0.208333E-01  0.125000      0.104167    
+  0.520833E-01  0.104167      0.468750    
+  
+   Sample size =  1000
+   Observed Min, Max, Mean, Variance:
+  
+     1  0.859454E-13  0.976581      0.100612      0.265730E-01
+     2  0.265177E-07  0.955817      0.185819      0.411010E-01
+     3  0.975173E-02  0.999977      0.713569      0.614305E-01
+  
+ TEST042
+   For the Dirichlet PDF:
+   DIRICHLET_PDF evaluates the PDF.
+   Number of components N =         3
+   PDF arguments X(I), I = 1 to N:
+  
+     1  0.500000    
+     2  0.125000    
+     3  0.375000    
+  
+   PDF parameters A(I), I = 1 to N:
+  
+     1  0.250000    
+     2  0.500000    
+     3   1.25000    
+ PDF value =            0.639069676
+  
+ TEST043
+   For the Dirichlet Mixture PDF:
+   DIRICHLET_MIX_SAMPLE samples;
+   DIRICHLET_MIX_MEAN computes the mean;
+  
+   Initial random number seed is    1349371075
+   Number of elements ELEM_NUM =    3
+   Number of components COMP_NUM =  2
+   PDF parameters A(ELEM,COMP):
+  
+  0.250000       2.00000    
+  0.500000       0.00000    
+   1.25000       2.00000    
+  
+   Component weights:
+  
+     1   1.00000    
+     2   2.00000    
+  
+   PDF mean:
+  
+     1  0.375000    
+     2  0.833333E-01
+     3  0.541667    
+  
+   Sample size =  1000
+   Observed Min, Max, Mean, Variance:
+  
+     1  0.415451E-09  0.969477      0.352851      0.775276E-01
+     2   0.00000      0.931608      0.643100E-01  0.218100E-01
+     3  0.305234E-01  0.999352      0.582839      0.632585E-01
+  
+ TEST044
+   For the Dirichlet mixture PDF:
+   DIRICHLET_MIX_PDF evaluates the PDF.
+   Number of elements ELEM_NUM =    3
+   Number of components COMP_NUM =  2
+   PDF parameters A(ELEM,COMP):
+  
+  0.250000       2.00000    
+  0.500000       0.00000    
+   1.25000       2.00000    
+  
+   Component weights:
+  
+     1   1.00000    
+     2   2.00000    
+ PDF value =            0.21302323
+  
+ TEST045
+   BETA_PDF evaluates the Beta PDF.
+   DIRICHLET_PDF evaluates the Dirichlet PDF.
+  
+   For N = 2, Dirichlet = Beta.
+   Number of components N =         2
+   PDF arguments X(I), I = 1 to N:
+  
+     1  0.250000    
+     2  0.750000    
+  
+   PDF parameters A(I), I = 1 to N:
+  
+     1   2.50000    
+     2   3.50000    
+ Dirichlet PDF value =   1.65398645
+ Beta PDF value =        1.65398633
+  
+ TEST046
+   For the Discrete PDF:
+   DISCRETE_CDF evaluates the CDF;
+   DISCRETE_CDF_INV inverts the CDF.
+   DISCRETE_PDF evaluates the PDF;
+  
+   PDF parameter A =  6
+   PDF parameters B:
+     1   1.00000    
+     2   2.00000    
+     3   6.00000    
+     4   2.00000    
+     5   4.00000    
+     6   1.00000    
+  
+     X    PDF    CDF  CDF_INV(CDF)
+  
+     0   0.00000       0.00000         1
+     1  0.625000E-01  0.625000E-01     1
+     2  0.125000      0.187500         2
+     3  0.375000      0.562500         3
+     4  0.125000      0.687500         4
+     5  0.250000      0.937500         5
+     6  0.625000E-01   1.00000         6
+     7   0.00000       1.00000         6
+  
+ TEST047
+   For the Discrete PDF:
+   DISCRETE_MEAN computes the mean;
+   DISCRETE_SAMPLE samples;
+   DISCRETE_VARIANCE computes the variance.
+  
+   Initial random number seed is  1104288591
+   PDF parameter A =              6
+   PDF parameters B:
+     1   1.00000    
+     2   2.00000    
+     3   6.00000    
+     4   2.00000    
+     5   4.00000    
+     6   1.00000    
+   PDF mean =                     3.5625
+   PDF variance =                 1.74609375
+  
+   Sample size =      1000
+   Sample mean =      3.58400011
+   Sample variance =  1.58652771
+   Sample maximum =   6
+   Sample minimum =   1
+  
+ TEST049
+   For the Erlang PDF:
+   ERLANG_CDF evaluates the CDF.
+   ERLANG_CDF_INV inverts the CDF.
+   ERLANG_PDF evaluates the PDF.
+  
+   PDF argument X =           4.
+   PDF parameter A =          1.
+   PDF parameter B =          2.
+   PDF parameter C =          3
+   PDF value                  0.125510722
+   CDF value                  0.191153169
+   CDF_INV                    4.
+  
+ TEST050
+   For the Erlang PDF:
+   ERLANG_MEAN computes the mean;
+   ERLANG_SAMPLE samples;
+   ERLANG_VARIANCE computes the variance.
+  
+   Initial random number seed is  1109662675
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3
+   PDF mean =                     7.
+   PDF variance =                 12.
+  
+   Sample size =      1000
+   Sample mean =      6.96702576
+   Sample variance =  11.4001474
+   Sample maximum =   23.6571102
+   Sample minimum =   1.7451216
+  
+ TEST052
+   ERROR_FUNCTION evaluates ERF(X).
+  
+   ERF argument X =           1.
+   ERF value                  0.842700779
+  
+   (Expected answer is 0.843)
+  
+   Test:
+     0.5 * ( ERF(X/SQRT(2)) + 1 ) = Normal_CDF(X)
+  
+ 0.5 * ( ERF(X/SQRT(2)) + 1 ) =  0.841344714
+ Normal_CDF(X) =  0.841344714
+  
+ TEST053
+   For the Exponential 01 PDF:
+   EXPONENTIAL_01_CDF evaluates the CDF.
+   EXPONENTIAL_01_CDF_INV inverts the CDF.
+   EXPONENTIAL_01_PDF evaluates the PDF.
+  
+   PDF argument X =           0.5
+   PDF value                  0.606530666
+   CDF value                  0.393469334
+   CDF_INV value X            0.5
+  
+ TEST054
+   For the Exponential 01_PDF:
+   EXPONENTIAL_01_MEAN computes the mean;
+   EXPONENTIAL_01_SAMPLE samples;
+   EXPONENTIAL_01_VARIANCE computes the variance.
+  
+   Initial random number seed is  1149789163
+   PDF mean =                     1.
+   PDF variance =                 1.
+  
+   Sample size =      1000
+   Sample mean =      1.02497721
+   Sample variance =  1.04444516
+   Sample maximum =   8.60414696
+   Sample minimum =   5.93083787E-5
+  
+ TEST056
+   For the Exponential CDF:
+   EXPONENTIAL_CDF evaluates the CDF.
+   EXPONENTIAL_CDF_INV inverts the CDF.
+   EXPONENTIAL_PDF evaluates the PDF.
+  
+   PDF argument X =           2.
+   PDF parameter A =          1.
+   PDF parameter B =          2.
+   PDF value                  0.303265333
+   CDF value                  0.393469334
+   CDF_INV value X            2.
+  
+ TEST057
+   For the Exponential PDF:
+   EXPONENTIAL_MEAN computes the mean;
+   EXPONENTIAL_SAMPLE samples;
+   EXPONENTIAL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1158745968
+   PDF parameter A =              1.
+   PDF parameter B =              10.
+   PDF mean =                     11.
+   PDF variance =                 100.
+  
+   Sample size =      1000
+   Sample mean =      10.4764462
+   Sample variance =  91.9895782
+   Sample maximum =   71.9294281
+   Sample minimum =   1.00357449
+  
+ TEST059
+   For the Extreme CDF:
+   EXTREME_CDF evaluates the CDF;
+   EXTREME_CDF_INV inverts the CDF.
+   EXTREME_PDF evaluates the PDF;
+  
+   PDF argument X =               1.89999998
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF value =                    0.122557603
+   CDF value =                    0.355619073
+   CDF_INV value X =              1.89999998
+  
+ TEST060
+   For the Extreme PDF:
+   EXTREME_MEAN computes the mean;
+   EXTREME_SAMPLE samples;
+   EXTREME_VARIANCE computes the variance.
+  
+   Initial random number seed is  1168777590
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF mean =                     3.73164701
+   PDF variance =                 14.8044081
+  
+   Sample size =      1000
+   Sample mean =      3.87136388
+   Sample variance =  14.3562031
+   Sample maximum =   24.7008743
+   Sample minimum =   -3.74727631
+  
+ TEST062
+   For the central F PDF:
+   F_CENTRAL_CDF evaluates the CDF.
+   F_CENTRAL_PDF evaluates the PDF.
+  
+   PDF argument X =   648.
+   PDF parameter M =  1
+   PDF parameter N =  1
+   PDF value =        1.92671705E-5
+   CDF value =        0.975004077
+  
+ TEST063
+   For the central F PDF:
+   F_CENTRAL_MEAN computes the mean;
+   F_CENTRAL_SAMPLE samples;
+   F_CENTRAL_VARIANCE computes the varianc.
+  
+   Initial random number seed is  1173793401
+   PDF parameter M =              8
+   PDF parameter N =              6
+   PDF mean =                     1.5
+   PDF variance =                 3.375
+  
+   Sample size =      1000
+   Sample mean =      1.48218119
+   Sample variance =  2.28510523
+   Sample maximum =   14.1686687
+   Sample minimum =   3.203609958E-2
+  
+ TEST0645
+   FACTORIAL_LOG evaluates the log of the factorial function;
+   GAMMA_LOG_INT evaluates the log for integer argument.
+  
+ I, GAMMA_LOG_INT(I+1) FACTORIAL_LOG(I)
+  
+     1   0.00000       0.00000    
+     2  0.693147      0.693147    
+     3   1.79176       1.79176    
+     4   3.17805       3.17805    
+     5   4.78749       4.78749    
+     6   6.57925       6.57925    
+     7   8.52516       8.52516    
+     8   10.6046       10.6046    
+     9   12.8018       12.8018    
+    10   15.1044       15.1044    
+    11   17.5023       17.5023    
+    12   19.9872       19.9872    
+    13   22.5522       22.5522    
+    14   25.1912       25.1912    
+    15   27.8993       27.8993    
+    16   30.6719       30.6719    
+    17   33.5051       33.5051    
+    18   36.3954       36.3954    
+    19   39.3399       39.3399    
+    20   42.3356       42.3356    
+  
+ TEST065
+   FACTORIAL_STIRLING computes Stirling's
+     approximate factorial function;
+   I_FACTORIAL evaluates the factorial function;
+   R_FACTORIAL evaluates the factorial function.
+  
+   N      Stirling     N!
+  
+     0   1.00000                       1
+     1   1.00227                       1
+     2   2.00065                       2
+     3   6.00060                       6
+     4   24.0010                      24
+     5   120.003                     120
+     6   720.009                     720
+     7   5040.04                    5040
+     8   40320.2                   40320
+     9   362881.                  362880
+    10  0.362881E+07             3628800
+  
+    10  0.362881E+07  0.362880E+07
+    11  0.399169E+08  0.399168E+08
+    12  0.479003E+09  0.479002E+09
+    13  0.622703E+10  0.622702E+10
+    14  0.871785E+11  0.871783E+11
+    15  0.130768E+13  0.130767E+13
+    16  0.209228E+14  0.209228E+14
+    17  0.355688E+15  0.355687E+15
+    18  0.640238E+16  0.640237E+16
+    19  0.121645E+18  0.121645E+18
+    20  0.243291E+19  0.243290E+19
+  
+ TEST066
+   For the Fisk PDF:
+   FISK_CDF evaluates the CDF;
+   FISK_CDF_INV inverts the CDF.
+   FISK_PDF evaluates the PDF;
+  
+   PDF argument X =               1.89999998
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3.
+   PDF value =                    0.255133361
+   CDF value =                    8.35147053E-2
+   CDF_INV value X =              1.89999986
+  
+ TEST067
+   For the Fisk PDF:
+   FISK_MEAN computes the mean;
+   FISK_SAMPLE samples;
+   FISK_VARIANCE computes the variance.
+  
+   Initial random number seed is  1238998944
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3.
+   PDF mean =                     3.4183991
+   PDF variance =                 3.82494307
+  
+   Sample size =      1000
+   Sample mean =      3.47341728
+   Sample variance =  4.68699026
+   Sample maximum =   27.0090351
+   Sample minimum =   1.04350424
+  
+ TEST069
+   For the Folded Normal PDF:
+   FOLDED_NORMAL_CDF evaluates the CDF.
+   FOLDED_NORMAL_CDF_INV inverts the CDF.
+   FOLDED_NORMAL_PDF evaluates the PDF.
+  
+   PDF argument X =           0.5
+   PDF parameter A =          2.
+   PDF parameter B =          3.
+   PDF value                  0.211325735
+   CDF value                  0.106209159
+   CDF_INV value X =          0.499914408
+  
+ TEST070
+   For the Folded Normal PDF:
+   FOLDED_NORMAL_MEAN computes the mean;
+   FOLDED_NORMAL_SAMPLE samples;
+   FOLDED_NORMAL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1252255016
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF mean =                     2.90671778
+   PDF variance =                 4.55099201
+  
+   Sample size =      1000
+   Sample mean =      2.88488483
+   Sample variance =  4.49964333
+   Sample maximum =   10.9393835
+   Sample minimum =   4.893288948E-3
+  
+ TEST072
+   GAMMA evaluates the Gamma function;
+   GAMMA_LOG evaluates the log of the Gamma function;
+   GAMMA_LOG_INT evaluates the log for integer argument;
+   R_FACTORIAL evaluates the factorial function.
+  
+ X, GAMMA(X), Exp(GAMMA_LOG(X)), Exp(GAMMA_LOG_INT(X)) R_FACTORIAL(X+1)
+  
+   1.00000       1.00000       1.00000       1.00000       1.00000    
+   2.00000       1.00000       1.00000       1.00000       1.00000    
+   3.00000       2.00000       2.00000       2.00000       2.00000    
+   4.00000       6.00000       6.00000       6.00000       6.00000    
+   5.00000       24.0000       24.0000       24.0000       24.0000    
+   6.00000       120.000       120.000       120.000       120.000    
+   7.00000       720.000       720.000       720.000       720.000    
+   8.00000       5040.00       5040.00       5040.00       5040.00    
+   9.00000       40320.0       40320.0       40320.0       40320.0    
+   10.0000       362880.       362880.       362880.       362880.    
+  
+ TEST073
+   GAMMA_INC evaluates the incomplete Gamma
+     function.
+  
+     X           P        GAMMA_INC(X,P)
+  
+   2.00000       1.00000      0.864665    
+   6.00000       5.00000      0.714944    
+   10.0000       5.00000      0.970747    
+   20.0000       7.00000      0.999745    
+   20.0000       14.0000      0.933872    
+   50.0000       2.00000       1.00000    
+   50.0000       10.0000       1.00000    
+   50.0000       20.0000       1.00000    
+   50.0000       30.0000      0.999083    
+   1.00000       2.00000      0.264241    
+   5.00000       6.00000      0.384039    
+   5.00000       10.0000      0.318281E-01
+   7.00000       20.0000      0.444022E-04
+   14.0000       20.0000      0.765046E-01
+   2.00000       50.0000       0.00000    
+   10.0000       50.0000      0.185473E-18
+   20.0000       50.0000      0.124590E-07
+   30.0000       50.0000      0.518894E-03
+   93.0000       50.0000       1.00000    
+   0.00000       1.00000       0.00000    
+  
+ TEST074
+   For the Gamma PDF:
+   GAMMA_CDF evaluates the CDF.
+   GAMMA_PDF evaluates the PDF.
+  
+   PDF parameter A =              1.
+   PDF parameter B =              1.5
+   PDF parameter C =              3.
+  
+   X  PDF   CDF
+  
+   0.00000       0.00000       0.00000    
+  0.200000       0.00000       0.00000    
+  0.400000       0.00000       0.00000    
+  0.600000       0.00000       0.00000    
+  0.800000       0.00000       0.00000    
+   1.00000       0.00000       0.00000    
+   1.20000      0.518622E-02  0.357587E-03
+   1.40000      0.181553E-01  0.259110E-02
+   1.60000      0.357504E-01  0.792633E-02
+   1.80000      0.556227E-01  0.170417E-01
+   2.00000      0.760618E-01  0.302121E-01
+  
+ TEST075
+   For the Gamma PDF:
+   GAMMA_MEAN computes the mean;
+   GAMMA_SAMPLE samples;
+   GAMMA_VARIANCE computes the variance.
+  
+   Initial random number seed is  1351496419
+   PDF parameter A =              1.
+   PDF parameter B =              3.
+   PDF parameter C =              2.
+   PDF mean =                     7.
+   PDF variance =                 18.
+  
+   Sample size =      1000
+   Sample mean =      6.92954063
+   Sample variance =  17.045332
+   Sample maximum =   33.7810249
+   Sample minimum =   1.14823425
+  
+   Initial random number seed is  1374067568
+   PDF parameter A =              2.
+   PDF parameter B =              0.5
+   PDF parameter C =              0.5
+   PDF mean =                     2.25
+   PDF variance =                 0.125
+  
+   Sample size =      1000
+   Sample mean =      2.13332152
+   Sample variance =  1.816016436E-2
+   Sample maximum =   2.4985795
+   Sample minimum =   2.00000048
+  
+ TEST620
+   For the Generalized Logistic PDF:
+   GENLOGISTIC_PDF evaluates the PDF.
+   GENLOGISTIC_CDF evaluates the CDF;
+   GENLOGISTIC_CDF_INV inverts the CDF.
+  
+   PDF argument X =               1.25
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3.
+   PDF value                      0.105406508
+   CDF value =                    0.149898484
+   CDF_INV value X =              1.25000012
+  
+ TEST621
+   For the Generalized Logistic PDF:
+   GENLOGISTIC_MEAN computes the mean;
+   GENLOGISTIC_SAMPLE samples;
+   GENLOGISTIC_VARIANCE computes the variance.
+  
+   Initial random number seed is  1410253062
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3.
+   PDF mean =                     4.
+   PDF variance =                 8.15947342
+  
+   Sample size =      1000
+   Sample mean =      3.80308604
+   Sample variance =  8.2889061
+   Sample maximum =   17.5364647
+   Sample minimum =   -3.8793211
+  
+ TEST077
+   For the Geometric PDF:
+   GEOMETRIC_CDF evaluates the CDF;
+   GEOMETRIC_CDF_INV inverts the CDF.
+   GEOMETRIC_PDF evaluates the PDF;
+  
+   PDF argument X =        5
+   PDF parameter A =       0.25
+   PDF value =             7.91015625E-2
+   CDF value =             0.762695313
+   CDF_INV value X =       6
+  
+ TEST078
+   For the Geometric PDF:
+   GEOMETRIC_MEAN computes the mean;
+   GEOMETRIC_SAMPLE samples;
+   GEOMETRIC_VARIANCE computes the variance.
+  
+   Initial random number seed is  1428524945
+   PDF parameter A =              0.25
+   PDF mean =                     4.
+   PDF variance =                 12.
+  
+   Sample size =      1000
+   Sample mean =      3.8829999
+   Sample variance =  10.7040081
+   Sample maximum =   27
+   Sample minimum =   1
+  
+ TEST079
+   For the Geometric PDF:
+   GEOMETRIC_PDF evaluates the PDF.
+   GEOMETRIC_CDF evaluates the CDF.
+  
+   PDF parameter A =  0.25
+  
+       X      PDF(X)      CDF(X)
+  
+     0   0.00000       0.00000    
+     1  0.250000      0.250000    
+     2  0.187500      0.437500    
+     3  0.140625      0.578125    
+     4  0.105469      0.683594    
+     5  0.791016E-01  0.762695    
+     6  0.593262E-01  0.822021    
+     7  0.444946E-01  0.866516    
+     8  0.333710E-01  0.899887    
+     9  0.250282E-01  0.924915    
+    10  0.187712E-01  0.943686    
+  
+ TEST0795
+   For the Gompertz PDF:
+   GOMPERTZ_CDF evaluates the CDF;
+   GOMPERTZ_CDF_INV inverts the CDF.
+   GOMPERTZ_PDF evaluates the PDF;
+  
+   PDF argument X =         0.600000024
+   PDF parameter A =        2.
+   PDF parameter B =        3.
+   PDF value =              0.487939268
+   CDF value =              0.8926934
+   CDF_INV value X =        0.600000024
+  
+ TEST0796
+   For the Gompertz PDF:
+   GOMPERTZ_SAMPLE samples;
+  
+   Initial random number seed is  1432824211
+   PDF parameter A =        2.
+   PDF parameter B =        3.
+  
+   Sample size =      1000
+   Sample mean =      0.289182723
+   Sample variance =  6.598469615E-2
+   Sample maximum =   1.7204653
+   Sample minimum =   1.73692024E-4
+  
+ TEST456
+   For the Gumbel PDF:
+   GUMBEL_CDF evaluates the CDF.
+   GUMBEL_CDF_INV inverts the CDF.
+   GUMBEL_PDF evaluates the PDF.
+  
+   PDF argument X =           0.5
+   PDF value                  0.330704302
+   CDF value                  0.54523921
+   CDF_INV value X            0.5
+  
+ TEST457
+   For the Gumbel PDF:
+   GUMBEL_MEAN computes the mean;
+   GUMBEL_SAMPLE samples;
+   GUMBEL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1109996657
+   PDF mean      =                0.577215672
+   PDF variance =                 1.64493418
+  
+   Sample size =      1000
+   Sample mean =      0.523889661
+   Sample variance =  1.46819484
+   Sample maximum =   5.75917816
+   Sample minimum =   -2.0833919
+  
+ TEST080
+   For the Half Normal PDF:
+   HALF_NORMAL_CDF evaluates the CDF.
+   HALF_NORMAL_CDF_INV inverts the CDF.
+   HALF_NORMAL_PDF evaluates the PDF.
+  
+   PDF argument X =           0.5
+   PDF parameter A =          0.E+0
+   PDF parameter B =          2.
+   PDF value                  0.386668086
+   CDF value                  0.197412729
+   CDF_INV value X            0.500000179
+  
+ TEST081
+   For the Half Normal PDF:
+   HALF_NORMAL_MEAN computes the mean;
+   HALF_NORMAL_SAMPLE samples;
+   HALF_NORMAL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1114654196
+   PDF parameter A =              0.E+0
+   PDF parameter B =              10.
+   PDF mean =                     7.97884512
+   PDF variance =                 36.3380241
+  
+   Sample size =      1000
+   Sample mean =      7.58464384
+   Sample variance =  33.0801926
+   Sample maximum =   40.5923882
+   Sample minimum =   1.542923506E-2
+  
+ TEST083
+   For the Hypergeometric PDF:
+   HYPERGEOMETRIC_CDF evaluates the CDF.
+   HYPERGEOMETRIC_PDF evaluates the PDF.
+  
+   PDF argument X =                 7
+   Total number of balls =          1000
+   Number of white balls =          70
+   Number of balls taken =          100
+   PDF value =                   =  0.162812665
+   CDF value =                   =  0.599334657
+  
+ TEST085
+   For the Hypergeometric PDF:
+   HYPERGEOMETRIC_MEAN computes the mean;
+   HYPERGEOMETRIC_SAMPLE samples;
+   HYPERGEOMETRIC_VARIANCE computes the variance.
+  
+   Initial random number seed is  1151556234
+   PDF parameter N =              100
+   PDF parameter M =              70
+   PDF parameter L =              1000
+   PDF mean =                     7.
+   PDF variance =                 1.56559837
+  
+ THIS CALL IS TAKING FOREVER!
+  
+ TEST086
+   I_ROUNDUP rounds reals up.
+  -1.20000        -1
+  -1.00000        -1
+ -0.800000         0
+ -0.600000         0
+ -0.400000         0
+ -0.200000         0
+   0.00000         0
+  0.200000         1
+  0.400000         1
+  0.600000         1
+  0.800000         1
+   1.00000         1
+   1.20000         2
+  
+ TEST087
+   For the Inverse Gaussian PDF:
+   INVERSE_GAUSSIAN_CDF evaluates the CDF.
+   INVERSE_GAUSSIAN_PDF evaluates the PDF.
+  
+   PDF argument X  =  1.
+   PDF parameter A =  5.
+   PDF parameter B =  2.
+   PDF value =        0.297492892
+   CDF value =        0.228749499
+  
+ TEST088
+   For the Inverse Gaussian PDF:
+   INVERSE_GAUSSIAN_MEAN computes the mean;
+   INVERSE_GAUSSIAN_SAMPLE samples;
+   INVERSE_GAUSSIAN_VARIANCE computes the variance.
+  
+   Initial random number seed is  1152989323
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF mean =                     2.
+   PDF variance =                 2.66666675
+  
+   Sample size =      1000
+   Sample mean =      2.00111651
+   Sample variance =  2.68804455
+   Sample maximum =   12.5195255
+   Sample minimum =   0.234548569
+  
+ TEST089
+   For the Laplace PDF:
+   LAPLACE_CDF evaluates the CDF;
+   LAPLACE_CDF_INV inverts the CDF.
+   LAPLACE_PDF evaluates the PDF;
+  
+   PDF argument X =               3.
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF value =                    9.196986258E-2
+   CDF value =                    0.816060305
+   CDF_INV value X =              3.00000024
+  
+ TEST090
+   For the Laplace PDF:
+   LAPLACE_MEAN computes the mean;
+   LAPLACE_SAMPLE samples;
+   LAPLACE_VARIANCE computes the variance.
+  
+   Initial random number seed is  1169111572
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF mean =                     1.
+   PDF variance =                 8.
+  
+   Sample size =      1000
+   Sample mean =      0.878343999
+   Sample variance =  7.68999529
+   Sample maximum =   17.7823963
+   Sample minimum =   -9.89486313
+  
+ TEST092
+   For the Logistic PDF:
+   LOGISTIC_CDF evaluates the CDF;
+   LOGISTIC_CDF_INV inverts the CDF.
+   LOGISTIC_PDF evaluates the PDF;
+  
+   PDF argument X =               3.
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF value =                    9.830597788E-2
+   CDF value =                    0.731058598
+   CDF_INV value X =              3.
+  
+ TEST093
+   For the Logistic PDF:
+   LOGISTIC_MEAN computes the mean;
+   LOGISTIC_SAMPLE samples;
+   LOGISTIC_VARIANCE computes the variance.
+  
+   Initial random number seed is  1172336022
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF mean =                     2.
+   PDF variance =                 29.6088123
+  
+   Sample size =      1000
+   Sample mean =      1.90239799
+   Sample variance =  31.2494545
+   Sample maximum =   30.9356346
+   Sample minimum =   -20.32761
+  
+ TEST095
+   For the Lognormal PDF:
+   LOGNORMAL_CDF evaluates the CDF;
+   LOGNORMAL_CDF_INV inverts the CDF.
+   LOGNORMAL_PDF evaluates the PDF;
+  
+   PDF argument X =               8103.08398
+   PDF parameter A =              10.
+   PDF parameter B =              2.25
+   PDF value =                    1.982366302E-5
+   CDF value =                    0.328360617
+   CDF_INV value X =              8103.08398
+  
+ TEST096
+   For the Lognormal PDF:
+   LOGNORMAL_MEAN computes the mean;
+   LOGNORMAL_SAMPLE samples;
+   LOGNORMAL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1186666911
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF mean =                     20.085537
+   PDF variance =                 21623.0371
+  
+   Sample size =      1000
+   Sample mean =      18.2937355
+   Sample variance =  5325.98486
+   Sample maximum =   1316.04639
+   Sample minimum =   1.80330989E-3
+  
+ TEST098
+   For the Logseries PDF,
+   LOGSERIES_CDF evaluates the CDF;
+   LOGSERIES_CDF_INV inverts the CDF.
+   LOGSERIES_PDF evaluates the PDF;
+  
+   PDF argument =      3
+   PDF parameter A =   0.25
+   PDF value =         1.810447499E-2
+   CDF value =         0.995746195
+   CDF_INV value   =   4
+  
+ TEST099
+   For the Logseries PDF:
+   LOGSERIES_CDF evaluates the CDF;
+   LOGSERIES_PDF evaluates the PDF.
+  
+   PDF argument X  =  2
+  
+   X        PDF(X)       CDF(X)
+  
+     1  0.869015      0.869015    
+     2  0.108627      0.977642    
+     3  0.181045E-01  0.995746    
+     4  0.339459E-02  0.999141    
+     5  0.678918E-03  0.999820    
+     6  0.141441E-03  0.999961    
+     7  0.303088E-04  0.999991    
+     8  0.663006E-05  0.999998    
+     9  0.147335E-05   1.00000    
+    10  0.331503E-06   1.00000    
+  
+ TEST100
+   For the Logseries PDF:
+   LOGSERIES_MEAN computes the mean;
+   LOGSERIES_VARIANCE computes the variance;
+   LOGSERIES_SAMPLE samples.
+  
+   Initial random number seed is  1190607905
+   PDF parameter A =              0.25
+   PDF mean =                     1.1586864
+   PDF variance =                 0.202360943
+  
+   Sample size =      1000
+   Sample mean =      1.15799999
+   Sample variance =  0.215250954
+   Sample maximum =   5
+   Sample minimum =   1
+  
+ TEST101
+   For the Lorentz PDF:
+   LORENTZ_CDF evaluates the CDF;
+   LORENTZ_CDF_INV inverts the CDF.
+   LORENTZ_PDF evaluates the PDF;
+  
+   PDF argument X =           0.75
+   PDF value =                0.20371832
+   CDF value =                0.704832792
+   CDF_INV value X =          0.750000179
+  
+ TEST102
+   For the Lorentz PDF:
+   LORENTZ_MEAN computes the mean;
+   LORENTZ_VARIANCE computes the variance;
+   LORENTZ_SAMPLE samples.
+  
+   Initial random number seed is  1219269682
+   PDF mean =                     0.E+0
+   PDF variance =                 3.402823466E+38
+  
+   Sample size =      1000
+   Sample mean =      -1.22037554
+   Sample variance =  554.717529
+   Sample maximum =   82.5020142
+   Sample minimum =   -588.193481
+  
+ TEST104
+   For the Maxwell CDF:
+   MAXWELL_CDF evaluates the CDF.
+   MAXWELL_CDF_INV inverts the CDF.
+   MAXWELL_PDF evaluates the PDF.
+  
+   PDF argument X =           0.5
+   PDF parameter A =          2.
+   PDF value                  2.416675724E-2
+   CDF value                  8.110860735E-2
+   CDF_INV value              0.5
+  
+ TEST105
+   For the Maxwell PDF:
+   MAXWELL_MEAN computes the mean;
+   MAXWELL_VARIANCE computes the variance;
+   MAXWELL_SAMPLE samples.
+  
+   Initial random number seed is  1222135860
+   PDF parameter A =              2.
+   PDF mean =                     3.1915381
+   PDF mean =                     1.81408501
+  
+   Sample size =      1000
+   Sample mean =      3.20103598
+   Sample variance =  1.76680887
+   Sample maximum =   7.73795509
+   Sample minimum =   0.307149887
+  
+ TEST106
+   MULTINOMIAL_COEF1 computes multinomial
+     coefficients using the Gamma function;
+   MULTINOMIAL_COEF2 computes multinomial
+     coefficients directly.
+  
+   Line 10 of the BINOMIAL table:
+  
+   0  10       1    1
+   1   9      10   10
+   2   8      45   45
+   3   7     120  120
+   4   6     210  210
+   5   5     252  252
+   6   4     210  210
+   7   3     120  120
+   8   2      45   45
+   9   1      10   10
+  10   0       1    1
+  
+   Level 5 of the TRINOMIAL coefficients:
+  
+   0   0   5       1    1
+   0   1   4       5    5
+   0   2   3      10   10
+   0   3   2      10   10
+   0   4   1       5    5
+   0   5   0       1    1
+  
+   1   0   4       5    5
+   1   1   3      20   20
+   1   2   2      30   30
+   1   3   1      20   20
+   1   4   0       5    5
+  
+   2   0   3      10   10
+   2   1   2      30   30
+   2   2   1      30   30
+   2   3   0      10   10
+  
+   3   0   2      10   10
+   3   1   1      20   20
+   3   2   0      10   10
+  
+   4   0   1       5    5
+   4   1   0       5    5
+  
+   5   0   0       1    1
+  
+ TEST107
+   For the Multinomial PDF:
+   MULTINOMIAL_MEAN computes the mean;
+   MULTINOMIAL_SAMPLE samples;
+   MULTINOMIAL_VARIANCE computes the variance;
+  
+   Initial random number seed is  1237899837
+   PDF parameter A =              5
+   PDF parameter B =              3
+   PDF parameter C = 
+  0.125000    
+  0.500000    
+  0.375000    
+  
+   PDF means and variances:
+  
+  0.625000      0.546875    
+   2.50000       1.25000    
+   1.87500       1.17187    
+  
+   Sample size =  1000
+   Component Min, Max, Mean, Variance:
+     1     0     4  0.631000      0.567408    
+     2     0     5   2.49300       1.26921    
+     3     0     5   1.87600       1.16979    
+  
+ TEST108
+   For the Multinomial PDF:
+   MULTINOMIAL_PDF evaluates the PDF.
+  
+   PDF argument X:
+  
+     0
+     2
+     3
+   PDF parameter A =              5
+   PDF parameter B =              3
+   PDF parameter C = 
+  0.100000    
+  0.500000    
+  0.400000    
+  
+   PDF value =      0.159999952
+  
+ TEST520
+   For the Nakagami PDF:
+   NAKAGAMI_CDF evaluates the CDF;
+   NAKAGAMI_PDF evaluates the PDF;
+  
+   PDF argument X =               1.25
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3.
+   PDF value =                    3.931210376E-4
+   CDF value =                    1.657379835E-5
+  
+ TEST521
+   For the Nakagami PDF:
+   NAKAGAMI_MEAN computes the mean;
+   NAKAGAMI_VARIANCE computes the variance.
+  
+   Initial random number seed is  1268711248
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+   PDF parameter C =              3.
+   PDF mean =                     2.91873789
+   PDF variance =                 0.318445921
+  
+ TEST109
+   For the Normal 01 PDF:
+   NORMAL_01_CDF evaluates the CDF;
+   NORMAL_01_CDF_INV inverts the CDF.
+   NORMAL_01_PDF evaluates the PDF;
+  
+   PDF argument X =        1.
+   PDF value =             0.241970733
+   CDF value =             0.841344714
+   CDF_INV value X =       1.
+  
+ TEST110
+   For the Normal 01 PDF:
+   NORMAL_01_MEAN computes the mean;
+   NORMAL_01_SAMPLE samples the PDF;
+   NORMAL_01_VARIANCE returns the variance.
+  
+   Initial random number seed is  1269786064
+   PDF mean =                     0.E+0
+   PDF variance =                 1.
+  
+   Sample size =      1000
+   Sample mean =      2.190421335E-2
+   Sample variance =  0.960834384
+   Sample maximum =   2.96145201
+   Sample minimum =   -3.34639716
+  
+ TEST112
+   For the Normal PDF:
+   NORMAL_CDF evaluates the CDF;
+   NORMAL_CDF_INV inverts the CDF.
+   NORMAL_PDF evaluates the PDF;
+  
+   PDF argument X =        90.
+   PDF parameter A =       100.
+   PDF parameter B =       15.
+   PDF value =             2.129653469E-2
+   CDF value =             0.252492517
+   CDF_INV value X =       90.
+  
+ TEST113
+   For the Normal PDF:
+   NORMAL_MEAN computes the mean;
+   NORMAL_SAMPLE samples;
+   NORMAL_VARIANCE returns the variance.
+  
+   Initial random number seed is  1285550042
+   PDF parameter A =              100.
+   PDF parameter B =              15.
+   PDF mean =                     100.
+   PDF variance =                 225.
+  
+   Sample size =      1000
+   Sample mean =      100.186234
+   Sample variance =  230.868423
+   Sample maximum =   149.144775
+   Sample minimum =   46.8818665
+  
+ TEST115
+   For the Pareto PDF:
+   PARETO_CDF evaluates the CDF;
+   PARETO_CDF_INV inverts the CDF.
+   PARETO_PDF evaluates the PDF;
+  
+   PDF argument X =               4.
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF value =                    9.375E-2
+   CDF value =                    0.875
+   CDF_INV value X =              4.
+  
+ TEST116
+   For the Pareto PDF:
+   PARETO_MEAN computes the mean;
+   PARETO_SAMPLE samples;
+   PARETO_VARIANCE computes the variance.
+  
+   Initial random number seed is  1300597475
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF mean =                     3.
+   PDF variance =                 3.
+  
+   Sample size =      1000
+   Sample mean =      2.89466715
+   Sample variance =  1.66401839
+   Sample maximum =   21.6637878
+   Sample minimum =   2.00000072
+  
+ TEST118
+   For the Pascal PDF:
+   PASCAL_MEAN computes the mean;
+   PASCAL_SAMPLE samples;
+   PASCAL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1304896741
+   PDF parameter A =              2
+   PDF parameter B =              0.75
+   PDF mean =                     2.66666675
+   PDF variance =                 0.888888896
+  
+   Sample size =      1000
+   Sample mean =      2.67700005
+   Sample variance =  0.899567485
+   Sample maximum =   8
+   Sample minimum =   2
+  
+ TEST119
+   For the Pascal PDF:
+   PASCAL_CDF evaluates the CDF.
+   PASCAL_CDF_INV inverts the CDF.
+   PASCAL_PDF evaluates the PDF.
+  
+   PDF parameter A =  2
+   PDF parameter B =  0.25
+  
+       X      PDF(X)       CDF(X)    CDF_INV(CDF)
+  
+     0   0.00000       0.00000         2
+     1   0.00000       0.00000         2
+     2  0.625000E-01  0.625000E-01     2
+     3  0.937500E-01  0.156250         3
+     4  0.105469      0.261719         4
+     5  0.105469      0.367187         5
+     6  0.988770E-01  0.466064         6
+     7  0.889893E-01  0.555054         7
+     8  0.778656E-01  0.632919         8
+     9  0.667419E-01  0.699661         9
+    10  0.563135E-01  0.755975        10
+  
+ TEST120
+   For the Pearson 05 PDF:
+   PEARSON_05_PDF evaluates the PDF.
+  
+   PDF argument X =   5.
+   PDF parameter A =  1.
+   PDF parameter B =  2.
+   PDF parameter C =  3.
+   PDF value =        7.581633329E-2
+  
+ TEST121
+   For the Planck PDF:
+   PLANCK_PDF evaluates the PDF.
+  
+   PDF argument X =   0.5
+   PDF value =        2.967178263E-2
+  
+ TEST122
+   For the Planck PDF:
+   PLANCK_SAMPLE samples.
+  
+   Initial random number seed is  1321377263
+  
+   Sample size =      1000
+   Sample mean =      3.77138686
+   Sample variance =  3.93053174
+   Sample maximum =   14.8570585
+   Sample minimum =   0.143210962
+  
+ TEST123
+   For the Poisson PDF:
+   POISSON_CDF evaluates the CDF,
+   POISSON_CDF_INV inverts the CDF.
+  
+   PDF argument X =    7
+   PDF parameter A =   10.
+   CDF value =         0.220220625
+   CDF_INV value X =   7
+  
+ TEST124
+   For the Poisson PDF:
+   POISSON_MEAN computes the mean;
+   POISSON_SAMPLE samples;
+   POISSON_VARIANCE computes the variance.
+  
+   Initial random number seed is  1357562757
+   PDF parameter A =              10.
+   PDF mean =                     10.
+   PDF variance =                 10.
+  
+   Sample size =      1000
+   Sample mean =      10.0209999
+   Sample variance =  9.948452
+   Sample maximum =   20
+   Sample minimum =   1
+  
+ TEST125
+   For the Poisson PDF:
+   POISSON_PDF evaluates the PDF.
+   POISSON_CDF evaluates the CDF.
+  
+   PDF parameter A =  10.
+  
+       X      PDF(X)      CDF(X)
+  
+     0  0.453999E-04  0.453999E-04
+     1  0.453999E-03  0.499399E-03
+     2  0.227000E-02  0.276940E-02
+     3  0.756666E-02  0.103361E-01
+     4  0.189166E-01  0.292527E-01
+     5  0.378333E-01  0.670860E-01
+     6  0.630555E-01  0.130141    
+     7  0.900792E-01  0.220221    
+     8  0.112599      0.332820    
+     9  0.125110      0.457930    
+    10  0.125110      0.583040    
+  
+ TEST126
+   POLY_VAL evaluates a polynomial.
+  
+   Polynomial degree is N =  3
+   Polynomial coefficients are:
+     0   7.00000    
+     1   5.00000    
+     2   2.00000    
+     3   1.00000    
+  
+   Polynomial argument X =  2.
+   Polynomial value VAL =   33.
+  
+   (Expected value is 33.)
+  
+ TEST209
+   For the Power PDF:
+   POWER_CDF evaluates the CDF;
+   POWER_CDF_INV inverts the CDF.
+   POWER_PDF evaluates the PDF;
+  
+   PDF argument X =         0.600000024
+   PDF parameter A =        2.
+   PDF parameter B =        3.
+   PDF value =              0.13333334
+   CDF value =              4.000000283E-2
+   CDF_INV value X =        0.600000024
+  
+ TEST211
+   For the Power PDF:
+   POWER_MEAN computes the mean;
+   POWER_SAMPLE samples;
+   POWER_VARIANCE computes the variance.
+  
+   Initial random number seed is  1375834640
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF mean =                     2.
+   PDF variance =                 0.5
+  
+   Sample size =      1000
+   Sample mean =      1.98681724
+   Sample variance =  0.483156472
+   Sample maximum =   2.99838614
+   Sample minimum =   6.265826523E-2
+  
+ TEST127
+   For the Rayleigh PDF:
+   RAYLEIGH_CDF evaluates the CDF;
+   RAYLEIGH_CDF_INV inverts the CDF.
+   RAYLEIGH_PDF evaluates the PDF;
+  
+   PDF argument X =               1.
+   PDF parameter A =              2.
+   PDF value =                    0.220624223
+   CDF value =                    0.117503107
+   CDF_INV value X =              1.
+  
+ TEST128
+   For the Rayleigh PDF:
+   RAYLEIGH_MEAN computes the mean;
+   RAYLEIGH_SAMPLE samples;
+   RAYLEIGH_VARIANCE computes the variance.
+  
+   Initial random number seed is  1389807256
+   PDF parameter A =              2.
+   PDF mean =                     2.50662827
+   PDF variance =                 1.71681452
+  
+   Sample size =      1000
+   Sample mean =      2.45857501
+   Sample variance =  1.76994371
+   Sample maximum =   7.70547724
+   Sample minimum =   4.933224246E-2
+  
+ TEST380
+   For the Reciprocal PDF:
+   RECIPROCAL_CDF evaluates the CDF.
+   RECIPROCAL_CDF_INV inverts the CDF.
+   RECIPROCAL_PDF evaluates the PDF.
+  
+   PDF argument X =           1.5
+   PDF parameter A =          1.
+   PDF parameter B =          3.
+   PDF value                  0.606826127
+   CDF value                  0.369070202
+   CDF_INV value X            1.49999988
+  
+ TEST381
+   For the Reciprocal PDF:
+   RECIPROCAL_MEAN computes the mean;
+   RECIPROCAL_SAMPLE samples;
+   RECIPROCAL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1409153955
+   PDF parameter A =              1.
+   PDF parameter B =              3.
+   PDF mean =                     1.82047844
+   PDF variance =                 0.326815158
+  
+   Sample size =      1000
+   Sample mean =      1.81711423
+   Sample variance =  0.320727617
+   Sample maximum =   2.99443793
+   Sample minimum =   1.00011015
+  
+ TEST304
+   For the Hyperbolic Secant PDF:
+   SECH_CDF evaluates the CDF.
+   SECH_CDF_INV inverts the CDF.
+   SECH_PDF evaluates the PDF.
+  
+   PDF argument X =           4.
+   PDF parameter A =          3.
+   PDF parameter B =          2.
+   PDF value                  0.141141608
+   CDF value                  0.652909994
+   CDF_INV value =            3.99999952
+  
+ TEST305
+   For the Hyperbolic Secant PDF:
+   SECH_MEAN computes the mean;
+   SECH_SAMPLE samples;
+   SECH_VARIANCE computes the variance.
+  
+   Initial random number seed is  1428142383
+   PDF parameter A =              3.
+   PDF parameter B =              2.
+   PDF mean =                     3.
+   PDF variance =                 9.86960506
+  
+   Sample size =      1000
+   Sample mean =      2.93673944
+   Sample variance =  9.8797245
+   Sample maximum =   16.562336
+   Sample minimum =   -12.0938282
+  
+ TEST204
+   For the Semicircular PDF:
+   SEMICIRCULAR_CDF evaluates the CDF.
+   SEMICIRCULAR_CDF_INV inverts the CDF.
+   SEMICIRCULAR_PDF evaluates the PDF.
+  
+   PDF argument X =           4.
+   PDF parameter A =          3.
+   PDF parameter B =          2.
+   PDF value                  0.275664419
+   CDF value                  0.804498911
+   CDV_INV value X =          4.
+  
+ TEST205
+   For the Semicircular PDF:
+   SEMICIRCULAR_MEAN computes the mean;
+   SEMICIRCULAR_SAMPLE samples;
+   SEMICIRCULAR_VARIANCE computes the variance.
+  
+   Initial random number seed is  1431725105
+   PDF parameter A =              3.
+   PDF parameter B =              2.
+   PDF mean =                     3.
+   PDF variance =                 1.
+  
+   Sample size =      1000
+   Sample mean =      2.95623827
+   Sample variance =  1.01982582
+   Sample maximum =   4.99181604
+   Sample minimum =   1.00438523
+  
+ TEST130
+   For the central Student PDF:
+   STUDENT_CENTRAL_CDF evaluates the CDF.
+   STUDENT_CENTRAL_PDF evaluates the PDF.
+  
+   PDF argument X =     2.44700003
+   PDF parameter A =    0.5
+   PDF parameter B =    2.
+   PDF parameter C =    6.
+   PDF value =          0.147540405
+   CDF value =          0.816049337
+  
+ TEST131
+   For the central Student PDF:
+   STUDENT_CENTRAL_MEAN computes the mean;
+   STUDENT_CENTRAL_SAMPLE samples;
+   STUDENT_CENTRAL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1452504893
+   PDF parameter A =              0.5
+   PDF parameter B =              2.
+   PDF parameter C =              6.
+   PDF mean =                     0.5
+   PDF variance =                 6.
+  
+   Sample size =      1000
+   Sample mean =      0.473807067
+   Sample variance =  2.05713129
+   Sample maximum =   14.4657402
+   Sample minimum =   -9.97265911
+  
+ TEST133
+   For the Noncentral Student PDF:
+   STUDENT_NONCENTRAL_CDF evaluates the CDF;
+  
+   PDF argument X =               0.5
+   PDF parameter IDF =            10
+   PDF parameter B =              1.
+   CDF value =                    0.305280268
+  
+ TEST134
+   For the Triangular PDF:
+   TRIANGULAR_CDF evaluates the CDF;
+   TRIANGULAR_CDF_INV inverts the CDF.
+   TRIANGULAR_PDF evaluates the PDF;
+  
+   PDF argument X =        4.
+   PDF parameter A =       1.
+   PDF parameter B =       10.
+   PDF value =             0.148148149
+   CDF value =             0.222222224
+   CDF_INV value X =       4.
+  
+ TEST135
+   For the Triangular PDF:
+   TRIANGULAR_MEAN computes mean;
+   TRIANGULAR_SAMPLE samples;
+   TRIANGULAR_VARIANCE computes variance.
+  
+   Initial random number seed is  1164429744
+   PDF parameter A =              1.
+   PDF parameter B =              10.
+   PDF mean =                     5.5
+   PDF variance =                 3.375
+  
+   Sample size =      1000
+   Sample mean =      5.41875648
+   Sample variance =  3.43876314
+   Sample maximum =   9.82303524
+   Sample minimum =   1.13903916
+  
+ TEST137
+   For the Uniform 01 Order PDF:
+   UNIFORM_ORDER_SAMPLE samples.
+  
+   Initial random number seed is  1174103094
+  
+ Ordered sample:
+  
+     1  0.156403E-01
+     2  0.244588    
+     3  0.267529    
+     4  0.341086    
+     5  0.415649    
+     6  0.627483    
+     7  0.647606    
+     8  0.651897    
+     9  0.690374    
+    10  0.996378    
+  
+ TEST138
+   For the Uniform PDF on the N-Sphere:
+   UNIFORM_NSPHERE_SAMPLE samples.
+  
+   Initial random number seed is  1174819638
+   Dimension N of sphere =        3
+  
+ Points on the sphere:
+  
+     1 -0.265169     -0.363413      0.893094    
+     2 -0.986338      0.163596      0.193541E-01
+     3  0.195908     -0.104184     -0.975072    
+     4 -0.819832      0.162694      0.549005    
+     5 -0.680001      0.681984     -0.269250    
+     6  0.387129     -0.483420      0.785135    
+     7 -0.210790      0.952401     -0.220228    
+     8  0.651095      0.660769     -0.373443    
+     9 -0.112033E-01 -0.123199     -0.992319    
+    10 -0.519502     -0.432261      0.737067    
+  
+ TEST139
+   For the Uniform PDF:
+   UNIFORM_CDF evaluates the CDF;
+   UNIFORM_CDF_INV inverts the CDF.
+   UNIFORM_PDF evaluates the PDF;
+  
+   PDF argument X =        4.
+   PDF parameter A =       1.
+   PDF parameter B =       10.
+   PDF value =             0.111111112
+   CDF value =             0.333333343
+   CDF_INV value X =       4.
+  
+ TEST140
+   For the Uniform PDF:
+   UNIFORM_MEAN computes mean;
+   UNIFORM_SAMPLE samples;
+   UNIFORM_VARIANCE computes variance.
+  
+   Initial random number seed is  1175894455
+   PDF parameter A =              1.
+   PDF parameter B =              10.
+   PDF mean =                     5.5
+   PDF variance =                 6.75
+  
+   Sample size =      1000
+   Sample mean =      5.44030571
+   Sample variance =  6.64551163
+   Sample maximum =   9.99538517
+   Sample minimum =   1.00673711
+  
+ TEST142
+   For the Uniform Discrete PDF:
+   UNIFORM_DISCRETE_CDF evaluates the CDF;
+   UNIFORM_DISCRETE_CDF_INV inverts the CDF.
+   UNIFORM_DISCRETE_PDF evaluates the PDF;
+  
+   PDF argument X =               4
+   PDF parameter A =              1
+   PDF parameter B =              6
+   PDF value =                    0.166666672
+   CDF value =                    0.666666687
+   CDF_INV value X2 =             5
+  
+ TEST143
+   For the Uniform discrete PDF:
+   UNIFORM_DISCRETE_MEAN computes the mean;
+   UNIFORM_DISCRETE_SAMPLE samples;
+   UNIFORM_DISCRETE_VARIANCE computes the variance.
+  
+   Initial random number seed is  1179118905
+   PDF parameter A =              1
+   PDF parameter B =              6
+   PDF mean =                     3.5
+   PDF variance =                 2.91666675
+  
+   Sample size =      1000
+   Sample mean =      3.91700006
+   Sample variance =  2.8149085
+   Sample maximum =   6
+   Sample minimum =   1
+  
+ TEST144
+   For the Uniform discrete PDF.
+   UNIFORM_DISCRETE_PDF evaluates the PDF.
+   UNIFORM_DISCRETE_CDF evaluates the CDF.
+  
+   PDF parameter A =              1
+   PDF parameter B =              6
+  
+       X      PDF(X)      CDF(X)
+  
+     0   0.00000       0.00000    
+     1  0.166667      0.166667    
+     2  0.166667      0.333333    
+     3  0.166667      0.500000    
+     4  0.166667      0.666667    
+     5  0.166667      0.833333    
+     6  0.166667       1.00000    
+  
+ TEST145
+   For the Von Mises PDF:
+   VON_MISES_CDF evaluates the CDF.
+   VON_MISES_CDF_INV inverts the CDF.
+   VON_MISES_PDF evaluates the PDF.
+  
+   PDF argument X =        0.5
+   PDF parameter A =       1.
+   PDF parameter B =       2.
+   PDF value =             0.403852552
+   CDF value =             0.261807799
+   CDF_INV value X =       0.499922276
+  
+ TEST146
+   For the Von Mises PDF:
+   VON_MISES_MEAN computes the mean;
+   VON_MISES_SAMPLE samples.
+  
+   Initial random number seed is  1194882882
+   PDF parameter A =              1.
+   PDF parameter B =              2.
+  
+   Sample size =      1000
+   Sample mean =      1.01684654
+   Sample variance =  0.798314631
+   Sample maximum =   4.00811291
+   Sample minimum =   -2.1256578
+  
+ TEST148
+   For the Weibull PDF:
+   WEIBULL_CDF evaluates the CDF;
+   WEIBULL_CDF_INV inverts the CDF.
+   WEIBULL_PDF evaluates the PDF;
+  
+   PDF argument X =               3.
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF parameter C =              4.
+   PDF value =                    4.877680913E-2
+   CDF value =                    1.226979494E-2
+   CDF_INV value X =              3.00000024
+  
+ TEST149
+   For the Weibull PDF:
+   WEIBULL_MEAN computes the mean;
+   WEIBULL_SAMPLE samples;
+   WEIBULL_VARIANCE computes the variance.
+  
+   Initial random number seed is  1214229582
+   PDF parameter A =              2.
+   PDF parameter B =              3.
+   PDF parameter C =              4.
+   PDF mean =                     4.71920729
+   PDF variance =                 0.581953526
+  
+   Sample size =      1000
+   Sample mean =      4.71242332
+   Sample variance =  0.590405226
+   Sample maximum =   6.76407337
+   Sample minimum =   2.59362483
+  
+ TEST151
+   For the Weibull Discrete PDF,
+   WEIBULL_DISCRETE_CDF evaluates the CDF;
+   WEIBULL_DISCRETE_CDF_INV inverts the CDF.
+   WEIBULL_DISCRETE_PDF evaluates the PDF;
+  
+   PDF argument X =               2
+   PDF parameter A =              0.5
+   PDF parameter B =              1.5
+   PDF value =                    0.113508366
+   CDF value =                    0.97272265
+   CDF_INV value X =              3
+  
+ TEST152
+   For the Weibull Discrete PDF:
+   WEIBULL_DISCRETE_PDF evaluates the PDF;
+   WEIBULL_DISCRETE_CDF evaluates the CDF.
+  
+   PDF parameter A =      0.5
+   PDF parameter B =      1.5
+  
+       X      PDF(X)      CDF(X)
+  
+     0  0.500000      0.500000    
+     1  0.359214      0.859214    
+     2  0.113508      0.972723    
+     3  0.233711E-01  0.996094    
+     4  0.347534E-02  0.999569    
+     5  0.393254E-03  0.999962    
+     6  0.349916E-04  0.999997    
+     7  0.250545E-05   1.00000    
+     8  0.146886E-06   1.00000    
+     9  0.714817E-08   1.00000    
+    10  0.291997E-09   1.00000    
+  
+ TEST153
+   For the discrete Weibull PDF:
+   WEIBULL_DISCRETE_SAMPLE samples.
+  
+   Initial random number seed is  1257222247
+   PDF parameter A =      0.5
+   PDF parameter B =      1.5
+  
+   Sample size =      1000
+   Sample mean =      0.681999981
+   Sample variance =  0.641520023
+   Sample maximum =   5
+   Sample minimum =   0
+  
+ TEST154
+   For the Zipf PDF:
+   ZIPF_PDF evaluates the PDF.
+   ZIPF_CDF evaluates the CDF.
+  
+   PDF parameter A =  2.
+  
+   X    PDF(X)       CDF(X)
+  
+     1    0.607927      0.607927    
+     2    0.151982      0.759909    
+     3    0.675475E-01  0.827456    
+     4    0.379954E-01  0.865452    
+     5    0.243171E-01  0.889769    
+     6    0.168869E-01  0.906656    
+     7    0.124067E-01  0.919062    
+     8    0.949886E-02  0.928561    
+     9    0.750527E-02  0.936067    
+    10    0.607927E-02  0.942146    
+    11    0.502419E-02  0.947170    
+    12    0.422172E-02  0.951392    
+    13    0.359720E-02  0.954989    
+    14    0.310167E-02  0.958091    
+    15    0.270190E-02  0.960792    
+    16    0.237472E-02  0.963167    
+    17    0.210355E-02  0.965271    
+    18    0.187632E-02  0.967147    
+    19    0.168401E-02  0.968831    
+    20    0.151982E-02  0.970351    
+  
+ TEST155
+   For the Zipf PDF:
+   ZIPF_SAMPLE samples.
+  
+   Initial random number seed is  1273702769
+   PDF parameter A =              4.
+   PDF mean =                     1.11062646
+   PDF variance =                 0.286326528
+  
+   Sample size =      1000
+   Sample mean =      1.09899998
+   Sample variance =  0.147346556
+   Sample maximum =   4
+   Sample minimum =   1
+  
+ PROBPRB
+   Normal end of PROB tests.

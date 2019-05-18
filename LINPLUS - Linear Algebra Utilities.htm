@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://www.psc.edu/~burkardt/src/linplus/linplus.html -->
+<HTML><HEAD><TITLE>LINPLUS - Linear Algebra Utilities</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>LINPLUS - Linear Algebra Utilities </H1>
+<P><B>LINPLUS</B> is a collection of linear algebra routines, inspired by 
+LINPACK. The routines are primarily organized by the storage format of the 
+matrix they operate on. Some of these formats were defined by LINPACK, while 
+others are new; I just made them up when I had to solve problems involving such 
+matrices. The formats include: 
+<UL>
+  <LI><B>C3</B> - Complex tridiagonal; 
+  <LI><B>CCI</B> - Complex circulant; 
+  <LI><B>CGE</B> - Complex general; 
+  <LI><B>CTO</B> - Complex Toeplitz; 
+  <LI><B>S3</B> - Real tridiagonal; 
+  <LI><B>S3P</B> - Real tridiagonal periodic; 
+  <LI><B>S5</B> - Real pentadiagonal; 
+  <LI><B>SBB</B> - Real border-banded; 
+  <LI><B>SBTO</B> - Real block Toeplitz; 
+  <LI><B>SCB</B> - Real compact band; 
+  <LI><B>SCBB</B> - Real compact border-banded; 
+  <LI><B>SCI</B> - Real circulant; 
+  <LI><B>SGB</B> - Real general band; 
+  <LI><B>SGD</B> - Real general diagonal; 
+  <LI><B>SGE</B> - Real general; 
+  <LI><B>SGT</B> - Real general tridiagonal; 
+  <LI><B>SLT</B> - Real lower triangular; 
+  <LI><B>SPB</B> - Real positive-definite symmetric band; 
+  <LI><B>SPO</B> - Real positive-definite symmetric; 
+  <LI><B>SPP</B> - Real positive-definite symmetric Packed; 
+  <LI><B>SSD</B> - Real symmetric diagonal; 
+  <LI><B>SSM</B> - Real Sherman Morrison system A - u * Transpose ( v ); 
+  <LI><B>SSS</B> - Real symmetric skyline; 
+  <LI><B>SSTO</B> - Real symmetric Toeplitz; 
+  <LI><B>STO</B> - Real Toeplitz; 
+  <LI><B>SUT</B> - Real upper triangular; 
+  <LI><B>SVM</B> - Real Vandermonde; </LI></UL>
+<P></P>
+<P>Files you may copy include: 
+<UL>
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/linplus/linplus.f90">LINPLUS.F90, the 
+  source code</A>; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/linplus/linplus_prb.f90">LINPLUS_PRB.F90, 
+  the calling program</A>; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/linplus/linplus_prb.out">LINPLUS_PRB.OUT, 
+  the sample output</A>. </LI></UL>
+<P></P>
+<P>The list of routines includes: 
+<UL>
+  <LI><B>C_LE_L2</B> := X &lt;= Y for complex values, and the L2 norm. 
+  <LI><B>C_SWAP</B> swaps two complex values. 
+  <LI><B>C3_CHECK</B> checks the dimensions of a complex tridiagonal matrix. 
+  <LI><B>C3_CR_FA</B> decomposes a complex tridiagonal matrix via cyclic 
+  reduction. 
+  <LI><B>C3_CR_SL</B> solves a complex linear system factored by C3_CR_FA. 
+  <LI><B>C3_JAC_SL</B> tries to solve a complex tridiagonal system using Jacobi 
+  iteration. 
+  <LI><B>C3_MXV</B> multiplies a complex tridiagonal matrix times a vector. 
+  <LI><B>C3_NP_DET</B> returns the determinant of a complex tridiagonal system 
+  factored by C3_NP_FA. 
+  <LI><B>C3_NP_FA</B> factors a complex tridiagonal system without pivoting. 
+  <LI><B>C3_NP_ML</B> computes A * x or x * A, where A has been factored by 
+  C3_NP_FA. 
+  <LI><B>C3_NP_SL</B> solves a tridiagonal system factored by C3_NP_FA. 
+  <LI><B>C3_PRINT</B> prints a complex tridiagonal matrix. 
+  <LI><B>C3_PRINT_SOME</B> prints some of a complex tridiagonal matrix. 
+  <LI><B>C3_RANDOM</B> returns a random complex tridiagonal matrix. 
+  <LI><B>C3_TO_CGE</B> copies a complex tridiagonal matrix into a general 
+  matrix. 
+  <LI><B>C3_VXM</B> multiplies the transpose of a complex tridiagonal matrix 
+  times a vector. 
+  <LI><B>CCI_EVAL</B> returns the eigenvalues of a complex circulant matrix. 
+  <LI><B>CCI_MXV</B> multiplies a complex circulant matrix times a vector. 
+  <LI><B>CCI_PRINT</B> prints a complex circulant matrix. 
+  <LI><B>CCI_PRINT_SOME</B> prints some of a complex circulant matrix. 
+  <LI><B>CCI_RANDOM</B> randomizes a complex circulant matrix. 
+  <LI><B>CCI_SL</B> solves the complex circulant system A * x = b. 
+  <LI><B>CCI_TO_CGE</B> copies a complex circulant matrix into a general matrix. 
+
+  <LI><B>CCI_VXM</B> multiplies a vector times a complex circulant matrix. 
+  <LI><B>CGE_CHECK</B> checks the dimensions of a complex general matrix. 
+  <LI><B>CTO_MXV</B> multiplies a complex Toeplitz matrix times a vector. 
+  <LI><B>CTO_PRINT</B> prints a complex Toeplitz matrix. 
+  <LI><B>CTO_PRINT_SOME</B> prints some of a complex Toeplitz matrix. 
+  <LI><B>CTO_RANDOM</B> randomizes a complex Toeplitz matrix. 
+  <LI><B>CTO_SL</B> solves the complex Toeplitz system A * X = B. 
+  <LI><B>CTO_TO_CGE</B> copies a complex Toeplitz matrix into a general matrix. 
+  <LI><B>CTO_VXM</B> multiplies a vector times a complex Toeplitz matrix. 
+  <LI><B>CVEC_IDENTITY</B> sets a complex vector to a sort of identity vector. 
+  <LI><B>CVEC_PRINT</B> prints a complex vector, with an optional title. 
+  <LI><B>CVEC_PRINT_SOME</B> prints some of a complex vector. 
+  <LI><B>CVEC_RANDOM</B> returns a random complex vector in a given range. 
+  <LI><B>CVEC_SORT_A2</B> ascending sorts a complex array by L2 norm. 
+  <LI><B>CVEC_UNITY</B> returns the N roots of unity. 
+  <LI><B>HILB_INV</B> returns the inverse of the Hilbert matrix. 
+  <LI><B>I_RANDOM</B> returns a random integer in a given range. 
+  <LI><B>R_IS_INT</B> determines if a real number represents an integer value. 
+  <LI><B>R_RANDOM</B> returns a random real in a given range. 
+  <LI><B>R_SWAP</B> switches two real values. 
+  <LI><B>RCOL_SWAP</B> swaps columns I and J of a real array of column data. 
+  <LI><B>RMAT_DIAG_ADD_SCALAR</B> adds a scalar to the diagonal of a matrix. 
+  <LI><B>RMAT_DIAG_GET_VECTOR</B> gets the value of the diagonal of a matrix. 
+  <LI><B>RMAT_DIAG_SET_SCALAR</B> sets the diagonal of a matrix to a scalar 
+  value. 
+  <LI><B>RMAT_RANDOM</B> returns a matrix of uniform random values between AHI 
+  and ALO. 
+  <LI><B>RROW_SWAP</B> swaps two rows of a table. 
+  <LI><B>RVEC2_PRINT_SOME</B> prints some of two real vectors. 
+  <LI><B>RVEC_IDENTITY</B> sets a real vector to the identity vector A(I)=I. 
+  <LI><B>RVEC_PRINT</B> prints a real vector, with an optional title. 
+  <LI><B>RVEC_PRINT_SOME</B> prints some of a real vector. 
+  <LI><B>RVEC_RANDOM</B> returns a random real vector in a given range. 
+  <LI><B>S3_CHECK</B> checks the dimensions of a real tridiagonal matrix. 
+  <LI><B>S3_CR_FA</B> decomposes a real tridiagonal matrix using cyclic 
+  reduction. 
+  <LI><B>S3_CR_SL</B> solves a real linear system factored by S3_CR_FA. 
+  <LI><B>S3_GS_SL</B> tries to solve a tridiagonal system using Gauss-Seidel 
+  iteration. 
+  <LI><B>S3_JAC_SL</B> tries to solve a tridiagonal system using Jacobi 
+  iteration. 
+  <LI><B>S3_MXV</B> multiplies a tridiagonal matrix times a vector. 
+  <LI><B>S3_NP_DET</B> returns the determinant of a tridiagonal system factored 
+  by S3_NP_FA. 
+  <LI><B>S3_NP_FA</B> factors a tridiagonal system without pivoting. 
+  <LI><B>S3_NP_FS</B> factors and solves a tridiagonal linear system. 
+  <LI><B>S3_NP_ML</B> computes A * x or x * A, where A has been factored by 
+  S3_NP_FA. 
+  <LI><B>S3_NP_SL</B> solves a tridiagonal system factored by S3_NP_FA. 
+  <LI><B>S3_PRINT</B> prints a tridiagonal matrix. 
+  <LI><B>S3_PRINT_SOME</B> prints some of a tridiagonal matrix. 
+  <LI><B>S3_RANDOM</B> returns a random tridiagonal matrix. 
+  <LI><B>S3_TO_SGE</B> copies a tridiagonal matrix into a general matrix. 
+  <LI><B>S3_VXM</B> multiplies the transpose of a tridiagonal matrix times a 
+  vector. 
+  <LI><B>S3_ZERO</B> zeroes out a general tridiagonal matrix. 
+  <LI><B>S3P_CHECK</B> checks the dimensions of a tridiagonal periodic matrix. 
+  <LI><B>S3P_DET</B> computes the determinant of a matrix factored by S3P_FA. 
+  <LI><B>S3P_FA</B> factors a tridiagonal periodic matrix. 
+  <LI><B>S3P_ML</B> computes A * x or x * A, where A has been factored by 
+  S3P_FA. 
+  <LI><B>S3P_MXV</B> computes A * x, where A is a tridiagonal periodic matrix. 
+  <LI><B>S3P_PRINT</B> prints a periodic tridiagonal matrix. 
+  <LI><B>S3P_PRINT_SOME</B> prints some of a periodic tridiagonal matrix. 
+  <LI><B>S3P_RANDOM</B> randomizes a tridiagonal periodic matrix. 
+  <LI><B>S3P_SL</B> solves a tridiagonal periodic system factored by S3P_FA. 
+  <LI><B>S3P_TO_SGE</B> copies a tridiagonal periodic matrix into a general 
+  matrix. 
+  <LI><B>S3P_VXM</B> computes X*A, where A is a tridiagonal periodic matrix. 
+  <LI><B>S3P_ZERO</B> zeroes out a tridiagonal periodic matrix. 
+  <LI><B>S5_CHECK</B> checks the dimensions of a pentadiagonal matrix. 
+  <LI><B>S5_FS</B> factors and solves a pentadiagonal linear system. 
+  <LI><B>S5_MXV</B> multiplies a pentadiagonal matrix times a vector. 
+  <LI><B>S5_PRINT_SOME</B> prints some of a pentadiagonal matrix. 
+  <LI><B>S5_PRINT_SOME</B> prints some of a pentadiagonal matrix. 
+  <LI><B>S5_RANDOM</B> returns a random pentadiagonal matrix. 
+  <LI><B>S5_TO_SGE</B> copies a pentadiagonal matrix into a general matrix. 
+  <LI><B>S5_VXM</B> multiplies the transpose of a pentadiagonal matrix times a 
+  vector. 
+  <LI><B>S5_ZERO</B> zeroes a pentadiagonal matrix. 
+  <LI><B>SBB_ADD</B> adds a value to an entry in a border banded matrix. 
+  <LI><B>SBB_CHECK</B> checks the dimensions of a border banded matrix. 
+  <LI><B>SBB_FA</B> factors a border banded matrix. 
+  <LI><B>SBB_GET</B> returns an entry of a border banded matrix. 
+  <LI><B>SBB_MXV</B> multiplies a border banded matrix times a vector. 
+  <LI><B>SBB_PRINT</B> prints a border banded matrix. 
+  <LI><B>SBB_PRINT_SOME</B> prints some of a border banded matrix. 
+  <LI><B>SBB_RANDOM</B> randomizes a border banded matrix. 
+  <LI><B>SBB_SET</B> sets an entry of a border banded matrix. 
+  <LI><B>SBB_SL</B> solves a border banded linear system factored by SBB_FA. 
+  <LI><B>SBB_TO_SGE</B> copies a border banded matrix into a general matrix. 
+  <LI><B>SBB_VXM</B> multiplies a vector times a border banded matrix. 
+  <LI><B>SBB_ZERO</B> zeroes out a border banded matrix. 
+  <LI><B>SBTO_MXV</B> computes the real block Toeplitz matrix product A * X = B. 
+
+  <LI><B>SBTO_PRINT</B> prints a block Toeplitz matrix. 
+  <LI><B>SBTO_PRINT_SOME</B> prints some of a block Toeplitz matrix. 
+  <LI><B>SBTO_SL</B> solves the real block Toeplitz linear system A * X = B. 
+  <LI><B>SBTO_TO_SGE</B> converts a block Toeplitz matrix to a Linpack General 
+  matrix. 
+  <LI><B>SBTO_VXM</B> computes the real block Toeplitz matrix product X * A = B. 
+
+  <LI><B>SCB_CHECK</B> checks the dimensions of a compact band matrix. 
+  <LI><B>SCB_DET</B> computes the determinant of a band matrix factored by 
+  SCB_NP_FA. 
+  <LI><B>SCB_ML</B> computes A * x or transpose ( A ) * X, using SCB_NP_FA 
+  factors. 
+  <LI><B>SCB_MXV</B> computes A * x, where A is a compact band matrix. 
+  <LI><B>SCB_NP_FA</B> factors a real band matrix by Gaussian elimination. 
+  <LI><B>SCB_NP_SL</B> solves a linear system factored by SCB_NP_FA. 
+  <LI><B>SCB_PRINT</B> prints a compact banded matrix. 
+  <LI><B>SCB_PRINT_SOME</B> prints some of a compact banded matrix. 
+  <LI><B>SCB_RANDOM</B> randomizes a compact band matrix. 
+  <LI><B>SCB_TO_SGE</B> converts a compact band matrix to general matrix format. 
+
+  <LI><B>SCB_VXM</B> computes X*A, where A is a compact band matrix. 
+  <LI><B>SCB_ZERO</B> zeroes out a compact band matrix. 
+  <LI><B>SCBB_ADD</B> adds a value to an entry of a compact border banded 
+  matrix. 
+  <LI><B>SCBB_CHECK</B> checks the dimensions of a compact border banded matrix. 
+
+  <LI><B>SCBB_FA</B> factors a compact border banded matrix. 
+  <LI><B>SCBB_GET</B> returns the value of an entry of a compact border banded 
+  matrix. 
+  <LI><B>SCBB_MXV</B> multiplies a compact border banded matrix times a vector. 
+  <LI><B>SCBB_PRINT</B> prints a compact border banded matrix. 
+  <LI><B>SCBB_PRINT_SOME</B> prints some of a compact border banded matrix. 
+  <LI><B>SCBB_RANDOM</B> randomizes a compact border banded matrix. 
+  <LI><B>SCBB_SET</B> sets the value of an entry in a compact border banded 
+  matrix. 
+  <LI><B>SCBB_SL</B> solves a compact border banded system factored by SCBB_FA. 
+  <LI><B>SCBB_TO_SGE</B> copies a compact border banded matrix into a general 
+  matrix. 
+  <LI><B>SCBB_VXM</B> multiplies a vector times a compact border banded matrix. 
+  <LI><B>SCBB_ZERO</B> zeroes out a compact border banded matrix. 
+  <LI><B>SCI_EVAL</B> returns the eigenvalues of a real circulant matrix. 
+  <LI><B>SCI_MXV</B> multiplies a circulant matrix times a vector. 
+  <LI><B>SCI_PRINT</B> prints a circulant matrix. 
+  <LI><B>SCI_PRINT_SOME</B> prints some of a circulant matrix. 
+  <LI><B>SCI_RANDOM</B> randomizes a circulant matrix. 
+  <LI><B>SCI_SL</B> solves the system A * x = b with the circulant matrix A. 
+  <LI><B>SCI_TO_SGE</B> copies a circulant matrix into a general matrix. 
+  <LI><B>SCI_VXM</B> multiplies a vector times a circulant matrix. 
+  <LI><B>SGB_CHECK</B> checks the dimensions of a general band matrix. 
+  <LI><B>SGB_DET</B> computes the determinant of a matrix factored by SGB_FA or 
+  SGB_TRF. 
+  <LI><B>SGB_FA</B> factors a matrix stored in LINPACK general band storage. 
+  <LI><B>SGB_ML</B> computes A * x or transpose ( A ) * X, using SGB_FA factors. 
+
+  <LI><B>SGB_MU</B> computes A * x or transpose ( A ) * X, using SGB_TRF 
+  factors. 
+  <LI><B>SGB_MXV</B> computes A * x, where A is a general band matrix. 
+  <LI><B>SGB_PRINT</B> prints a banded matrix. 
+  <LI><B>SGB_PRINT_SOME</B> prints some of a banded matrix. 
+  <LI><B>SGB_RANDOM</B> randomizes a general band matrix. 
+  <LI><B>SGB_SCAN</B> reports the number of zeroes in a general band matrix. 
+  <LI><B>SGB_SL</B> solves a system factored by SGB_FA. 
+  <LI><B>SGB_TO_SGE</B> converts a general band matrix to general matrix format. 
+
+  <LI><B>SGB_TRF</B> performs a PLU factorization of an M by N band matrix. 
+  <LI><B>SGB_TRS</B> solves a linear system factored by SGB_TRF. 
+  <LI><B>SGB_VXM</B> computes X*A, where A is a general band matrix. 
+  <LI><B>SGB_ZERO</B> zeroes out a general band matrix. 
+  <LI><B>SGD_CHECK</B> checks the dimensions of a general diagonal matrix. 
+  <LI><B>SGD_MXV</B> computes A * x where A is a general diagonal matrix. 
+  <LI><B>SGD_PRINT</B> prints a general diagonal matrix. 
+  <LI><B>SGD_PRINT_SOME</B> prints some of a general diagonal matrix. 
+  <LI><B>SGD_RANDOM</B> randomizes a general diagonal matrix. 
+  <LI><B>SGD_TO_SGE</B> copies a general diagonal matrix into a general matrix. 
+  <LI><B>SGD_VXM</B> computes X*A where A is a general diagonal matrix. 
+  <LI><B>SGD_ZERO</B> zeroes out a general diagonal matrix. 
+  <LI><B>SGE_CHECK</B> checks the dimensions of a general matrix. 
+  <LI><B>SGE_DET</B> computes the determinant of a matrix factored by SGE_FA or 
+  SGE_TRF. 
+  <LI><B>SGE_DILU</B> produces the diagonal incomplete LU factors of a real 
+  rectangular matrix. 
+  <LI><B>SGE_FA</B> factors a general matrix. 
+  <LI><B>SGE_FS</B> factors and solves a general linear system in one step. 
+  <LI><B>SGE_IDENTITY</B> sets up the identity matrix in real general storage. 
+  <LI><B>SGE_ILU</B> produces the incomplete LU factors of a real rectangular 
+  matrix. 
+  <LI><B>SGE_INV</B> computes the inverse of a matrix factored by SGE_FA. 
+  <LI><B>SGE_ML</B> computes A * x or transpose ( A ) * x, using SGE_FA factors. 
+
+  <LI><B>SGE_MU</B> computes A * x or transpose ( A ) * x, using SGE_TRF 
+  factors. 
+  <LI><B>SGE_MXM</B> computes A * B = C, where A, B and C are N by N matrices. 
+  <LI><B>SGE_MXV</B> computes A * x, where A is a general matrix. 
+  <LI><B>SGE_NP_DET</B> computes the determinant of a matrix factored by 
+  SGE_NP_FA. 
+  <LI><B>SGE_NP_FA</B> factors a general matrix by nonpivoting Gaussian 
+  elimination. 
+  <LI><B>SGE_NP_INV</B> computes the inverse of a matrix factored by SGE_NP_FA. 
+  <LI><B>SGE_NP_ML</B> computes A * x or x * A, for a matrix factored by 
+  SGE_NP_FA. 
+  <LI><B>SGE_NP_SL</B> solves a system factored by SGE_NP_FA. 
+  <LI><B>SGE_NP_TRF</B> computes the LU factorization of a general M by N 
+  matrix. 
+  <LI><B>SGE_NP_TRM</B> computes A * x or x * A, for a matrix factored by 
+  SGE_NP_TRF. 
+  <LI><B>SGE_NP_TRS</B> solves a system of linear equations factored by 
+  SGE_NP_TRF. 
+  <LI><B>SGE_PLU</B> produces the PLU factors of a real rectangular matrix. 
+  <LI><B>SGE_POLY</B> computes the characteristic polynomial of a general 
+  matrix. 
+  <LI><B>SGE_PRINT</B> prints a general matrix. 
+  <LI><B>SGE_PRINT_SOME</B> prints some of a general matrix. 
+  <LI><B>SGE_RANDOM</B> randomizes a general matrix. 
+  <LI><B>SGE_RES</B> computes the residual vector for a linear system. 
+  <LI><B>SGE_SL</B> solves a system factored by SGE_FA. 
+  <LI><B>SGE_SL_IT</B> applies one step of iterative refinement following 
+  SGE_SL. 
+  <LI><B>SGE_TRF</B> computes the PLU factorization of a general M by N matrix. 
+  <LI><B>SGE_TRS</B> solves a system of linear equations factored by SGE_TRF. 
+  <LI><B>SGE_VXM</B> computes Tranpose(A) * X, where A is a general matrix. 
+  <LI><B>SGE_ZERO</B> zeroes out a general matrix. 
+  <LI><B>SLT_DET</B> computes the determinant of a lower triangular matrix. 
+  <LI><B>SLT_INV</B> computes the inverse of a lower triangular matrix. 
+  <LI><B>SLT_MXV</B> computes A * x, where A is a lower triangular matrix. 
+  <LI><B>SLT_PRINT</B> prints a lower triangular matrix. 
+  <LI><B>SLT_PRINT_SOME</B> prints some of a lower triangular matrix. 
+  <LI><B>SLT_SL</B> solves a lower triangular system. 
+  <LI><B>SLT_VXM</B> computes A' * x, where A is a lower triangular matrix. 
+  <LI><B>SORT_HEAP_EXTERNAL</B> externally sorts a list of items into linear 
+  order. 
+  <LI><B>SPB_CG</B> uses the conjugate gradient method on a symmetric banded 
+  system. 
+  <LI><B>SPB_CHECK</B> checks the dimensions of a positive definite symmetric 
+  band matrix. 
+  <LI><B>SPB_DET</B> computes the determinant of a matrix factored by SPB_FA. 
+  <LI><B>SPB_FA</B> factors a positive definite symmetric band matrix A. 
+  <LI><B>SPB_ML</B> multiplies a vector times a matrix that was factored by 
+  SPB_FA. 
+  <LI><B>SPB_MXV</B> multiplies a positive definite symmetric band matrix times 
+  a vector. 
+  <LI><B>SPB_PRINT</B> prints a symmetric banded matrix. 
+  <LI><B>SPB_PRINT_SOME</B> prints some of a symmetric banded matrix. 
+  <LI><B>SPB_RANDOM</B> randomizes a positive definite symmetric band matrix. 
+  <LI><B>SPB_SL</B> solves a linear system A * x = b, factored by SPB_FA. 
+  <LI><B>SPB_SOR</B> uses SOR iteration to solve the PDS band system A*x=b. 
+  <LI><B>SPB_TO_SGE</B> converts a positive definite symmetric band matrix to 
+  general matrix format. 
+  <LI><B>SPB_ZERO</B> zeroes out a positive definite symmetric band matrix. 
+  <LI><B>SPO_DET</B> computes the determinant of an SPD matrix factored by 
+  SPO_FA. 
+  <LI><B>SPO_FA</B> factors a real symmetric positive definite matrix. 
+  <LI><B>SPO_INV</B> computes the inverse of an SPD matrix factored by SPO_FA. 
+  <LI><B>SPO_ML</B> computes A * x = b after A has been factored by SPO_FA. 
+  <LI><B>SPO_RANDOM</B> randomizes a positive definite symmetric matrix. 
+  <LI><B>SPO_SL</B> solves an SPD system factored by SPO_FA. 
+  <LI><B>SPP_PRINT</B> prints a square packed matrix. 
+  <LI><B>SPP_PRINT_SOME</B> prints some of a square packed matrix. 
+  <LI><B>SPP_RANDOM</B> randomizes a positive definite symmetric packed matrix. 
+  <LI><B>SPP_TO_SGE</B> copies a packed matrix into a general matrix. 
+  <LI><B>SSD_CG</B> uses conjugate gradient on a symmetric diagonal storage 
+  matrix. 
+  <LI><B>SSD_CHECK</B> checks the dimensions of a symmetric diagonal storage 
+  matrix. 
+  <LI><B>SSD_MXV</B> computes A * x where A is a symmetric diagonal storage 
+  matrix. 
+  <LI><B>SSD_PRINT</B> prints a symmetric diagonal matrix. 
+  <LI><B>SSD_PRINT_SOME</B> prints some of a symmetric diagonal matrix. 
+  <LI><B>SSD_RANDOM</B> randomizes a symmetric diagonal storage matrix. 
+  <LI><B>SSD_TO_SGE</B> copies a symmetric diagonal storage matrix to a general 
+  matrix. 
+  <LI><B>SSD_ZERO</B> zeroes out a symmetric diagonal storage matrix. 
+  <LI><B>SSM_ML</B> multiplies a factored Sherman Morrison matrix times a 
+  vector. 
+  <LI><B>SSM_MXV</B> multiplies a Sherman-Morrison matrix times a vector. 
+  <LI><B>SSM_PRINT</B> prints a Sherman Morrison matrix. 
+  <LI><B>SSM_PRINT_SOME</B> prints some of a Sherman Morrison matrix. 
+  <LI><B>SSM_RANDOM</B> randomizes a Sherman-Morrison matrix. 
+  <LI><B>SSM_SL</B> solves a linear system involving a Sherman Morrison matrix. 
+  <LI><B>SSM_TO_SGE</B> copies a Sherman-Morrison matrix into a general storage 
+  matrix. 
+  <LI><B>SSM_VXM</B> multiplies a vector times a Sherman-Morrison matrix. 
+  <LI><B>SSS_CHECK</B> checks dimensions for symmetric skyline matrix. 
+  <LI><B>SSS_MXV</B> multiplies a symmetric skyline matrix times a vector. 
+  <LI><B>SSS_PRINT</B> prints a symmetric skyline matrix. 
+  <LI><B>SSS_PRINT_SOME</B> prints some of a symmetric skyline matrix. 
+  <LI><B>SSS_RANDOM</B> randomizes a symmetric skyline matrix. 
+  <LI><B>SSS_TO_SGE</B> copies a symmetric skyline matrix into a general matrix. 
+
+  <LI><B>SSS_ZERO</B> zeroes out a symmetric skyline matrix. 
+  <LI><B>SSTO_INV</B> computes the inverse of a real symmetric Toeplitz matrix. 
+  <LI><B>SSTO_SL</B> solves a linear system with a real symmetric Toeplitz 
+  matrix. 
+  <LI><B>SSTO_YW_SL</B> solves the Yule-Walker equations for a real symmetric 
+  Toeplitz matrix. 
+  <LI><B>SSTO_MXV</B> multiplies a symmetric Toeplitz matrix times a vector. 
+  <LI><B>SSTO_PRINT</B> prints a symmetric Toeplitz matrix. 
+  <LI><B>STO_PRINT_SOME</B> prints some of a Toeplitz matrix. 
+  <LI><B>SSTO_RANDOM</B> randomizes a symmetric Toeplitz matrix. 
+  <LI><B>SSTO_TO_SGE</B> copies a symmetric Toeplitz matrix into a general 
+  matrix. 
+  <LI><B>STO_MXV</B> multiplies a Toeplitz matrix times a vector. 
+  <LI><B>STO_PRINT</B> prints a Toeplitz matrix. 
+  <LI><B>STO_PRINT_SOME</B> prints some of a Toeplitz matrix. 
+  <LI><B>STO_RANDOM</B> randomizes a Toeplitz matrix. 
+  <LI><B>STO_SL</B> solves the real Toeplitz system A * X = B. 
+  <LI><B>STO_TO_SGE</B> copies a Toeplitz matrix into a general matrix. 
+  <LI><B>STO_VXM</B> multiplies a vector times a Toeplitz matrix. 
+  <LI><B>SUT_DET</B> computes the determinant of an upper triangular matrix. 
+  <LI><B>SUT_INV</B> computes the inverse of an upper triangular matrix. 
+  <LI><B>SUT_MXV</B> computes A * x, where A is an upper triangular matrix. 
+  <LI><B>SUT_PRINT</B> prints an upper triangular matrix. 
+  <LI><B>SUT_PRINT_SOME</B> prints some of an upper triangular matrix. 
+  <LI><B>SUT_SL</B> solves an upper triangular system. 
+  <LI><B>SUT_VXM</B> computes Transpose ( A ) * x, where A is an upper 
+  triangular matrix. 
+  <LI><B>SVM_DET</B> computes the determinant of a Vandermonde matrix. 
+  <LI><B>SVM_MXV</B> multiplies a Vandermonde matrix times a vector. 
+  <LI><B>SVM_PRINT</B> prints a Vandermonde matrix. 
+  <LI><B>SVM_PRINT_SOME</B> prints some of a Vandermonde matrix. 
+  <LI><B>SVM_RANDOM</B> randomizes a Vandermonde matrix. 
+  <LI><B>SVM_SL</B> solves the system A * x = b with the Vandermonde matrix A. 
+  <LI><B>SVM_TO_SGE</B> copies a Vandermonde matrix into a general matrix. 
+  <LI><B>SVM_VXM</B> multiplies a vector times a Vandermonde matrix. </LI></UL>
+<P></P>
+<P>Back to <A href="http://www.psc.edu/~burkardt/src/f_src.html">the FORTRAN 
+software page.</A> </P>
+<HR>
+<I>Last revised on 29 March 2001. </I></BODY></HTML>

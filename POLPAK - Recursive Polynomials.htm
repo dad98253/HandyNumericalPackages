@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0051)http://www.psc.edu/~burkardt/src/polpak/polpak.html -->
+<HTML><HEAD><TITLE>POLPAK - Recursive Polynomials</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>POLPAK - Recursive Polynomials </H1>
+<P><B>POLPAK</B> evaluates a variety of mathematical functions. It includes 
+routines to evaluate the classic recursively defined polynomials of Chebyshev, 
+Gegenbauer, Hermite, Jacobi, Laguerre and Legendre. A variety of other 
+polynomials and functions have been added. </P>
+<P>Files you may copy include: 
+<UL>
+  <LI><A href="http://www.psc.edu/~burkardt/src/polpak/polpak.f90">POLPAK.F90, 
+  the source code</A>; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/polpak/polpak_prb.f90">POLPAK_PRB.F90, 
+  the calling program</A>; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/polpak/polpak_prb.out">POLPAK_PRB.OUT, 
+  the sample output</A>. </LI></UL>
+<P></P>
+<P>The list of routines includes: 
+<UL>
+  <LI><B>ALIGN_ENUM</B> counts the number of alignments of two sequences of M 
+  and N elements. 
+  <LI><B>BELL</B> returns the Bell numbers from 0 to N. 
+  <LI><B>BENFORD</B> returns the Benford probability of one or more significant 
+  digits. 
+  <LI><B>BERN</B> computes the value of the Bernoulli numbers B(0) through B(N). 
+
+  <LI><B>BERN2</B> evaluates the Bernoulli numbers. 
+  <LI><B>BERN_POLY</B> evaluates the Bernoulli polynomial of order N at X. 
+  <LI><B>BERN_POLY2</B> evaluates the N-th Bernoulli polynomial at X. 
+  <LI><B>BETA</B> returns the value of the Beta function. 
+  <LI><B>BP01</B> computes the values of the Bernstein polynomials at a point X. 
+
+  <LI><B>BPAB</B> evaluates at X the Bernstein polynomials based in [A,B]. 
+  <LI><B>CARDAN</B> evaluates the Cardan polynomials. 
+  <LI><B>CARDAN_COEFF</B> computes the coefficients of the N-th Cardan 
+  polynomial. 
+  <LI><B>CATALAN</B> computes the Catalan numbers, from C(0) to C(N). 
+  <LI><B>CATALAN_ROW</B> computes row N of Catalan's triangle. 
+  <LI><B>CHEBY1</B> evaluates the Chebyshev polynomials of the first kind. 
+  <LI><B>CHEBY2</B> evaluates the Chebyshev polynomials of the second kind. 
+  <LI><B>COMBIN</B> computes the combinatorial coefficient C(N,K). 
+  <LI><B>COMBIN2</B> computes the binomial coefficient C(N,K). 
+  <LI><B>COMB_ROW</B> computes row N of Pascal's triangle. 
+  <LI><B>COMMUL</B> computes a multinomial combinatorial coefficient. 
+  <LI><B>DBERN3</B> computes the value of the Bernoulli number B(N). 
+  <LI><B>DEULER2</B> computes the Euler numbers. 
+  <LI><B>DFACTORIAL</B> computes the factorial N! 
+  <LI><B>DPI</B> returns the value of Pi. 
+  <LI><B>E_CONSTANT</B> returns the value of the base of the natural logarithm 
+  system. 
+  <LI><B>EULER</B> computes the Euler numbers. 
+  <LI><B>EULER_CONSTANT</B> returns the value of the Euler-Mascheroni constant. 
+  <LI><B>EULERIAN</B> computes the Eulerian number E(N,K). 
+  <LI><B>EULER_POLY</B> evaluates the N-th Euler polynomial at X. 
+  <LI><B>F_HOFSTADTER</B> computes the Hofstadter F sequence. 
+  <LI><B>FACTORIAL</B> computes the factorial N! 
+  <LI><B>FIBONACCI_DIRECT</B> computes the N-th Fibonacci number directly. 
+  <LI><B>FIBONACCI_FLOOR</B> returns the largest Fibonacci number less than or 
+  equal to N. 
+  <LI><B>FIBONACCI_RECURSIVE</B> computes the first N Fibonacci numbers. 
+  <LI><B>G_HOFSTADTER</B> computes the Hofstadter G sequence. 
+  <LI><B>GAMMA</B> returns the value of the Gamma function at X. 
+  <LI><B>GAMMA_LOG</B> calculates the natural logarithm of GAMMA ( X ) for 
+  positive X. 
+  <LI><B>GEGENBAUER</B> computes the Gegenbauer polynomials C(I,ALFA)(X) for I = 
+  1 to N. 
+  <LI><B>HAIL</B> computes the hail function. 
+  <LI><B>H_HOFSTADTER</B> computes the Hofstadter H sequence. 
+  <LI><B>HERMITE</B> evaluates the Hermite polynomials at X. 
+  <LI><B>I_RANDOM</B> returns a random integer in a given range. 
+  <LI><B>JACOBI</B> evaluates the Jacobi polynomials at X. 
+  <LI><B>LAGUERRE</B> evaluates the Laguerre polynomials at X. 
+  <LI><B>LAGUERRE_GEN</B> evaluates the generalized Laguerre polynomials at X. 
+  <LI><B>LAGUERRE_LNM</B> evaluates the associated Laguerre polynomials Lnm at 
+  X. 
+  <LI><B>LEGENDRE_PN</B> evaluates the Legendre polynomials P(N)(X) at X. 
+  <LI><B>LEGENDRE_PNM</B> evaluates the associated Legendre polynomial Pnm(x) of 
+  the first kind. 
+  <LI><B>LEGENDRE_QN</B> evaluates the Legendre polynomials Qn(X). 
+  <LI><B>LOG_FACTORIAL</B> computes the natural logarithm of the factorial N! 
+  <LI><B>PENTAGON_NUM</B> computes the N-th pentagonal number. 
+  <LI><B>PI</B> returns the value of pi. 
+  <LI><B>PYRAMID_NUM</B> returns the N-th pyramidal number. 
+  <LI><B>RPOLY_VAL_HORNER</B> evaluates a polynomial using Horner's method. 
+  <LI><B>STIRLING1</B> computes the Stirling numbers of the first kind. 
+  <LI><B>STIRLING2</B> computes the Stirling numbers of the second kind. 
+  <LI><B>TRIANGLE_NUM</B> returns the N-th triangular number. 
+  <LI><B>VIBONACCI</B> computes the first N Vibonacci numbers. 
+  <LI><B>ZECKENDORF</B> produces the Zeckendorf decomposition of a positive 
+  integer. </LI></UL>
+<P></P>
+<P>Back to <A href="http://www.psc.edu/~burkardt/fsoftware.html">the FORTRAN 
+software page.</A> </P>
+<HR>
+<I>Last revised on 17 December 2000. </I></BODY></HTML>

@@ -1,0 +1,749 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0051)http://www.psc.edu/~burkardt/src/subpak/subpak.html -->
+<HTML><HEAD><TITLE>SUBPAK - A Utility Library</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>SUBPAK - A Utility Library </H1>
+<P><B>SUBPAK</B> is a collection of <B>FORTRAN</B> utility routines for a 
+variety of tasks, including the greatest common divisor of two integers, 
+searching, sorting, range, and unique elements of vectors, determinants and 
+inverses of small matrices, and all the primes less than 10,000. </P>
+<P>Many of the routine names begin with the name of the data type they operate 
+on: 
+<UL>
+  <LI><B>C</B> or <B>CVEC</B> - a complex value or vector; 
+  <LI><B>CH</B> or <B>CHVEC</B> - a character or character vector; 
+  <LI><B>FAC</B> - an integer represented as a product of successive primes; 
+  <LI><B>I</B>, <B>IVEC</B>, <B>IMAT</B> - an integer value, vector or matrix; 
+  <LI><B>IROW</B> - an integer matrix organized by rows; 
+  <LI><B>ICOL</B> - an integer matrix organized by columns; 
+  <LI><B>R</B>, <B>RVEC</B>, <B>RMAT</B> - a real value, vector or matrix; 
+  <LI><B>RCOL</B> - a real matrix organized by columns; 
+  <LI><B>RINT</B> - a real interval; 
+  <LI><B>RPOLY</B> - a polynomial with real coefficients; 
+  <LI><B>RROW</B> - a real matrix organized by rows; 
+  <LI><B>S</B> or <B>SVEC</B> - a character string or vector of character 
+  strings; 
+  <LI><B>SVECI</B> - a vector of implicitly capitalized character strings; 
+</LI></UL>
+<P></P>
+<P>Files you may copy include: 
+<UL>
+  <LI><A href="http://www.psc.edu/~burkardt/src/subpak/subpak.f90">SUBPAK.F90, 
+  the source code</A>; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/subpak/subpak_prb.f90">SUBPAK_PRB.F90, 
+  the calling program</A>; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/subpak/subpak_prb.out">SUBPAK_PRB.OUT, 
+  the sample output</A>. </LI></UL>
+<P></P>
+<P>The list of routines includes: 
+<UL>
+  <LI><B>ACOSH2</B> returns the inverse hyperbolic cosine of a number. 
+  <LI><B>AGUD</B> evaluates the inverse Gudermannian function. 
+  <LI><B>ARC_COSINE</B> computes the arc cosine function, with argument 
+  truncation. 
+  <LI><B>ASINH2</B> returns the inverse hyperbolic sine of a number. 
+  <LI><B>ATAN4</B> computes the inverse tangent of the ratio Y / X. 
+  <LI><B>ATANH2</B> returns the inverse hyperbolic tangent of a number. 
+  <LI><B>AXIS_LIMITS</B> returns "nice" axis limits for a plot. 
+  <LI><B>BAR_CHECK</B> computes the check digit for a barcode. 
+  <LI><B>BAR_CODE</B> constructs the 113 character barcode from 11 digits. 
+  <LI><B>BAR_DIGIT_CODE</B> returns the 7 character right and left bar codes for 
+  a digit. 
+  <LI><B>BIN_TO_R2_EVEN</B> returns the limits for a given R2 "bin" in [A,B]. 
+  <LI><B>BIN_TO_R2_EVEN2</B> returns the limits for a given R2 "bin" in [A,B]. 
+  <LI><B>BIN_TO_R2_EVEN3</B> returns the limits for a given R2 "bin" in [A,B]. 
+  <LI><B>BIN_TO_R3_EVEN2</B> returns the limits for a given R3 "bin" in [A,B]. 
+  <LI><B>BIN_TO_R_EVEN</B> returns the limits for a given "bin" in [A,B]. 
+  <LI><B>BIN_TO_R_EVEN2</B> returns the limits for a given "bin" in [A,B]. 
+  <LI><B>BMI_ENGLISH</B> computes the body mass index given English 
+  measurements. 
+  <LI><B>BMI_METRIC</B> computes the body mass index given metric measurements. 
+  <LI><B>C_CUBE_ROOT</B> returns the principal cube root of a complex number. 
+  <LI><B>C_LE_L1</B> := X &lt;= Y for complex values, and the L1 norm. 
+  <LI><B>C_LE_L2</B> := X &lt;= Y for complex values, and the L2 norm. 
+  <LI><B>C_LE_LINF</B> := X &lt;= Y for complex values, and the L Infinity norm. 
+
+  <LI><B>C_NORM1</B> evaluates the L1 norm of a complex number. 
+  <LI><B>C_NORM2</B> evaluates the L2 norm of a complex number. 
+  <LI><B>C_NORMI</B> evaluates the L-infinity norm of a complex number. 
+  <LI><B>C_SWAP</B> swaps two complex values. 
+  <LI><B>CH_CAP</B> capitalizes a single character. 
+  <LI><B>CH_IS_DIGIT</B> returns .TRUE. if a character is a decimal digit. 
+  <LI><B>CH_RANDOM</B> returns a random character in a given range. 
+  <LI><B>CH_SWAP</B> swaps two character values. 
+  <LI><B>CHVEC2_PRINT</B> prints two vectors of characters. 
+  <LI><B>CHVEC_PERMUTE</B> permutes a character vector in place. 
+  <LI><B>CHVEC_PRINT</B> prints a character vector. 
+  <LI><B>CHVEC_REVERSE</B> reverses the elements of a character vector. 
+  <LI><B>CMAT_PRINT</B> prints a complex matrix. 
+  <LI><B>COT</B> returns the cotangent of an angle. 
+  <LI><B>COTD</B> returns the cotangent of an angle given in degrees. 
+  <LI><B>CSC</B> returns the cosecant of X. 
+  <LI><B>CVEC_IDENTITY</B> sets a complex vector to a sort of identity vector. 
+  <LI><B>CVEC_PRINT</B> prints a complex vector, with an optional title. 
+  <LI><B>CVEC_PRINT_SOME</B> prints some of a complex vector. 
+  <LI><B>CVEC_RANDOM</B> returns a random complex vector in a given range. 
+  <LI><B>CVEC_SORT_A1</B> ascending sorts a complex array by L1 norm. 
+  <LI><B>CVEC_SORT_A2</B> ascending sorts a complex array by L2 norm. 
+  <LI><B>CVEC_SORT_AINF</B> ascending sorts a complex array by L infinity norm. 
+  <LI><B>CVEC_UNITY</B> returns the N roots of unity. 
+  <LI><B>D_SWAP</B> swaps two double precision values. 
+  <LI><B>DPI</B> returns the value of pi as a double precision quantity. 
+  <LI><B>DVEC_PRINT</B> prints a double precision vector. 
+  <LI><B>E_CONSTANT</B> returns the value of E. 
+  <LI><B>ERF</B> evaluates the error function ERF(X). 
+  <LI><B>EULER_CONSTANT</B> returns the value of the Euler-Mascheroni constant. 
+  <LI><B>FAC_DIV</B> divides two quantities represented as prime factors. 
+  <LI><B>FAC_GCD</B> finds the GCD of two products of prime factors. 
+  <LI><B>FAC_LCM</B> finds the LCM of two products of prime factors. 
+  <LI><B>FAC_MUL</B> multiplies two quantities represented as prime factors. 
+  <LI><B>FAC_PRINT</B> prints a product of prime factors. 
+  <LI><B>FAC_TO_I</B> converts a product of prime factors into an integer. 
+  <LI><B>FAC_TO_RAT</B> converts a prime factorization into a rational value. 
+  <LI><B>FEET_TO_METERS</B> converts a measurement in feet to meters. 
+  <LI><B>FGAUSS</B> evaluates a function that is the sum of Gaussians. 
+  <LI><B>GET_SEED</B> returns a seed for the random number generator. 
+  <LI><B>GRID1</B> finds grid points between X1 and X2 in N dimensions. 
+  <LI><B>GRID1N</B> finds the I-th grid point between X1 and X2 in N dimensions. 
+
+  <LI><B>GRID2</B> computes grid points between X1 and X2 in N dimensions. 
+  <LI><B>GRID2N</B> computes one grid point between X1 and X2 in N dimensions. 
+  <LI><B>GRID3</B> computes a grid on the parallelogram set by X1, X2 and X3 in 
+  N space. 
+  <LI><B>GRID3N</B> computes a parallelogram grid on 3 points in N dimensions. 
+  <LI><B>GRID4</B> computes a grid on the parallelogram set by X1, X2 and X3 in 
+  N space. 
+  <LI><B>GRID4N</B> computes a single point on a parallelogram grid in N space. 
+  <LI><B>GUD</B> evaluates the Gudermannian function. 
+  <LI><B>HEXCOL</B> returns a color on the perimeter of the color hexagon. 
+  <LI><B>I2VEC_PRINT</B> prints an I2 vector. 
+  <LI><B>I_DIVP</B> returns the smallest multiple of J greater than or equal to 
+  I. 
+  <LI><B>I_FACTOR</B> factors an integer into prime factors. 
+  <LI><B>I_GCD</B> finds the greatest common divisor of I and J. 
+  <LI><B>I_GCDB</B> finds the greatest common divisor of the form K**N of two 
+  numbers. 
+  <LI><B>I_IS_PRIME</B> reports whether an integer is prime. 
+  <LI><B>I_JACOBI_SYMBOL</B> evaluates the Jacobi symbol (Q/P). 
+  <LI><B>I_LCM</B> computes the least common multiple of two integers. 
+  <LI><B>I_LEGENDRE_SYMBOL</B> evaluates the Legendre symbol (Q/P). 
+  <LI><B>I_LOG_10</B> returns the integer part of the logarithm base 10 of 
+  ABS(X). 
+  <LI><B>I_LOG_2</B> returns the integer part of the logarithm base 2 of ABS(X). 
+
+  <LI><B>I_LOG_B</B> returns the integer part of the logarithm base ABS(B) of 
+  ABS(X). 
+  <LI><B>I_MANT</B> computes the "mantissa" of a real number. 
+  <LI><B>I_MEMORY</B> manages a set of runtime integer variables. 
+  <LI><B>I_MODDIV</B> breaks a number into a multiple of a divisor and 
+  remainder. 
+  <LI><B>I_MODP</B> returns the nonnegative remainder of integer division. 
+  <LI><B>I_MOEBIUS</B> returns the value of MU(N), the Moebius function of N. 
+  <LI><B>I_OMEGA</B> returns OMEGA(N), the number of distinct prime divisors of 
+  N. 
+  <LI><B>I_PHI</B> returns the value of PHI(N), the number of relatively prime 
+  predecessors. 
+  <LI><B>I_RANDOM</B> returns a random integer in a given range. 
+  <LI><B>I_ROUNDUP</B> rounds a real value "up" to the nearest integer. 
+  <LI><B>I_SIGMA</B> returns the value of SIGMA(N), the divisor sum. 
+  <LI><B>I_SIGN</B> evaluates the sign of an integer. 
+  <LI><B>I_SWAP</B> swaps two integer values. 
+  <LI><B>I_SWAP3</B> swaps three integer values. 
+  <LI><B>I_TAU</B> returns the value of TAU(N), the number of distinct divisors 
+  of N. 
+  <LI><B>I_TO_FAC</B> converts an integer into a product of prime factors. 
+  <LI><B>I_TO_ISBN</B> converts an integer to an ISBN digit. 
+  <LI><B>I_TO_IVEC_BINARY</B> makes a vector binary representation of an 
+  integer. 
+  <LI><B>I_UNSWAP3</B> unswaps three integer values. 
+  <LI><B>I_WRAP</B> forces an integer to lie between given limits by wrapping. 
+  <LI><B>ICOL_COMPARE</B> compares columns I and J of a integer array. 
+  <LI><B>ICOL_FIND</B> seeks a table column equal to an integer vector. 
+  <LI><B>ICOL_FIND_ITEM</B> searches a table by columns for a given value. 
+  <LI><B>ICOL_FIND_PAIR_WRAP</B> searches a table by columns for a pair of 
+  items. 
+  <LI><B>ICOL_SORT_A</B> ascending sorts an integer array of columns. 
+  <LI><B>ICOL_SORT_D</B> descending sorts an integer array of columns. 
+  <LI><B>ICOL_SWAP</B> swaps columns I and J of a integer array of column data. 
+  <LI><B>ICOL_UNIQ</B> keeps the unique elements in a sorted integer array of 
+  columns. 
+  <LI><B>IINT_TO_RINT</B> maps an integer interval to a real interval. 
+  <LI><B>IJ_NEXT</B> returns the next matrix index. 
+  <LI><B>IJ_NEXT_GT</B> returns the next matrix index, with the constraint that 
+  I &lt; J. 
+  <LI><B>IMAT_COPY</B> copies a rectangular integer matrix. 
+  <LI><B>IMAT_ELIM</B> carries out exact Gauss elimination on an integer matrix. 
+
+  <LI><B>IMAT_IMAX</B> returns the location of the maximum of an integer M by N 
+  matrix. 
+  <LI><B>IMAT_IMIN</B> returns the location of the minimum of an integer M by N 
+  matrix. 
+  <LI><B>IMAT_L1_INVERSE</B> inverts an integer unit lower triangular matrix. 
+  <LI><B>IMAT_MAX</B> returns the maximum entry of an integer M by N matrix. 
+  <LI><B>IMAT_MIN</B> returns the minimum entry of an integer M by N matrix. 
+  <LI><B>IMAT_PERM</B> permutes the rows and columns of a square integer matrix. 
+
+  <LI><B>IMAT_PERM2</B> permutes the rows and columns of a rectangular integer 
+  matrix. 
+  <LI><B>IMAT_PERM2_RANDOM</B> selects a random permutation of an integer 
+  matrix. 
+  <LI><B>IMAT_PERM_RANDOM</B> selects a random permutation of an integer matrix. 
+
+  <LI><B>IMAT_PRINT</B> prints an integer matrix. 
+  <LI><B>IMAT_RANDOM</B> returns a matrix of uniform random values between AHI 
+  and ALO. 
+  <LI><B>IMAT_RED</B> divides out common factors in a row or column of a matrix. 
+
+  <LI><B>IMAT_ROW_COMPARE</B> compares two arrays of row vectors. 
+  <LI><B>IMAT_U1_INVERSE</B> inverts an integer unit upper triangular matrix. 
+  <LI><B>INDEX_BOX2_NEXT_2D</B> produces indices on the surface of a box in 2D. 
+  <LI><B>INDEX_BOX2_NEXT_3D</B> produces indices on the surface of a box in 3D. 
+  <LI><B>IROW_COMPARE</B> compares two rows of a integer array. 
+  <LI><B>IROW_FIND_ITEM</B> searches the rows of an integer array for a given 
+  value. 
+  <LI><B>IROW_FIND_PAIR_WRAP</B> searches the rows of an integer array for a 
+  pair of items. 
+  <LI><B>IROW_MAX</B> returns the maximums of the rows of an integer array. 
+  <LI><B>IROW_MEAN</B> returns the means of the rows of an integer array. 
+  <LI><B>IROW_MIN</B> returns the minimums of the rows of an integer array. 
+  <LI><B>IROW_SORT2_D</B> descending sorts the elements of each row of an 
+  integer array. 
+  <LI><B>IROW_SORT_A</B> ascending sorts the rows of an integer array. 
+  <LI><B>IROW_SORT_D</B> descending sorts the rows of an integer array. 
+  <LI><B>IROW_SUM</B> returns the sums of the rows of an integer array. 
+  <LI><B>IROW_SWAP</B> swaps two rows of an integer array. 
+  <LI><B>IROW_VARIANCE</B> returns the variances of the rows of an integer 
+  array. 
+  <LI><B>ISBN_CHECK</B> checks an ISBN code. 
+  <LI><B>ISBN_FILL</B> fills in a missing digit in an ISBN code. 
+  <LI><B>ISBN_TO_I</B> converts an ISBN character into an integer. 
+  <LI><B>ISET2_COMPARE</B> compares two I2 sets. 
+  <LI><B>ISET2_INDEX_INSERT_UNIQUE</B> inserts a unique I2 set value in an 
+  indexed sorted list. 
+  <LI><B>ISET2_INDEX_SEARCH</B> searches for an I2 set value in an indexed 
+  sorted list. 
+  <LI><B>IVEC2_COMPARE</B> compares pairs of integers stored in two vectors. 
+  <LI><B>IVEC2_PRINT</B> prints a pair of integer vectors. 
+  <LI><B>IVEC2_SORT_A</B> ascending sorts a vector of pairs of integers. 
+  <LI><B>IVEC2_SORT_D</B> descending sorts a vector of pairs of integers. 
+  <LI><B>IVEC2_UNIQ</B> keeps the unique elements in a array of pairs of 
+  integers. 
+  <LI><B>IVEC_AMAX</B> returns the largest magnitude in an integer vector. 
+  <LI><B>IVEC_AMIN</B> returns the smallest magnitude in an integer vector. 
+  <LI><B>IVEC_AMINZ</B> returns the smallest nonzero magnitude in an integer 
+  vector. 
+  <LI><B>IVEC_AXPY:</B> Y(I) := Y(I) + A * X(I). 
+  <LI><B>IVEC_BRACKET</B> searches a sorted array for successive brackets of a 
+  value. 
+  <LI><B>IVEC_COMPARE</B> compares two integer vectors. 
+  <LI><B>IVEC_CUM</B> computes the cumulutive sum of the entries of a vector. 
+  <LI><B>IVEC_DESCENDS</B> determines if an integer vector is decreasing. 
+  <LI><B>IVEC_FRAC</B> searches for the K-th smallest element in an N-vector. 
+  <LI><B>IVEC_GCD</B> finds the greatest common divisor of an integer vector. 
+  <LI><B>IVEC_HEAP_A</B> reorders an array of integers into an ascending heap. 
+  <LI><B>IVEC_HEAP_D</B> reorders an array of integers into an descending heap. 
+  <LI><B>IVEC_HEAP_D_EXTRACT</B> extracts the maximum value from a descending 
+  heap. 
+  <LI><B>IVEC_HEAP_D_INSERT</B> inserts a new value into a descending heap. 
+  <LI><B>IVEC_HEAP_D_MAX</B> returns the maximum value in a descending heap of 
+  integers. 
+  <LI><B>IVEC_IAMAX</B> returns the index of the largest magnitude in an integer 
+  vector. 
+  <LI><B>IVEC_IAMIN</B> returns the index of the smallest magnitude in an 
+  integer vector. 
+  <LI><B>IVEC_IAMINZ</B> returns the smallest nonzero magnitude in an integer 
+  vector. 
+  <LI><B>IVEC_IDENTITY</B> sets an integer vector to the identity vector A(I)=I. 
+
+  <LI><B>IVEC_IMAX</B> computes the index of a maximum element of an integer 
+  array. 
+  <LI><B>IVEC_MAX_LAST</B> returns the index of the last maximal integer vector 
+  element. 
+  <LI><B>IVEC_IMIN</B> computes the index of the minimum element of an integer 
+  array. 
+  <LI><B>IVEC_INDEX</B> returns the location of the first occurrence of a given 
+  value. 
+  <LI><B>IVEC_INDEX_DELETE_ALL</B> deletes all occurrences of an integer value 
+  from an indexed sorted list. 
+  <LI><B>IVEC_INDEX_DELETE_DUPES</B> deletes duplicate integer values from an 
+  indexed sorted list. 
+  <LI><B>IVEC_INDEX_DELETE_ONE</B> deletes one copy of an integer value from an 
+  indexed sorted list. 
+  <LI><B>IVEC_INDEX_INSERT</B> inserts an integer value in an indexed sorted 
+  list. 
+  <LI><B>IVEC_INDEX_INSERT_UNIQUE</B> inserts a unique integer value in an 
+  indexed sorted list. 
+  <LI><B>IVEC_INDEX_ORDER</B> sorts an integer vector using an index vector. 
+  <LI><B>IVEC_INDEX_SEARCH</B> searches for an integer value in an indexed 
+  sorted list. 
+  <LI><B>IVEC_INDEX_SORT_UNIQUE</B> creates a sort index for an integer vector. 
+  <LI><B>IVEC_INSERT</B> inserts a value into an array. 
+  <LI><B>IVEC_MAX</B> computes the maximum element of an integer array. 
+  <LI><B>IVEC_MEAN</B> returns the mean of an integer vector. 
+  <LI><B>IVEC_MEDIAN</B> returns the median of an unsorted integer vector. 
+  <LI><B>IVEC_MERGE_A</B> merges two ascending sorted integer arrays. 
+  <LI><B>IVEC_MIN</B> computes the minimum element of an integer array. 
+  <LI><B>IVEC_NONZERO</B> counts the nonzero entries in an integer vector 
+  <LI><B>IVEC_ORDER_TYPE</B> determines if an integer array is (non)strictly 
+  ascending/descending. 
+  <LI><B>IVEC_PAIRWISE_PRIME</B> checks whether a vector of integers is pairwise 
+  prime. 
+  <LI><B>IVEC_PART</B> partitions an integer NVAL into N nearly equal parts. 
+  <LI><B>IVEC_PART_QUICK_A</B> reorders an integer vector as part of a quick 
+  sort. 
+  <LI><B>IVEC_PERMUTE</B> permutes an integer vector in place. 
+  <LI><B>IVEC_PERMUTE_RANDOM</B> randomly permutes an integer vector. 
+  <LI><B>IVEC_POP</B> pops an integer vector off of a stack. 
+  <LI><B>IVEC_PRINT</B> prints an integer vector. 
+  <LI><B>IVEC_PRINT_SOME</B> prints "some" of an integer vector. 
+  <LI><B>IVEC_PUSH</B> pushes an integer vector onto a stack. 
+  <LI><B>IVEC_RANDOM</B> returns a random integer vector in a given range. 
+  <LI><B>IVEC_RED</B> divides out common factors in a vector. 
+  <LI><B>IVEC_REVERSE</B> reverses the elements of an integer vector. 
+  <LI><B>IVEC_ROTATE</B> rotates an object in place. 
+  <LI><B>IVEC_SEARCH_BINARY_A</B> searches an ascending sorted vector of 
+  integers. 
+  <LI><B>IVEC_SEARCH_BINARY_D</B> searches a descending sorted vector of 
+  integers. 
+  <LI><B>IVEC_SORT_BUBBLE_A</B> ascending sorts an integer array using bubble 
+  sort. 
+  <LI><B>IVEC_SORT_HEAP_A</B> ascending sorts an integer array using heap sort. 
+  <LI><B>IVEC_SORT_HEAP_D</B> descending sorts an integer array using heap sort. 
+
+  <LI><B>IVEC_SORT_HEAP_INDEX_A</B> does an indexed heap ascending sort of an 
+  integer vector. 
+  <LI><B>IVEC_SORT_HEAP_INDEX_D</B> does an indexed heap descending sort of an 
+  integer vector. 
+  <LI><B>IVEC_SORT_INSERT_A</B> uses an ascending insertion sort on an integer 
+  vector. 
+  <LI><B>IVEC_SORT_INSERT_D</B> uses a descending insertion sort on an integer 
+  vector. 
+  <LI><B>IVEC_SORT_QUICK_A</B> ascending sorts an integer vector using quick 
+  sort. 
+  <LI><B>IVEC_SORT_SHELL_A</B> ascending sorts an integer array using Shell's 
+  sort. 
+  <LI><B>IVEC_SPLIT_UNSORT</B> "splits" an unsorted vector based on a splitting 
+  value. 
+  <LI><B>IVEC_SWAP</B> swaps the entries of two integer vectors. 
+  <LI><B>IVEC_UNIQ</B> finds the number of unique elements in a sorted integer 
+  array. 
+  <LI><B>IVEC_VALUE_INDEX</B> indexes integer vector entries equal to a given 
+  value. 
+  <LI><B>IVEC_VARIANCE</B> returns the variance of an integer vector. 
+  <LI><B>L_MEMORY</B> manages a set of runtime logical variables. 
+  <LI><B>NORMAL_01_SAMPLE</B> samples the standard Normal PDF. 
+  <LI><B>PAUSE_INPUT</B> waits until an input character is entered. 
+  <LI><B>PERM_CHECK</B> checks that a vector represents a permutation. 
+  <LI><B>PERM_CYCLE</B> analyzes a permutation. 
+  <LI><B>PERM_FREE</B> reports the number of unused items in a partial 
+  permutation. 
+  <LI><B>PERM_NEXT</B> computes all of the permutations on N objects, one at a 
+  time. 
+  <LI><B>PERM_PRINT</B> prints a permutation. 
+  <LI><B>PERM_RANDOM</B> selects a random permutation of N objects. 
+  <LI><B>PI</B> returns the value of pi. 
+  <LI><B>POINTS_NEAREST_POINT_BINS_2D</B> finds the nearest point to a given 
+  point in 2D. 
+  <LI><B>POINTS_NEAREST_POINT_NAIVE_2D</B> finds the nearest point to a given 
+  point in 2D. 
+  <LI><B>POINTS_NEAREST_POINT_NAIVE_3D</B> finds the nearest point to a given 
+  point in 3D. 
+  <LI><B>POINTS_NEAREST_POINTS_BINS2_2D</B> finds the nearest point to given 
+  points in 2D. 
+  <LI><B>POINTS_NEAREST_POINTS_BINS3_2D</B> finds the nearest point to given 
+  points in 2D. 
+  <LI><B>POINTS_NEAREST_POINTS_BINS2_3D</B> finds the nearest point to given 
+  points in 3D. 
+  <LI><B>POINTS_NEAREST_POINTS_BINS_2D</B> finds the nearest point to given 
+  points in 2D. 
+  <LI><B>POINTS_NEAREST_POINTS_NAIVE_2D</B> finds the nearest point to given 
+  points in 2D. 
+  <LI><B>POINTS_NEAREST_POINTS_NAIVE_3D</B> finds the nearest point to given 
+  points in 3D. 
+  <LI><B>POUNDS_TO_KILOGRAMS</B> converts a measurement in pounds to kilograms. 
+  <LI><B>PRIME</B> returns any of the first MAXPRIME prime numbers. 
+  <LI><B>PRIMER</B> computes the prime numbers up to a given limit. 
+  <LI><B>R2_CHEBY</B> sets up the Chebyshev abscissas in a real interval. 
+  <LI><B>R2_EQ</B> == ( A1 == A2 ) for R2 vectors. 
+  <LI><B>R2_GE</B> == ( A1 &gt;= A2 ) for R2 vectors. 
+  <LI><B>R2_GT</B> == ( A1 &gt; A2 ) for R2 vectors. 
+  <LI><B>R2_LE</B> == ( A1 &lt;= A2 ) for R2 vectors. 
+  <LI><B>R2_LT</B> == ( A1 &lt; A2 ) for R2 vectors. 
+  <LI><B>R2_NE</B> == ( A1 /= A2 ) for R2 vectors. 
+  <LI><B>R2_RANDOM</B> returns a random R2 value in a given range. 
+  <LI><B>R2_SWAP</B> swaps two R2 values. 
+  <LI><B>R2_TO_BIN_EVEN</B> determines the appropriate "bin" for an R2 value. 
+  <LI><B>R2_TO_BIN_EVEN2</B> determines the appropriate "bin" for an R2 value. 
+  <LI><B>R2_TO_BIN_EVEN3</B> determines the appropriate "bin" for an R2 value. 
+  <LI><B>R2VEC_BIN_EVEN</B> bins an R2 array into evenly spaced bins. 
+  <LI><B>R2VEC_BIN_EVEN2</B> bins an R2 array into evenly spaced bins. 
+  <LI><B>R2VEC_BIN_EVEN3</B> bins an R2 array into evenly spaced bins. 
+  <LI><B>R2VEC_BINNED_REORDER</B> reorders a binned R2 data vector. 
+  <LI><B>R2VEC_BINNED_REORDER2</B> reorders a binned R2 data vector. 
+  <LI><B>R2VEC_BINNED_SORT_A</B> sorts each bin of an R2 binned data vector. 
+  <LI><B>R2VEC_BINNED_SORT_A2</B> sorts each bin of an R2 binned data vector. 
+  <LI><B>R2VEC_PART_QUICK_A</B> reorders an R2 vector as part of a quick sort. 
+  <LI><B>R2VEC_PRINT</B> prints an R2 vector. 
+  <LI><B>R2VEC_RANDOM</B> returns a random R2 vector in a given range. 
+  <LI><B>R2VEC_SORT_QUICK_A</B> ascending sorts an R2 vector using quick sort. 
+  <LI><B>R3_EQ</B> == ( A1 == A2 ) for R3 vectors. 
+  <LI><B>R3_GT</B> == ( A1 &gt; A2 ) for R3 vectors. 
+  <LI><B>R3_LT</B> == ( A1 &lt; A2 ) for R3 vectors. 
+  <LI><B>R3_SWAP</B> swaps two R3 values. 
+  <LI><B>R3_TO_BIN_EVEN2</B> determines the appropriate "bin" for an R3 value. 
+  <LI><B>R3VEC_BIN_EVEN2</B> bins an R3 array into evenly spaced bins. 
+  <LI><B>R3VEC_BINNED_REORDER</B> reorders a binned R3 data vector. 
+  <LI><B>R3VEC_BINNED_SORT_A</B> sorts each bin of an R3 binned data vector. 
+  <LI><B>R3VEC_PART_QUICK_A</B> reorders an R3 vector as part of a quick sort. 
+  <LI><B>R3VEC_RANDOM</B> returns a random R3 vector in a given range. 
+  <LI><B>R3VEC_SORT_QUICK_A</B> ascending sorts an R3 vector using quick sort. 
+  <LI><B>R_CHOP</B> chops a real number to a given number of binary places. 
+  <LI><B>R_CUBE_ROOT</B> returns the cube root of a real number. 
+  <LI><B>R_DIFF</B> computes (X-Y) to a specified accuracy. 
+  <LI><B>R_DIGIT</B> returns a particular decimal digit of a real number. 
+  <LI><B>R_INF</B> returns a real number set to "Inf". 
+  <LI><B>R_IS_INT</B> determines if a real number represents an integer value. 
+  <LI><B>R_LOG_2</B> returns the logarithm base 2 of a real number. 
+  <LI><B>R_MANT</B> computes the "mantissa" or "fraction part" of X. 
+  <LI><B>R_MEMORY</B> manages a set of runtime real variables. 
+  <LI><B>R_MODP</B> returns the nonnegative remainder of real division. 
+  <LI><B>R_NAN</B> returns a real number set to "NaN". 
+  <LI><B>R_POWER</B> computes the P-th power of R, for real R and integer P. 
+  <LI><B>R_RANDOM</B> returns a random real in a given range. 
+  <LI><B>R_ROUND2</B> rounds a number to a specified number of binary digits. 
+  <LI><B>R_ROUNDB</B> rounds a number to a given number of digits in a given 
+  base. 
+  <LI><B>R_ROUNDX</B> rounds a real number to a specified number of decimal 
+  digits. 
+  <LI><B>R_SIGN</B> evaluates the sign of a real argument. 
+  <LI><B>R_SWAP</B> swaps two real values. 
+  <LI><B>R_SWAP3</B> swaps three real items. 
+  <LI><B>R_TO_BIN_EVEN</B> determines the appropriate "bin" for C in [A,B]. 
+  <LI><B>R_TO_BIN_EVEN2</B> determines the appropriate "bin" for C in [A,B]. 
+  <LI><B>R_TO_DHMS</B> converts a real number of days into days, hours, minutes, 
+  seconds. 
+  <LI><B>R_TO_R_DISCRETE</B> maps real X to XD in [XDMIN, XDMAX] with NDX 
+  possible values. 
+  <LI><B>R_UNSWAP3</B> unswaps three real items. 
+  <LI><B>R_ZETA</B> estimates the Riemann Zeta function. 
+  <LI><B>RANDOM_INITIALIZE</B> initializes the FORTRAN 90 random number seed. 
+  <LI><B>RAT_FACTOR</B> factors a rational value into a product of prime 
+  factors. 
+  <LI><B>RCOL_COMPARE</B> compares columns I and J of a real array of column 
+  data. 
+  <LI><B>RCOL_FIND</B> seeks a table column equal to a real vector. 
+  <LI><B>RCOL_INSERT</B> inserts a column into a sorted table, if it is new. 
+  <LI><B>RCOL_MAX</B> returns the maximums of columns of a real array. 
+  <LI><B>RCOL_MEAN</B> returns the means of columns of a real array. 
+  <LI><B>RCOL_MIN</B> returns the minimums of columns of a real array. 
+  <LI><B>RCOL_SORT_A</B> ascending sorts a real array of columns. 
+  <LI><B>RCOL_SORTR_A</B> ascending sorts one column of a 2D array, adjusting 
+  all entries. 
+  <LI><B>RCOL_SUM</B> sums the entries of columns of a real array. 
+  <LI><B>RCOL_SWAP</B> swaps columns I and J of a real array of column data. 
+  <LI><B>RCOL_TO_RVEC</B> converts a matrix of columns into a vector. 
+  <LI><B>RCOL_UNIQ</B> keeps only the unique elements in a sorted real array of 
+  columns. 
+  <LI><B>RCOL_VARIANCE</B> returns the variances of the columns of a real array. 
+
+  <LI><B>RINT_TO_IINT</B> maps a real interval to an integer interval. 
+  <LI><B>RINT_TO_RINT</B> maps a real interval to another real interval. 
+  <LI><B>RMAT_AAT</B> computes the normal matrix A*A'. 
+  <LI><B>RMAT_ATA</B> computes the normal matrix A'*A. 
+  <LI><B>RMAT_CHOLESKY_FACTOR</B> computes the Cholesky factor of a symmetric 
+  matrix. 
+  <LI><B>RMAT_CHOLESKY_SOLVE</B> solves a Cholesky factored linear system A * x 
+  = b. 
+  <LI><B>RMAT_DET_2D</B> computes the determinant of a 2 by 2 matrix. 
+  <LI><B>RMAT_DET_3D</B> computes the determinant of a 3 by 3 matrix. 
+  <LI><B>RMAT_DET_4D</B> computes the determinant of a 4 by 4 matrix. 
+  <LI><B>RMAT_DET_5D</B> computes the determinant of a 5 by 5 matrix. 
+  <LI><B>RMAT_DIAG_ADD_SCALAR</B> adds a scalar to the diagonal of a matrix. 
+  <LI><B>RMAT_DIAG_SET_SCALAR</B> sets the diagonal of a matrix to a scalar 
+  value. 
+  <LI><B>RMAT_DIAG_GET_VECTOR</B> gets the value of the diagonal of a matrix. 
+  <LI><B>RMAT_DIAG_SET_VECTOR</B> sets the diagonal of a matrix to a vector. 
+  <LI><B>RMAT_DIAG_ADD_VECTOR</B> adds a vector to the diagonal of a matrix. 
+  <LI><B>RMAT_EXPAND_LINEAR</B> expands a real array by linear interpolation. 
+  <LI><B>RMAT_GIVENS_POST</B> computes the Givens postmultiplier rotation matrix 
+  G(IROW,JCOL). 
+  <LI><B>RMAT_GIVENS_PRE</B> computes the Givens premultiplier rotation matrix 
+  G(IROW,JCOL). 
+  <LI><B>RMAT_HOUSE_AXH</B> computes A*H where H is a compact Householder 
+  matrix. 
+  <LI><B>RMAT_HOUSE_FORM</B> constructs a Householder matrix from its compact 
+  form. 
+  <LI><B>RMAT_HOUSE_HXA</B> computes H*A where H is a compact Householder 
+  matrix. 
+  <LI><B>RMAT_HOUSE_POST</B> computes a Householder post-multiplier matrix. 
+  <LI><B>RMAT_HOUSE_PRE</B> computes a Householder pre-multiplier matrix. 
+  <LI><B>RMAT_IDENTITY</B> sets the square matrix A to the identity. 
+  <LI><B>RMAT_IMAX</B> returns the location of the maximum of a real M by N 
+  matrix. 
+  <LI><B>RMAT_IMIN</B> returns the location of the minimum of a real M by N 
+  matrix. 
+  <LI><B>RMAT_INVERSE_2D</B> inverts a 2 by 2 real matrix using Cramer's rule. 
+  <LI><B>RMAT_INVERSE_3D</B> inverts a 3 by 3 real matrix using Cramer's rule. 
+  <LI><B>RMAT_INVERSE_4D</B> inverts a 4 by 4 real matrix using Cramer's rule. 
+  <LI><B>RMAT_L1_INVERSE</B> inverts a real unit lower triangular matrix. 
+  <LI><B>RMAT_L_INVERSE</B> inverts a real lower triangular matrix. 
+  <LI><B>RMAT_L_SOLVE</B> solves a lower triangular linear system. 
+  <LI><B>RMAT_LT_SOLVE</B> solves a transposed lower triangular linear system. 
+  <LI><B>RMAT_LU</B> computes the LU factorization of a rectangular matrix. 
+  <LI><B>RMAT_MAT_MULT</B> computes a simple matrix*matrix product C = A*B. 
+  <LI><B>RMAT_MAT_MULT2</B> computes the general matrix*matrix product C = A*B. 
+  <LI><B>RMAT_MAX</B> returns the maximum entry of a real M by N matrix. 
+  <LI><B>RMAT_MAXCOL_MINROW</B> returns the maximum column minimum row of an M 
+  by N matrix. 
+  <LI><B>RMAT_MAXROW_MINCOL</B> returns the maximum row minimum column of an M 
+  by N matrix. 
+  <LI><B>RMAT_MIN</B> returns the minimum entry of an M by N matrix. 
+  <LI><B>RMAT_MINCOL_MAXROW</B> returns the minimum column maximum row of an M 
+  by N matrix. 
+  <LI><B>RMAT_MINROW_MAXCOL</B> returns the minimum row maximum column of an M 
+  by N matrix. 
+  <LI><B>RMAT_MTV</B> multiplies a transposed matrix times a vector 
+  <LI><B>RMAT_MV</B> multiplies a matrix times a vector. 
+  <LI><B>RMAT_NORM1</B> returns the matrix 1-norm of an M by N matrix. 
+  <LI><B>RMAT_NORM2</B> returns the matrix 2-norm of an M by N matrix. 
+  <LI><B>RMAT_NORME</B> returns the EISPACK norm of an M by N matrix. 
+  <LI><B>RMAT_NORMF</B> returns the Frobenius norm of an M by N matrix. 
+  <LI><B>RMAT_NORMI</B> returns the matrix infinity-norm of an M by N matrix. 
+  <LI><B>RMAT_ORTH_RANDOM</B> returns a random orthogonal matrix. 
+  <LI><B>RMAT_POLY_CHAR</B> computes the characteristic polynomial of a matrix. 
+  <LI><B>RMAT_POWER</B> computes A**NPOW, the nonnegative power of a real square 
+  matrix. 
+  <LI><B>RMAT_POWER_METHOD</B> applies the power method to a matrix. 
+  <LI><B>RMAT_PRINT</B> prints a real matrix. 
+  <LI><B>RMAT_PRINT2</B> prints out the M by N matrix A. 
+  <LI><B>RMAT_PRINT_SOME</B> prints out a portion of a dense matrix. 
+  <LI><B>RMAT_RANDOM</B> returns a matrix of uniform random values between AHI 
+  and ALO. 
+  <LI><B>RMAT_SOLVE</B> uses Gauss-Jordan elimination to solve an N by N linear 
+  system. 
+  <LI><B>RMAT_SYMM_JACOBI</B> applies the Jacobi eigenvalue iteration to a 
+  symmetric matrix. 
+  <LI><B>RMAT_SYMM_RANDOM</B> returns a "random" symmetric matrix with given 
+  eigenvalues. 
+  <LI><B>RMAT_TRACE</B> computes the trace of a real matrix. 
+  <LI><B>RMAT_TRANSPOSE</B> transposes a real matrix. 
+  <LI><B>RMAT_U1_INVERSE</B> inverts a real unit upper triangular matrix. 
+  <LI><B>RMAT_U_INVERSE</B> inverts a real upper triangular matrix. 
+  <LI><B>RMAT_VAND2</B> returns the N by N row Vandermonde matrix A. 
+  <LI><B>ROOTS_TO_IPOLY</B> converts polynomial roots to polynomial 
+  coefficients. 
+  <LI><B>ROOTS_TO_RPOLY</B> converts polynomial roots to polynomial 
+  coefficients. 
+  <LI><B>RPOLY2_EX</B> finds the extremal point of a parabola determined by 
+  three points. 
+  <LI><B>RPOLY2_EX2</B> finds the extremal point of a parabola determined by 
+  three points. 
+  <LI><B>RPOLY2_ROOT</B> returns the two roots of a quadratic polynomial. 
+  <LI><B>RPOLY2_RROOT</B> returns the real parts of the roots of a quadratic 
+  polynomial. 
+  <LI><B>RPOLY2_VAL</B> evaluates a parabola defined by three data values. 
+  <LI><B>RPOLY2_VAL2</B> evaluates a parabolic interpolant through tabular data. 
+
+  <LI><B>RPOLY3_ROOT</B> returns the three roots of a cubic polynomial. 
+  <LI><B>RPOLY4_ROOT</B> returns the four roots of a quartic polynomial. 
+  <LI><B>RPOLY_DEGREE</B> returns the degree of a polynomial. 
+  <LI><B>RPOLY_LAGRANGE_COEF</B> returns the coefficients of a Lagrange 
+  polynomial. 
+  <LI><B>RPOLY_LAGRANGE_FACTOR</B> evaluates the polynomial Lagrange factor at a 
+  point. 
+  <LI><B>RPOLY_LAGRANGE_VAL</B> evaluates the IPOL-th Lagrange polynomial. 
+  <LI><B>RPOLY_LS_SET</B> defines a least squares polynomial for given data. 
+  <LI><B>RPOLY_LS_VAL</B> evaluates a least squares polynomial defined by 
+  RPOLY_LS_SET. 
+  <LI><B>RPOLY_LS_VAL2</B> evaluates a least squares polynomial defined by 
+  RPOLY_LS_SET. 
+  <LI><B>RPOLY_PRINT</B> prints out a polynomial. 
+  <LI><B>RPOLY_VAL_HORNER</B> evaluates a polynomial using Horner's method. 
+  <LI><B>RROW_MAX</B> returns the maximums of rows of a real array. 
+  <LI><B>RROW_MEAN</B> returns the means of rows of a real array. 
+  <LI><B>RROW_MIN</B> returns the minimums of rows of a real array. 
+  <LI><B>RROW_SUM</B> returns the sums of the rows of a table. 
+  <LI><B>RROW_SWAP</B> swaps two rows of a table. 
+  <LI><B>RROW_TO_RVEC</B> converts a matrix of rows into a vector. 
+  <LI><B>RROW_VARIANCE</B> returns the variances of the rows of a real array. 
+  <LI><B>RVEC2_COMPARE</B> compares pairs of reals stored in two vectors. 
+  <LI><B>RVEC2_PRINT</B> prints a pair of real vectors. 
+  <LI><B>RVEC2_PRINT_SOME</B> prints "some" of two real vectors. 
+  <LI><B>RVEC2_SORT_A</B> ascending sorts a vector of real (X,Y) data. 
+  <LI><B>RVEC2_SORT_A</B> descending sorts a vector of real (X,Y) data. 
+  <LI><B>RVEC2_SORT_HEAP_INDEX_A</B> does an indexed heap ascending sort of 
+  (X,Y) data. 
+  <LI><B>RVEC2_SUM_IMAX</B> returns the index of the maximum sum of two real 
+  vectors. 
+  <LI><B>RVEC2_UNIQ</B> keeps the unique elements in a array of pairs of reals. 
+  <LI><B>RVEC3_COMPARE</B> compares two R3 vectors. 
+  <LI><B>RVEC3_INDEX_INSERT_UNIQUE</B> inserts a unique R3 value in an indexed 
+  sorted list. 
+  <LI><B>RVEC3_INDEX_SEARCH</B> searches for an R3 value in an indexed sorted 
+  list. 
+  <LI><B>RVEC3_PRINT</B> prints a trio of real vectors. 
+  <LI><B>RVEC3_STRIPLE</B> computes the scalar triple product of three vectors. 
+  <LI><B>RVEC3_VTRIPLE</B> computes the vector triple product of three vectors. 
+  <LI><B>RVEC4_UNIT_EUCLIDEAN_4D</B> Euclidean normalizes a vector in 4D. 
+  <LI><B>RVEC_01_TO_AB</B> shifts and rescales data to lie within given bounds. 
+  <LI><B>RVEC_AB_TO_01</B> shifts and rescales data to lie within [0,1]. 
+  <LI><B>RVEC_AB_TO_CD</B> shifts and rescales data to lie within a given pair 
+  of bounds. 
+  <LI><B>RVEC_AMAX</B> returns the maximum absolute value in a real vector. 
+  <LI><B>RVEC_AMIN</B> returns the minimum absolute value in a real vector. 
+  <LI><B>RVEC_BIN</B> bins a real vector, returning the population of each bin. 
+  <LI><B>RVEC_BIN_EVEN</B> bins a real array into evenly spaced bins. 
+  <LI><B>RVEC_BINNED_REORDER</B> reorders a real binned data vector. 
+  <LI><B>RVEC_BINNED_SORT_A</B> ascending sorts a real binned reordered data 
+  vector. 
+  <LI><B>RVEC_BLEND</B> interpolates a vector, given two vectors and weight 
+  factors. 
+  <LI><B>RVEC_BRACKET</B> searches a sorted array for successive brackets of a 
+  value. 
+  <LI><B>RVEC_BRACKET2</B> searches a sorted array for successive brackets of a 
+  value. 
+  <LI><B>RVEC_BRACKET3</B> finds the interval containing or nearest a given 
+  value. 
+  <LI><B>RVEC_COMPARE</B> compares two real vectors. 
+  <LI><B>RVEC_CONVOLVE_CIRC</B> returns the discrete circular convolution of two 
+  vectors. 
+  <LI><B>RVEC_CROSS_3D</B> computes the cross product of two vectors in 3D. 
+  <LI><B>RVEC_CUM</B> computes the cumulutive sum of the entries of a vector. 
+  <LI><B>RVEC_DIF</B> computes coefficients for estimating the N-th derivative. 
+  <LI><B>RVEC_DISTINCT</B> is true if the entries in a real vector are distinct. 
+
+  <LI><B>RVEC_DOT0_3D</B> computes the dot product of (P1-P2) and (P3-P2) in 3D. 
+
+  <LI><B>RVEC_DOT_2D</B> computes the dot product of a pair of vectors in 2D. 
+  <LI><B>RVEC_DOT_3D</B> computes the dot product of a pair of vectors in 3D. 
+  <LI><B>RVEC_EQ</B> is true if every pair of entries in two vectors is equal. 
+  <LI><B>RVEC_EVEN</B> returns N real values, evenly spaced between ALO and AHI. 
+
+  <LI><B>RVEC_EVEN2</B> linearly interpolates new numbers into a vector of data. 
+
+  <LI><B>RVEC_EVEN3</B> evenly interpolates new data into a vector. 
+  <LI><B>RVEC_EVEN_SELECT</B> returns the I-th of N evenly spaced values in [ 
+  XLO, XHI ]. 
+  <LI><B>RVEC_FRAC</B> searches for the K-th smallest entry in an N-vector. 
+  <LI><B>RVEC_HEAP_A</B> reorders an array of reals into an ascending heap. 
+  <LI><B>RVEC_HEAP_D</B> reorders an array of reals into a descending heap. 
+  <LI><B>RVEC_HOUSE_COLUMN</B> defines a Householder premultiplier that "packs" 
+  a column. 
+  <LI><B>RVEC_IAMAX</B> returns the index of the maximum absolute value in a 
+  real vector. 
+  <LI><B>RVEC_IAMIN</B> returns the index of the minimum absolute value in a 
+  real vector. 
+  <LI><B>RVEC_IDENTITY</B> sets a real vector to the identity vector A(I)=I. 
+  <LI><B>RVEC_IMAX</B> returns the index of the maximum value in a real vector. 
+  <LI><B>RVEC_IMIN</B> returns the index of the minimum value in a real vector. 
+  <LI><B>RVEC_INDEX_DELETE_ALL</B> deletes all occurrences of a real value from 
+  an indexed sorted list. 
+  <LI><B>RVEC_INDEX_DELETE_DUPES</B> deletes duplicate real values from an 
+  indexed sorted list. 
+  <LI><B>RVEC_INDEX_DELETE_ONE</B> deletes one copy of a real value from an 
+  indexed sorted list. 
+  <LI><B>RVEC_INDEX_INSERT</B> inserts a real value in an indexed sorted list. 
+  <LI><B>RVEC_INDEX_INSERT_UNIQUE</B> inserts a unique real value in an indexed 
+  sorted list. 
+  <LI><B>RVEC_INDEX_ORDER</B> sorts an integer vector using an index vector. 
+  <LI><B>RVEC_INDEX_SEARCH</B> searches for a real value in an indexed sorted 
+  list. 
+  <LI><B>RVEC_INDEX_SORT_UNIQUE</B> creates a sort index for a real vector. 
+  <LI><B>RVEC_INSERT</B> inserts a value into an array. 
+  <LI><B>RVEC_MAX</B> returns the maximum value in a real vector. 
+  <LI><B>RVEC_MEAN</B> returns the mean of a real vector. 
+  <LI><B>RVEC_MEDIAN</B> returns the median of an unsorted real vector. 
+  <LI><B>RVEC_MERGE_A</B> merges two ascending sorted real arrays. 
+  <LI><B>RVEC_MIN</B> returns the minimum value of a real array. 
+  <LI><B>RVEC_NORM1</B> returns the 1-norm of a vector. 
+  <LI><B>RVEC_NORM2</B> returns the 2-norm of a vector. 
+  <LI><B>RVEC_NORMI</B> returns the infinity-norm of a vector. 
+  <LI><B>RVEC_ORDER_TYPE</B> determines if a real array is (non)strictly 
+  ascending/descending. 
+  <LI><B>RVEC_PART_QUICK_A</B> reorders a real vector as part of a quick sort. 
+  <LI><B>RVEC_PERMUTE</B> permutes a real vector in place. 
+  <LI><B>RVEC_PERMUTE_RANDOM</B> randomly permutes an real vector. 
+  <LI><B>RVEC_PRINT</B> prints a real vector. 
+  <LI><B>RVEC_PRINT2</B> prints out the N vector A. 
+  <LI><B>RVEC_PRINT_2D</B> prints a 2D vector. 
+  <LI><B>RVEC_PRINT_3D</B> prints a 3D vector. 
+  <LI><B>RVEC_PRINT_SOME</B> prints "some" of a real vector. 
+  <LI><B>RVEC_RANDOM</B> returns a random real vector in a given range. 
+  <LI><B>RVEC_RANGE</B> finds the range of Y's within a restricted X range. 
+  <LI><B>RVEC_RANGE_2</B> updates a range to include a new array. 
+  <LI><B>RVEC_REVERSE</B> reverses the elements of a real vector. 
+  <LI><B>RVEC_ROTATE</B> rotates an object in place. 
+  <LI><B>RVEC_SEARCH_BINARY_A</B> searches an ascending sorted real vector. 
+  <LI><B>RVEC_SORT2_A</B> ascending sorts a real array and adjusts an associated 
+  real array. 
+  <LI><B>RVEC_SORT_BUBBLE_A</B> ascending sorts a real array using bubble sort. 
+  <LI><B>RVEC_SORT_HEAP_A</B> ascending sorts a real array using heap sort. 
+  <LI><B>RVEC_SORT_HEAP_INDEX_A</B> does an indexed heap ascending sort of a 
+  real vector. 
+  <LI><B>RVEC_SORT_HEAP_INDEX_D</B> does an indexed heap descending sort of a 
+  real vector. 
+  <LI><B>RVEC_SORT_INSERT_A</B> ascending sorts a real vector using an insertion 
+  sort. 
+  <LI><B>RVEC_SORT_INSERT_INDEX_A</B> ascending index sorts a real vector using 
+  insertion. 
+  <LI><B>RVEC_SORT_INSERT_INDEX_D</B> descending index sorts a real vector using 
+  insertion. 
+  <LI><B>RVEC_SORT_QUICK_A</B> ascending sorts a real vector using quick sort. 
+  <LI><B>RVEC_SORT_SHELL_A</B> ascending sorts a real array using Shell's sort. 
+  <LI><B>RVEC_SPLIT_SORT</B> "splits" a sorted vector, given a splitting value. 
+  <LI><B>RVEC_SPLIT_UNSORT</B> "splits" an unsorted vector based on a splitting 
+  value. 
+  <LI><B>RVEC_UNIQ</B> keeps only the unique elements in a sorted real array. 
+  <LI><B>RVEC_UNIQ_COUNT</B> counts the unique elements in an unsorted real 
+  array. 
+  <LI><B>RVEC_UNIQ_HIST</B> computes a histogram of the unique elements of a 
+  sorted vector. 
+  <LI><B>RVEC_UNIT_EUCLIDEAN</B> Euclidean normalizes a vector in ND. 
+  <LI><B>RVEC_UNIT_EUCLIDEAN_2D</B> Euclidean normalizes a vector in 2D. 
+  <LI><B>RVEC_UNIT_EUCLIDEAN_3D</B> Euclidean normalizes a vector in 3D. 
+  <LI><B>RVEC_UNIT_SUM</B> normalizes a real vector to have unit sum. 
+  <LI><B>RVEC_VARIANCE</B> returns the variance of a real vector. 
+  <LI><B>S_CAT</B> concatenates two strings to make a third string. 
+  <LI><B>S_EQI</B> is a case insensitive comparison of two strings for equality. 
+
+  <LI><B>S_GTI</B> = STRNG1 is lexically greater than STRNG2. 
+  <LI><B>S_LEI</B> = STRNG1 is lexically less than or equal to STRNG2. 
+  <LI><B>S_LTI</B> = STRNG1 is lexically less than STRNG2. 
+  <LI><B>S_MEMORY</B> manages a set of runtime string variables. 
+  <LI><B>S_SWAP</B> swaps two strings. 
+  <LI><B>SGE_HESS</B> approximates a Hessian matrix via finite differences. 
+  <LI><B>SGE_JAC</B> estimates a dense jacobian matrix of the function FX. 
+  <LI><B>SGE_SOLVE</B> computes the solution of an N by N linear system. 
+  <LI><B>SORT_HEAP_EXTERNAL</B> externally sorts a list of items into linear 
+  order. 
+  <LI><B>SVEC_MERGE_A</B> merges two ascending sorted string arrays. 
+  <LI><B>SVEC_PERMUTE</B> permutes a string vector in place. 
+  <LI><B>SVEC_REVERSE</B> reverses the elements of a string vector. 
+  <LI><B>SVEC_SEARCH_BINARY_A</B> searches an ascending sorted string vector. 
+  <LI><B>SVEC_SORT_HEAP_A</B> ascending sorts a vector of character strings 
+  using heap sort. 
+  <LI><B>SVEC_UNIQ</B> finds the number of unique entries in a vector of 
+  strings. 
+  <LI><B>SVECI_SEARCH_BINARY_A</B> searches an ascending sorted vector of 
+  implicitly capitalized strings. 
+  <LI><B>SVECI_SORT_HEAP_A</B> ascending sorts a vector of implicitly 
+  capitalized strings using heap sort. 
+  <LI><B>TAND</B> returns the tangent of an angle given in degrees. 
+  <LI><B>TVEC_EVEN</B> computes an evenly spaced set of angles between 0 and 
+  2*PI. 
+  <LI><B>TVEC_EVEN_BRACKET</B> computes an evenly spaced set of angles between 
+  THETA1 and THETA2. 
+  <LI><B>TVEC_EVEN_BRACKET2</B> computes an evenly spaced set of angles between 
+  THETA1 and THETA2. 
+  <LI><B>TVEC_EVEN_BRACKET3</B> computes an evenly spaced set of angles between 
+  THETA1 and THETA2. 
+  <LI><B>UNIFORM_01_SAMPLE</B> is a portable random number generator. </LI></UL>
+<P></P>
+<P>Back to <A href="http://www.psc.edu/~burkardt/src/f_src.html">the FORTRAN 
+software page.</A> </P>
+<HR>
+<I>Last revised on 27 March 2001. </I></BODY></HTML>

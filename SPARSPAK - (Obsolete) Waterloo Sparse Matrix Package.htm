@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://www.psc.edu/~burkardt/src/sparspak/sparspak.html -->
+<HTML><HEAD><TITLE>SPARSPAK - (Obsolete) Waterloo Sparse Matrix Package</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>SPARSPAK - (Obsolete) Waterloo Sparse Matrix Package </H1>
+<P><B>SPARSPAK</B> is an old version of the Waterloo Sparse Matrix Package. 
+SPARSPAK can carry out direct solution of large sparse linear systems. Only 
+positive definite matrices should be used with this program. Three different 
+storage methods, and five solution algorithms are supported. </P>
+<P>Reference: 
+<BLOCKQUOTE>Alan George and J W Liu,<BR>Computer Solution of Large Sparse 
+  Positive Definite Systems,<BR>Prentice Hall, 1981. </BLOCKQUOTE>
+<P></P>
+<P>The methods available are: 
+<UL>
+  <LI><B>1WD</B>: One way dissection, partitioned tree storage. 
+  <LI><B>ND</B>: Nested dissection, compressed storage. 
+  <LI><B>QMD</B>: Quotient minimum degree, compressed storage. 
+  <LI><B>RCM</B>: Reverse Cuthill-McKee with envelope storage. 
+  <LI><B>RQT</B>: Refined quotient tree, partitioned tree storage. </LI></UL>
+<P></P>
+<P>This version is not the most recent one. The most recent version requires a 
+license from the University of Waterloo, and includes support for large sparse 
+linear least squares problems and other features. </P>
+<P>Files you may copy include: 
+<UL>
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/sparspak/sparspak.f90">SPARSPAK.F90, 
+  the source code</A> 
+  <LI><A href="http://www.psc.edu/~burkardt/src/sparspak/spaprb.f90">SPAPRB.F90, 
+  a sample problem</A> 
+  <LI><A href="http://www.psc.edu/~burkardt/src/sparspak/spaprb.out">SPAPRB.OUT, 
+  output from the sample problem</A> </LI></UL>
+<P></P>
+<P>The list of routines includes: 
+<UL>
+  <LI><B>ADDCOM</B> can add values to a matrix stored in compressed storage 
+  scheme. 
+  <LI><B>ADDRCM</B> can add values to a matrix stored in the RCM scheme. 
+  <LI><B>ADDRHS</B> adds a quantity to a specific entry of the right hand side. 
+  <LI><B>ADDRQT</B> can add values to a matrix stored in the implicit block 
+  storage scheme. 
+  <LI><B>ADJ_PRINT</B> prints the adjacency information stored in XADJ, ADJNCY. 
+  <LI><B>ADJ_SET</B> sets up the adjacency information XADJ and ADJNCY. 
+  <LI><B>BSHUFL</B> renumbers the nodes of each block to reduce its envelope. 
+  <LI><B>DEGREE</B> computes the degrees of the nodes in the connected 
+  component. 
+  <LI><B>EL_SOLVE</B> solves a lower triangular system stored in the envelope 
+  format. 
+  <LI><B>ES_FACTOR</B> factors a positive definite envelope matrix into 
+  l*l(transpose). 
+  <LI><B>EU_SOLVE</B> solves an upper triangular system stored in the envelope 
+  format. 
+  <LI><B>FNBENV</B> finds the exact envelope structure of the diagonal blocks of 
+
+  <LI><B>FNDSEP</B> finds a small separator for a connected component in a 
+  graph. 
+  <LI><B>FNENV</B> finds the envelope structure of a permuted matrix. 
+  <LI><B>FNLVLS</B> generates a rooted level structure for a masked connected 
+  <LI><B>FNOFNZ</B> finds the column subscripts of the off-block-diagonal 
+  nonzeros 
+  <LI><B>FNROOT</B> finds pseudo-peripheral nodes. 
+  <LI><B>FNSPAN</B> finds the span of a subset in a level subgraph in a level 
+  structure. 
+  <LI><B>FNTADJ</B> determines the quotient tree adjacency structure for a 
+  graph. 
+  <LI><B>FNTENV</B> determines the envelope index vector for the envelope of the 
+
+  <LI><B>FN1WD</B> finds one-way dissectors of a connected component. 
+  <LI><B>GENND</B> finds a nested dissection ordering for a general graph. 
+  <LI><B>GENQMD</B> implements the quotient minimum degree algorithm. 
+  <LI><B>GENRCM</B> finds the reverse Cuthill-Mckee ordering for a general 
+  graph. 
+  <LI><B>GENRQT</B> determines a partitioned ordering for a possibly 
+  disconnected 
+  <LI><B>GEN1WD</B> finds a one-way dissection partitioning for a general graph. 
+
+  <LI><B>GS_FACTOR</B> performs the symmetric factorization for a general sparse 
+
+  <LI><B>GS_SOLVE</B> solves a factored system, stored in compressed subscript 
+  format. 
+  <LI><B>I_SWAP</B> switches two integer values. 
+  <LI><B>IVEC_COPY</B> copies one integer vector into another. 
+  <LI><B>IVEC_REVERSE</B> reverses the elements of an integer vector. 
+  <LI><B>PERM_INVERSE</B> produces the inverse of a given permutation. 
+  <LI><B>PERM_RV</B> should be called once the linear system has been solved and 
+
+  <LI><B>QMDMRG</B> merges indistinguishable nodes in the minimum degree 
+  ordering 
+  <LI><B>QMDQT</B> performs the quotient graph transformation after a node has 
+  <LI><B>QMDRCH</B> determines the reachable set of a node through a given 
+  subset. 
+  <LI><B>QMDUPD</B> performs degree update for a set of nodes in the minimum 
+  <LI><B>RCM</B> numbers a connected component using the reverse Cuthill McKee 
+  algorithm. 
+  <LI><B>REACH</B> determines the reachable set of a node through a subset in a 
+  subgraph. 
+  <LI><B>ROOTLS</B> generates the connected level structure rooted at a given 
+  node. 
+  <LI><B>RQTREE</B> finds a quotient tree ordering for the component specified 
+  <LI><B>SHOMAT</B> displays a symbolic picture of a matrix. 
+  <LI><B>SMB_FACTOR</B> performs symbolic factorization on a permuted linear 
+  system. 
+  <LI><B>SORTS1</B> ascending sorts integers using linear insertion. 
+  <LI><B>SUBRCM</B> finds the reverse cuthill mckee ordering for a given 
+  subgraph. 
+  <LI><B>TS_FACTOR</B> performs the symmetric factorization of a 
+  tree-partitioned system. 
+  <LI><B>TS_SOLVE</B> solves a tree-partitioned factored system by implicit back 
+  substitution. </LI></UL>
+<P></P>
+<P>Return to the <A 
+href="http://www.psc.edu/~burkardt/src/sparspak/fsoftware.html">FORTRAN software 
+page</A>. </P>
+<HR>
+<I>Last revised on 17 June 2000. </I></BODY></HTML>

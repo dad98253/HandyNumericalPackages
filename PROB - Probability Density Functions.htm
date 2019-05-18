@@ -1,0 +1,563 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0047)http://www.psc.edu/~burkardt/src/prob/prob.html -->
+<HTML><HEAD><TITLE>PROB - Probability Density Functions</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>PROB - Probability Density Functions </H1>
+<P><B>PROB</B> contains routines for handling various discrete and continuous 
+probability density functions or "PDF"'s. For a discrete variable, PDF(X) is the 
+probability that the value X will occur; for a continuous variable PDF(X) is the 
+probability density of X. </P>
+<P>The corresponding cumulative density functions or "CDF"'s are also handled. 
+For a discrete or continuous variable, CDF(X) is the probability that the 
+variable takes on a value less than or equal to X. </P>
+<P>For most distributions, the <I>mean</I> or "average value" or "expected 
+value" is also available. For a discrete variable, MEAN is simply the sum of the 
+products X * PDF(X); for a continuous variable, MEAN is the integral of X * 
+PDF(X) over the range. For the distributions covered here, the means are known 
+beforehand, and no summation or integration is required. </P>
+<P>For most distributions, the <I>variance</I> is available. For a discrete 
+variable, the variance is the sum of the products ( X - MEAN )**2 * PDF(X); for 
+a continuous variable, the variance is the integral of ( X - MEAN )**2 * PDF(X) 
+over the range. The square root of the variance is known as the <I>standard 
+deviation</I>. For the distributions covered here, the variances are known 
+beforehand, and no summation or integration is required. </P>
+<P>References: 
+<BLOCKQUOTE>Evans, Hastings and Peacock,<BR>Statistical Distributions 
+</BLOCKQUOTE>
+<BLOCKQUOTE>Johnson, Kotz, and Balakrishnan,<BR>Continuous Univariate 
+  Distributions, second edition,<BR>Wiley, 1994. </BLOCKQUOTE>
+<BLOCKQUOTE><A 
+  href="http://www.geocities.com/~mikemclaughlin/math_stat/Dists/Compendium.html">Michael 
+  McLaughlin</A><BR>A Compendium of Common Probability Distributions </BLOCKQUOTE>
+<BLOCKQUOTE><A href="http://www.az-tec.com/zwillinger">Zwillinger and 
+  Kokoska</A><BR>Standard Probability and Statistical Tables<BR>CRC Press, 2000, 
+  ISBN 1-58488-059-7. </BLOCKQUOTE>
+<P></P>
+<P>Files you may copy include: 
+<UL>
+  <LI><A href="http://www.psc.edu/~burkardt/src/prob/prob.f90">PROB.F90, the 
+  source code</A>; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/prob/probprb.f90">PROBPRB.F90, 
+  the calling program</A>; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/prob/probprb.out">PROBPRB.OUT, 
+  the sample output</A>. </LI></UL>
+<P></P>
+<P>The list of routines includes: 
+<UL>
+  <LI><B>ANGLIT_CDF</B> evaluates the Anglit CDF. 
+  <LI><B>ANGLIT_CDF_INV</B> inverts the Anglit CDF. 
+  <LI><B>ANGLIT_MEAN</B> returns the mean of the Anglit PDF. 
+  <LI><B>ANGLIT_PDF</B> evaluates the Anglit PDF. 
+  <LI><B>ANGLIT_SAMPLE</B> samples the Anglit PDF. 
+  <LI><B>ANGLIT_VARIANCE</B> returns the variance of the Anglit PDF. 
+  <LI><B>ARCSIN_CDF</B> evaluates the Arcsin CDF. 
+  <LI><B>ARCSIN_CDF_INV</B> inverts the Arcsin CDF. 
+  <LI><B>ARCSIN_MEAN</B> returns the mean of the Arcsin PDF. 
+  <LI><B>ARCSIN_PDF</B> evaluates the Arcsin PDF. 
+  <LI><B>ARCSIN_SAMPLE</B> samples the Arcsin PDF. 
+  <LI><B>ARCSIN_VARIANCE</B> returns the variance of the Arcsin PDF. 
+  <LI><B>BENFORD_PDF</B> returns the Benford probability of one or more 
+  significant digits. 
+  <LI><B>BERNOULLI_CDF</B> evaluates the Bernoulli CDF. 
+  <LI><B>BERNOULLI_CDF_INV</B> inverts the Bernoulli CDF. 
+  <LI><B>BERNOULLI_CHECK</B> checks the parameter of the Bernoulli CDF. 
+  <LI><B>BERNOULLI_MEAN</B> returns the mean of the Bernoulli PDF. 
+  <LI><B>BERNOULLI_PDF</B> evaluates the Bernoulli PDF. 
+  <LI><B>BERNOULLI_SAMPLE</B> samples the Bernoulli PDF. 
+  <LI><B>BERNOULLI_VARIANCE</B> returns the variance of the Bernoulli PDF. 
+  <LI><B>BETA</B> returns the value of the Beta function. 
+  <LI><B>BETA_BINOMIAL_CDF</B> evaluates the Beta Binomial CDF. 
+  <LI><B>BETA_BINOMIAL_CDF_INV</B> inverts the Beta Binomial CDF. 
+  <LI><B>BETA_BINOMIAL_CHECK</B> checks the parameters of the Beta Binomial PDF. 
+
+  <LI><B>BETA_BINOMIAL_MEAN</B> returns the mean of the Beta Binomial PDF. 
+  <LI><B>BETA_BINOMIAL_PDF</B> evaluates the Beta Binomial PDF. 
+  <LI><B>BETA_BINOMIAL_SAMPLE</B> samples the Beta Binomial CDF. 
+  <LI><B>BETA_BINOMIAL_VARIANCE</B> returns the variance of the Beta Binomial 
+  PDF. 
+  <LI><B>BETA_CDF</B> evaluates the Beta CDF. 
+  <LI><B>BETA_CDF_INV</B> inverts the Beta CDF. 
+  <LI><B>BETA_CHECK</B> checks the parameters of the Beta PDF. 
+  <LI><B>BETA_INC</B> returns the value of the incomplete Beta function. 
+  <LI><B>BETA_MEAN</B> returns the mean of the Beta PDF. 
+  <LI><B>BETA_PASCAL_CDF</B> evaluates the Beta Pascal CDF. 
+  <LI><B>BETA_PASCAL_CDF_INV</B> inverts the Beta Pascal CDF. 
+  <LI><B>BETA_PASCAL_CHECK</B> checks the parameters of the Beta Pascal PDF. 
+  <LI><B>BETA_PASCAL_MEAN</B> returns the mean of the Beta Pascal PDF. 
+  <LI><B>BETA_PASCAL_PDF</B> evaluates the Beta Pascal PDF. 
+  <LI><B>BETA_PASCAL_SAMPLE</B> samples the Beta Pascal CDF. 
+  <LI><B>BETA_PASCAL_VARIANCE</B> returns the variance of the Beta Pascal PDF. 
+  <LI><B>BETA_PDF</B> evaluates the Beta PDF. 
+  <LI><B>BETA_SAMPLE</B> samples the Beta PDF. 
+  <LI><B>BETA_VARIANCE</B> returns the variance of the Beta PDF. 
+  <LI><B>BINOMIAL_CDF</B> evaluates the Binomial CDF. 
+  <LI><B>BINOMIAL_CDF_INV</B> inverts the Binomial CDF. 
+  <LI><B>BINOMIAL_CHECK</B> checks the parameter of the Binomial PDF. 
+  <LI><B>BINOMIAL_COEF</B> computes the Binomial coefficient C(N,K). 
+  <LI><B>BINOMIAL_COEF_LOG</B> computes the logarithm of the Binomial 
+  coefficient. 
+  <LI><B>BINOMIAL_MEAN</B> returns the mean of the Binomial PDF. 
+  <LI><B>BINOMIAL_PDF</B> evaluates the Binomial PDF. 
+  <LI><B>BINOMIAL_SAMPLE</B> samples the Binomial PDF. 
+  <LI><B>BINOMIAL_VARIANCE</B> returns the variance of the Binomial PDF. 
+  <LI><B>BRADFORD_CDF</B> evaluates the Bradford CDF. 
+  <LI><B>BRADFORD_CDF_INV</B> inverts the Bradford CDF. 
+  <LI><B>BRADFORD_CHECK</B> checks the parameters of the Bradford PDF. 
+  <LI><B>BRADFORD_MEAN</B> returns the mean of the Bradford PDF. 
+  <LI><B>BRADFORD_PDF</B> evaluates the Bradford PDF. 
+  <LI><B>BRADFORD_SAMPLE</B> samples the Bradford PDF. 
+  <LI><B>BRADFORD_VARIANCE</B> returns the variance of the Bradford PDF. 
+  <LI><B>BURR_CDF</B> evaluates the Burr CDF. 
+  <LI><B>BURR_CDF_INV</B> inverts the Burr CDF. 
+  <LI><B>BURR_CHECK</B> checks the parameters of the Burr CDF. 
+  <LI><B>BURR_MEAN</B> returns the mean of the Burr PDF. 
+  <LI><B>BURR_PDF</B> evaluates the Burr PDF. 
+  <LI><B>BURR_SAMPLE</B> samples the Burr PDF. 
+  <LI><B>BURR_VARIANCE</B> returns the variance of the Burr PDF. 
+  <LI><B>CAUCHY_CDF</B> evaluates the Cauchy CDF. 
+  <LI><B>CAUCHY_CDF_INV</B> inverts the Cauchy CDF. 
+  <LI><B>CAUCHY_CHECK</B> checks the parameters of the Cauchy CDF. 
+  <LI><B>CAUCHY_MEAN</B> returns the mean of the Cauchy PDF. 
+  <LI><B>CAUCHY_PDF</B> evaluates the Cauchy PDF. 
+  <LI><B>CAUCHY_SAMPLE</B> samples the Cauchy PDF. 
+  <LI><B>CAUCHY_VARIANCE</B> returns the variance of the Cauchy PDF. 
+  <LI><B>CHI_CDF</B> evaluates the Chi CDF. 
+  <LI><B>CHI_CDF_INV</B> inverts the Chi CDF. 
+  <LI><B>CHI_CHECK</B> checks the parameters of the Chi CDF. 
+  <LI><B>CHI_MEAN</B> returns the mean of the Chi PDF. 
+  <LI><B>CHI_PDF</B> evaluates the Chi PDF. 
+  <LI><B>CHI_SAMPLE</B> samples the Chi PDF. 
+  <LI><B>CHI_VARIANCE</B> returns the variance of the Chi PDF. 
+  <LI><B>CHISQUARE_CENTRAL_CDF</B> evaluates the chi-squared CDF. 
+  <LI><B>CHISQUARE_CENTRAL_CDF_INV</B> inverts the chi-squared PDF. 
+  <LI><B>CHISQUARE_CENTRAL_CHECK</B> checks the parameter of the central 
+  Chi-Squared PDF. 
+  <LI><B>CHISQUARE_CENTRAL_MEAN</B> returns the mean of the central Chi-Squared 
+  PDF. 
+  <LI><B>CHISQUARE_CENTRAL_PDF</B> evaluates the central Chi-Squared PDF. 
+  <LI><B>CHISQUARE_CENTRAL_SAMPLE</B> samples the central Chisquare PDF. 
+  <LI><B>CHISQUARE_CENTRAL_VARIANCE</B> returns the variance of the central 
+  Chisquare PDF. 
+  <LI><B>CHISQUARE_NONCENTRAL_CHECK</B> checks the parameters of the noncentral 
+  Chi-Squared PDF. 
+  <LI><B>CHISQUARE_NONCENTRAL_MEAN</B> returns the mean of the noncentral 
+  Chi-Squared PDF. 
+  <LI><B>CHISQUARE_NONCENTRAL_SAMPLE</B> samples the noncentral Chisquare PDF. 
+  <LI><B>CHISQUARE_NONCENTRAL_VARIANCE</B> returns the variance of the 
+  noncentral Chi-Squared PDF. 
+  <LI><B>CIRCLE_SAMPLE</B> samples points from a circle. 
+  <LI><B>CIRCULAR_NORMAL_01_MEAN</B> returns the mean of the Circular Normal 01 
+  PDF. 
+  <LI><B>CIRCULAR_NORMAL_01_PDF</B> evaluates the Circular Normal 01 PDF. 
+  <LI><B>CIRCULAR_NORMAL_01_SAMPLE</B> samples the Circular Normal 01 PDF. 
+  <LI><B>CIRCULAR_NORMAL_01_VARIANCE</B> returns the variance of the Circular 
+  Normal 01 PDF. 
+  <LI><B>COSINE_CDF</B> evaluates the Cosine CDF. 
+  <LI><B>COSINE_CDF_INV</B> inverts the Cosine CDF. 
+  <LI><B>COSINE_CHECK</B> checks the parameters of the Cosine CDF. 
+  <LI><B>COSINE_MEAN</B> returns the mean of the Cosine PDF. 
+  <LI><B>COSINE_PDF</B> evaluates the Cosine PDF. 
+  <LI><B>COSINE_SAMPLE</B> samples the Cosine PDF. 
+  <LI><B>COSINE_VARIANCE</B> returns the variance of the Cosine PDF. 
+  <LI><B>COUPON_SIMULATE</B> simulates the coupon collector's problem. 
+  <LI><B>CSC</B> returns the cosecant of X. 
+  <LI><B>DERANGED_CDF</B> evaluates the Deranged CDF. 
+  <LI><B>DERANGED_CDF_INV</B> inverts the Deranged CDF. 
+  <LI><B>DERANGED_CHECK</B> checks the parameter of the Deranged PDF. 
+  <LI><B>DERANGED_ENUM</B> returns the number of derangements of N objects. 
+  <LI><B>DERANGED_MEAN</B> returns the mean of the Deranged CDF. 
+  <LI><B>DERANGED_PDF</B> evaluates the Deranged PDF. 
+  <LI><B>DERANGED_SAMPLE</B> samples the Deranged PDF. 
+  <LI><B>DERANGED_VARIANCE</B> returns the variance of the Deranged CDF. 
+  <LI><B>DIGAMMA</B> calculates the digamma or Psi function = d ( LOG ( GAMMA ( 
+  X ) ) ) / dX 
+  <LI><B>DIPOLE_CDF</B> evaluates the Dipole CDF. 
+  <LI><B>DIPOLE_CDF_INV</B> inverts the Dipole CDF. 
+  <LI><B>DIPOLE_CHECK</B> checks the parameters of the Dipole CDF. 
+  <LI><B>DIPOLE_PDF</B> evaluates the Dipole PDF. 
+  <LI><B>DIPOLE_SAMPLE</B> samples the Dipole PDF. 
+  <LI><B>DIRICHLET_CHECK</B> checks the parameters of the Dirichlet PDF. 
+  <LI><B>DIRICHLET_MEAN</B> returns the means of the Dirichlet PDF. 
+  <LI><B>DIRICHLET_MIX_CHECK</B> checks the parameters of a Dirichlet mixture 
+  PDF. 
+  <LI><B>DIRICHLET_MIX_MEAN</B> returns the means of a Dirichlet mixture PDF. 
+  <LI><B>DIRICHLET_MIX_PDF</B> evaluates a Dirichlet mixture PDF. 
+  <LI><B>DIRICHLET_MIX_SAMPLE</B> samples a Dirichlet mixture PDF. 
+  <LI><B>DIRICHLET_MOMENT2</B> returns the second moments of the Dirichlet PDF. 
+  <LI><B>DIRICHLET_MULTINOMIAL_PDF</B> evaluates a Dirichlet Multinomial PDF. 
+  <LI><B>DIRICHLET_PDF</B> evaluates the Dirichlet PDF. 
+  <LI><B>DIRICHLET_SAMPLE</B> samples the Dirichlet PDF. 
+  <LI><B>DIRICHLET_VARIANCE</B> returns the variances of the Dirichlet PDF. 
+  <LI><B>DISCRETE_CDF</B> evaluates the Discrete CDF. 
+  <LI><B>DISCRETE_CDF_INV</B> inverts the Discrete CDF. 
+  <LI><B>DISCRETE_CHECK</B> checks the parameters of the Discrete CDF. 
+  <LI><B>DISCRETE_MEAN</B> evaluates the mean of the Discrete PDF. 
+  <LI><B>DISCRETE_PDF</B> evaluates the Discrete PDF. 
+  <LI><B>DISCRETE_SAMPLE</B> samples the Discrete PDF. 
+  <LI><B>DISCRETE_VARIANCE</B> evaluates the variance of the Discrete PDF. 
+  <LI><B>E_CONSTANT</B> returns the value of E. 
+  <LI><B>ERLANG_CDF</B> evaluates the Erlang CDF. 
+  <LI><B>ERLANG_CDF_INV</B> inverts the Erlang CDF. 
+  <LI><B>ERLANG_CHECK</B> checks the parameters of the Erlang PDF. 
+  <LI><B>ERLANG_MEAN</B> returns the mean of the Erlang PDF. 
+  <LI><B>ERLANG_PDF</B> evaluates the Erlang PDF. 
+  <LI><B>ERLANG_SAMPLE</B> samples the Erlang PDF. 
+  <LI><B>ERLANG_VARIANCE</B> returns the variance of the Erlang PDF. 
+  <LI><B>ERROR_FUNCTION</B> evaluates the error function ERF(X). 
+  <LI><B>EULER_CONSTANT</B> returns the value of the Euler-Mascheroni constant. 
+  <LI><B>EXPONENTIAL_01_CDF</B> evaluates the Exponential 01 CDF. 
+  <LI><B>EXPONENTIAL_01_CDF_INV</B> inverts the Exponential 01 CDF. 
+  <LI><B>EXPONENTIAL_01_MEAN</B> returns the mean of the Exponential 01 PDF. 
+  <LI><B>EXPONENTIAL_01_PDF</B> evaluates the Exponential 01 PDF. 
+  <LI><B>EXPONENTIAL_01_SAMPLE</B> samples the Exponential PDF with parameter 1. 
+
+  <LI><B>EXPONENTIAL_01_VARIANCE</B> returns the variance of the Exponential 01 
+  PDF. 
+  <LI><B>EXPONENTIAL_CDF</B> evaluates the Exponential CDF. 
+  <LI><B>EXPONENTIAL_CDF_INV</B> inverts the Exponential CDF. 
+  <LI><B>EXPONENTIAL_CHECK</B> checks the parameters of the Exponential CDF. 
+  <LI><B>EXPONENTIAL_MEAN</B> returns the mean of the Exponential PDF. 
+  <LI><B>EXPONENTIAL_PDF</B> evaluates the Exponential PDF. 
+  <LI><B>EXPONENTIAL_SAMPLE</B> samples the Exponential PDF. 
+  <LI><B>EXPONENTIAL_VARIANCE</B> returns the variance of the Exponential PDF. 
+  <LI><B>EXTREME_CDF</B> evaluates the Extreme Value CDF. 
+  <LI><B>EXTREME_CDF_INV</B> inverts the Extreme Value CDF. 
+  <LI><B>EXTREME_CHECK</B> checks the parameters of the Extreme Value CDF. 
+  <LI><B>EXTREME_MEAN</B> returns the mean of the Extreme Value PDF. 
+  <LI><B>EXTREME_PDF</B> evaluates the Extreme Value PDF. 
+  <LI><B>EXTREME_SAMPLE</B> samples the Extreme Value PDF. 
+  <LI><B>EXTREME_VARIANCE</B> returns the variance of the Extreme Value PDF. 
+  <LI><B>F_CENTRAL_CDF</B> evaluates the F CDF. 
+  <LI><B>F_CENTRAL_MEAN</B> returns the mean of the F PDF. 
+  <LI><B>F_CENTRAL_PDF</B> evaluates the F PDF. 
+  <LI><B>F_CENTRAL_SAMPLE</B> samples the F PDF. 
+  <LI><B>F_CENTRAL_VARIANCE</B> returns the variance of the F PDF. 
+  <LI><B>F_NONCENTRAL_MEAN</B> returns the mean of the F PDF. 
+  <LI><B>F_NONCENTRAL_VARIANCE</B> returns the variance of the F PDF. 
+  <LI><B>FACTORIAL_LOG</B> returns the logarithm of N!. 
+  <LI><B>FACTORIAL_STIRLING</B> computes Stirling's approximation to N!. 
+  <LI><B>FISK_CDF</B> evaluates the Fisk CDF. 
+  <LI><B>FISK_CDF_INV</B> inverts the Fisk CDF. 
+  <LI><B>FISK_CHECK</B> checks the parameters of the Fisk PDF. 
+  <LI><B>FISK_MEAN</B> returns the mean of the Fisk PDF. 
+  <LI><B>FISK_PDF</B> evaluates the Fisk PDF. 
+  <LI><B>FISK_SAMPLE</B> samples the Fisk PDF. 
+  <LI><B>FISK_VARIANCE</B> returns the variance of the Fisk PDF. 
+  <LI><B>FOLDED_NORMAL_CDF</B> evaluates the Folded Normal CDF. 
+  <LI><B>FOLDED_NORMAL_CDF_INV</B> inverts the Folded Normal CDF. 
+  <LI><B>FOLDED_NORMAL_CHECK</B> checks the parameters of the Folded Normal CDF. 
+
+  <LI><B>FOLDED_NORMAL_MEAN</B> returns the mean of the Folded Normal PDF. 
+  <LI><B>FOLDED_NORMAL_PDF</B> evaluates the Folded Normal PDF. 
+  <LI><B>FOLDED_NORMAL_SAMPLE</B> samples the Folded Normal PDF. 
+  <LI><B>FOLDED_NORMAL_VARIANCE</B> returns the variance of the Folded Normal 
+  PDF. 
+  <LI><B>GAMMA</B> calculates the Gamma function for a real argument X. 
+  <LI><B>GAMMA_CDF</B> evaluates the Gamma CDF. 
+  <LI><B>GAMMA_CHECK</B> checks the parameters of the Gamma PDF. 
+  <LI><B>GAMMA_INC</B> computes the incomplete Gamma function. 
+  <LI><B>GAMMA_LOG</B> calculates the natural logarithm of GAMMA ( X ) for 
+  positive X. 
+  <LI><B>GAMMA_LOG_INT</B> computes the logarithm of Gamma of an integer N. 
+  <LI><B>GAMMA_MEAN</B> returns the mean of the Gamma PDF. 
+  <LI><B>GAMMA_PDF</B> evaluates the Gamma PDF. 
+  <LI><B>GAMMA_SAMPLE</B> samples the Gamma PDF. 
+  <LI><B>GAMMA_VARIANCE</B> returns the variance of the Gamma PDF. 
+  <LI><B>GENLOGISTIC_CDF</B> evaluates the Generalized Logistic CDF. 
+  <LI><B>GENLOGISTIC_CDF_INV</B> inverts the Generalized Logistic CDF. 
+  <LI><B>GENLOGISTIC_CHECK</B> checks the parameters of the Generalized Logistic 
+  CDF. 
+  <LI><B>GENLOGISTIC_MEAN</B> returns the mean of the Generalized Logistic PDF. 
+  <LI><B>GENLOGISTIC_PDF</B> evaluates the Generalized Logistic PDF. 
+  <LI><B>GENLOGISTIC_SAMPLE</B> samples the Generalized Logistic PDF. 
+  <LI><B>GENLOGISTIC_VARIANCE</B> returns the variance of the Generalized 
+  Logistic PDF. 
+  <LI><B>GEOMETRIC_CDF</B> evaluates the Geometric CDF. 
+  <LI><B>GEOMETRIC_CDF_INV</B> inverts the Geometric CDF. 
+  <LI><B>GEOMETRIC_CHECK</B> checks the parameter of the Geometric CDF. 
+  <LI><B>GEOMETRIC_MEAN</B> returns the mean of the Geometric PDF. 
+  <LI><B>GEOMETRIC_PDF</B> evaluates the Geometric PDF. 
+  <LI><B>GEOMETRIC_SAMPLE</B> samples the Geometric PDF. 
+  <LI><B>GEOMETRIC_VARIANCE</B> returns the variance of the Geometric PDF. 
+  <LI><B>GET_SEED</B> returns a seed for the random number generator. 
+  <LI><B>GOMPERTZ_CDF</B> evaluates the Gompertz CDF. 
+  <LI><B>GOMPERTZ_CDF_INV</B> inverts the Gompertz CDF. 
+  <LI><B>GOMPERTZ_CHECK</B> checks the parameters of the Gompertz PDF. 
+  <LI><B>GOMPERTZ_PDF</B> evaluates the Gompertz PDF. 
+  <LI><B>GOMPERTZ_SAMPLE</B> samples the Gompertz PDF. 
+  <LI><B>GUMBEL_CDF</B> evaluates the Gumbel CDF. 
+  <LI><B>GUMBEL_CDF_INV</B> inverts the Gumbel CDF. 
+  <LI><B>GUMBEL_MEAN</B> returns the mean of the Gumbel PDF. 
+  <LI><B>GUMBEL_PDF</B> evaluates the Gumbel PDF. 
+  <LI><B>GUMBEL_SAMPLE</B> samples the Gumbel PDF. 
+  <LI><B>GUMBEL_VARIANCE</B> returns the variance of the Gumbel PDF. 
+  <LI><B>HALF_NORMAL_CDF</B> evaluates the Half Normal CDF. 
+  <LI><B>HALF_NORMAL_CDF_INV</B> inverts the Half Normal CDF. 
+  <LI><B>HALF_NORMAL_CHECK</B> checks the parameters of the Half Normal PDF. 
+  <LI><B>HALF_NORMAL_MEAN</B> returns the mean of the Half Normal PDF. 
+  <LI><B>HALF_NORMAL_PDF</B> evaluates the Half Normal PDF. 
+  <LI><B>HALF_NORMAL_SAMPLE</B> samples the Half Normal PDF. 
+  <LI><B>HALF_NORMAL_VARIANCE</B> returns the variance of the Half Normal PDF. 
+  <LI><B>HYPERGEOMETRIC_CDF</B> evaluates the Hypergeometric CDF. 
+  <LI><B>HYPERGEOMETRIC_CHECK</B> checks the parameters of the Hypergeometric 
+  CDF. 
+  <LI><B>HYPERGEOMETRIC_MEAN</B> returns the mean of the Hypergeometric PDF. 
+  <LI><B>HYPERGEOMETRIC_PDF</B> evaluates the Hypergeometric PDF. 
+  <LI><B>HYPERGEOMETRIC_SAMPLE</B> samples the Hypergeometric PDF. 
+  <LI><B>HYPERGEOMETRIC_VARIANCE</B> returns the variance of the Hypergeometric 
+  PDF. 
+  <LI><B>I_FACTORIAL</B> returns N!. 
+  <LI><B>I_RANDOM</B> returns a random integer in a given range. 
+  <LI><B>I_ROUNDUP</B> rounds a real value "up" to the nearest integer. 
+  <LI><B>I0</B> evaluates the modified Bessel function of the first kind and 
+  order zero. 
+  <LI><B>INVERSE_GAUSSIAN_CDF</B> evaluates the Inverse Gaussian CDF. 
+  <LI><B>INVERSE_GAUSSIAN_CHECK</B> checks the parameters of the Inverse 
+  Gaussian CDF. 
+  <LI><B>INVERSE_GAUSSIAN_MEAN</B> returns the mean of the Inverse Gaussian PDF. 
+
+  <LI><B>INVERSE_GAUSSIAN_PDF</B> evaluates the Inverse Gaussian PDF. 
+  <LI><B>INVERSE_GAUSSIAN_SAMPLE</B> samples the Inverse Gaussian PDF. 
+  <LI><B>INVERSE_GAUSSIAN_VARIANCE</B> returns the variance of the Inverse 
+  Gaussian PDF. 
+  <LI><B>IROW_MAX</B> returns the maximums of rows of an integer array. 
+  <LI><B>IROW_MEAN</B> returns the means of the rows of a table. 
+  <LI><B>IROW_MIN</B> returns the minimums of rows of an integer array. 
+  <LI><B>IROW_VARIANCE</B> returns the variances of the rows of a table. 
+  <LI><B>IVEC_MAX</B> computes the maximum element of an integer array. 
+  <LI><B>IVEC_MEAN</B> returns the mean of an integer vector. 
+  <LI><B>IVEC_MIN</B> computes the minimum element of an integer array. 
+  <LI><B>IVEC_VARIANCE</B> returns the variance of an integer vector. 
+  <LI><B>LAPLACE_CDF</B> evaluates the Laplace CDF. 
+  <LI><B>LAPLACE_CDF_INV</B> inverts the Laplace CDF. 
+  <LI><B>LAPLACE_CHECK</B> checks the parameters of the Laplace PDF. 
+  <LI><B>LAPLACE_MEAN</B> returns the mean of the Laplace PDF. 
+  <LI><B>LAPLACE_PDF</B> evaluates the Laplace PDF. 
+  <LI><B>LAPLACE_SAMPLE</B> samples the Laplace PDF. 
+  <LI><B>LAPLACE_VARIANCE</B> returns the variance of the Laplace PDF. 
+  <LI><B>LERCH</B> estimates the Lerch transcendent function. 
+  <LI><B>LOGISTIC_CDF</B> evaluates the Logistic CDF. 
+  <LI><B>LOGISTIC_CDF_INV</B> inverts the Logistic CDF. 
+  <LI><B>LOGISTIC_CHECK</B> checks the parameters of the Logistic CDF. 
+  <LI><B>LOGISTIC_MEAN</B> returns the mean of the Logistic PDF. 
+  <LI><B>LOGISTIC_PDF</B> evaluates the Logistic PDF. 
+  <LI><B>LOGISTIC_SAMPLE</B> samples the Logistic PDF. 
+  <LI><B>LOGISTIC_VARIANCE</B> returns the variance of the Logistic PDF. 
+  <LI><B>LOGNORMAL_CDF</B> evaluates the Lognormal CDF. 
+  <LI><B>LOGNORMAL_CDF_INV</B> inverts the Lognormal CDF. 
+  <LI><B>LOGNORMAL_CHECK</B> checks the parameters of the Lognormal PDF. 
+  <LI><B>LOGNORMAL_MEAN</B> returns the mean of the Lognormal PDF. 
+  <LI><B>LOGNORMAL_PDF</B> evaluates the Lognormal PDF. 
+  <LI><B>LOGNORMAL_SAMPLE</B> samples the Lognormal PDF. 
+  <LI><B>LOGNORMAL_VARIANCE</B> returns the variance of the Lognormal PDF. 
+  <LI><B>LOGSERIES_CDF</B> evaluates the Logarithmic Series CDF. 
+  <LI><B>LOGSERIES_CDF_INV</B> inverts the Logarithmic Series CDF. 
+  <LI><B>LOGSERIES_CHECK</B> checks the parameter of the Logarithmic Series PDF. 
+
+  <LI><B>LOGSERIES_MEAN</B> returns the mean of the Logarithmic Series PDF. 
+  <LI><B>LOGSERIES_PDF</B> evaluates the Logarithmic Series PDF. 
+  <LI><B>LOGSERIES_SAMPLE</B> samples the Logarithmic Series PDF. 
+  <LI><B>LOGSERIES_VARIANCE</B> returns the variance of the Logarithmic Series 
+  PDF. 
+  <LI><B>LORENTZ_CDF</B> evaluates the Lorentz CDF. 
+  <LI><B>LORENTZ_CDF_INV</B> inverts the Lorentz CDF. 
+  <LI><B>LORENTZ_MEAN</B> returns the mean of the Lorentz PDF. 
+  <LI><B>LORENTZ_PDF</B> evaluates the Lorentz PDF. 
+  <LI><B>LORENTZ_SAMPLE</B> samples the Lorentz PDF. 
+  <LI><B>LORENTZ_VARIANCE</B> returns the variance of the Lorentz PDF. 
+  <LI><B>MAXWELL_CDF</B> evaluates the Maxwell CDF. 
+  <LI><B>MAXWELL_CDF_INV</B> inverts the Maxwell CDF. 
+  <LI><B>MAXWELL_CHECK</B> checks the parameters of the Maxwell CDF. 
+  <LI><B>MAXWELL_MEAN</B> returns the mean of the Maxwell PDF. 
+  <LI><B>MAXWELL_PDF</B> evaluates the Maxwell PDF. 
+  <LI><B>MAXWELL_SAMPLE</B> samples the Maxwell PDF. 
+  <LI><B>MAXWELL_VARIANCE</B> returns the variance of the Maxwell PDF. 
+  <LI><B>MULTICOEF_CHECK</B> checks the parameters of the multinomial 
+  coefficient. 
+  <LI><B>MULTINOMIAL_COEF1</B> computes a Multinomial coefficient. 
+  <LI><B>MULTINOMIAL_COEF2</B> computes a Multinomial coefficient. 
+  <LI><B>MULTINOMIAL_CHECK</B> checks the parameters of the Multinomial PDF. 
+  <LI><B>MULTINOMIAL_COVARIANCE</B> returns the covariances of the Multinomial 
+  PDF. 
+  <LI><B>MULTINOMIAL_MEAN</B> returns the means of the Multinomial PDF. 
+  <LI><B>MULTINOMIAL_PDF</B> computes a Multinomial PDF. 
+  <LI><B>MULTINOMIAL_SAMPLE</B> samples the Multinomial PDF. 
+  <LI><B>MULTINOMIAL_VARIANCE</B> returns the variances of the Multinomial PDF. 
+  <LI><B>MULTIVARIATE_NORMAL_SAMPLE</B> samples the Multivariate Normal PDF. 
+  <LI><B>NAKAGAMI_CDF</B> evaluates the Nakagami CDF. 
+  <LI><B>NAKAGAMI_CHECK</B> checks the parameters of the Nakagami PDF. 
+  <LI><B>NAKAGAMI_MEAN</B> returns the mean of the Nakagami PDF. 
+  <LI><B>NAKAGAMI_PDF</B> evaluates the Nakagami PDF. 
+  <LI><B>NAKAGAMI_VARIANCE</B> returns the variance of the Nakagami PDF. 
+  <LI><B>NORMAL_01_CDF</B> evaluates the Normal 01 CDF. 
+  <LI><B>NORMAL_01_CDF_INV</B> inverts the Normal 01 CDF. 
+  <LI><B>NORMAL_01_MEAN</B> returns the mean of the Normal 01 PDF. 
+  <LI><B>NORMAL_01_PDF</B> evaluates the Normal 01 PDF. 
+  <LI><B>NORMAL_01_SAMPLE</B> samples the Normal 01 PDF. 
+  <LI><B>NORMAL_01_VARIANCE</B> returns the variance of the Normal 01 PDF. 
+  <LI><B>NORMAL_CDF</B> evaluates the Normal CDF. 
+  <LI><B>NORMAL_CDF_INV</B> inverts the Normal CDF. 
+  <LI><B>NORMAL_CHECK</B> checks the parameters of the Normal PDF. 
+  <LI><B>NORMAL_MEAN</B> returns the mean of the Normal PDF. 
+  <LI><B>NORMAL_PDF</B> evaluates the Normal PDF. 
+  <LI><B>NORMAL_SAMPLE</B> samples the Normal PDF. 
+  <LI><B>NORMAL_VARIANCE</B> returns the variance of the Normal PDF. 
+  <LI><B>PARETO_CDF</B> evaluates the Pareto CDF. 
+  <LI><B>PARETO_CDF_INV</B> inverts the Pareto CDF. 
+  <LI><B>PARETO_CHECK</B> checks the parameters of the Pareto CDF. 
+  <LI><B>PARETO_MEAN</B> returns the mean of the Pareto PDF. 
+  <LI><B>PARETO_PDF</B> evaluates the Pareto PDF. 
+  <LI><B>PARETO_SAMPLE</B> samples the Pareto PDF. 
+  <LI><B>PARETO_VARIANCE</B> returns the variance of the Pareto PDF. 
+  <LI><B>PASCAL_CDF</B> evaluates the Pascal CDF. 
+  <LI><B>PASCAL_CDF_INV</B> inverts the Pascal CDF. 
+  <LI><B>PASCAL_CHECK</B> checks the parameters of the Pascal PDF. 
+  <LI><B>PASCAL_MEAN</B> returns the mean of the Pascal PDF. 
+  <LI><B>PASCAL_PDF</B> evaluates the Pascal PDF. 
+  <LI><B>PASCAL_SAMPLE</B> samples the Pascal PDF. 
+  <LI><B>PASCAL_VARIANCE</B> returns the variance of the Pascal PDF. 
+  <LI><B>PEARSON_05_CHECK</B> checks the parameters of the Pearson 5 PDF. 
+  <LI><B>PEARSON_05_MEAN</B> evaluates the mean of the Pearson 5 PDF. 
+  <LI><B>PEARSON_05_PDF</B> evaluates the Pearson 5 PDF. 
+  <LI><B>PEARSON_05_SAMPLE</B> samples the Pearson 5 PDF. 
+  <LI><B>PI</B> returns the value of Pi. 
+  <LI><B>PLANCK_MEAN</B> returns the mean of the Planck PDF. 
+  <LI><B>PLANCK_PDF</B> evaluates the Planck PDF. 
+  <LI><B>PLANCK_SAMPLE</B> samples the Planck PDF. 
+  <LI><B>PLANCK_VARIANCE</B> returns the variance of the Planck PDF. 
+  <LI><B>POISSON_CDF</B> evaluates the Poisson CDF. 
+  <LI><B>POISSON_CDF_INV</B> inverts the Poisson CDF. 
+  <LI><B>POISSON_CHECK</B> checks the parameter of the Poisson PDF. 
+  <LI><B>POISSON_MEAN</B> returns the mean of the Poisson PDF. 
+  <LI><B>POISSON_PDF</B> evaluates the Poisson PDF. 
+  <LI><B>POISSON_SAMPLE</B> samples the Poisson PDF. 
+  <LI><B>POISSON_VARIANCE</B> returns the variance of the Poisson PDF. 
+  <LI><B>POLY_VAL</B> evaluates a polynomial using Horner's method. 
+  <LI><B>POWER_CDF</B> evaluates the Power CDF. 
+  <LI><B>POWER_CDF_INV</B> inverts the Power CDF. 
+  <LI><B>POWER_CHECK</B> checks the parameter of the Power PDF. 
+  <LI><B>POWER_MEAN</B> returns the mean of the Power PDF. 
+  <LI><B>POWER_PDF</B> evaluates the Power PDF. 
+  <LI><B>POWER_SAMPLE</B> samples the Power PDF. 
+  <LI><B>POWER_VARIANCE</B> returns the variance of the Power PDF. 
+  <LI><B>R_FACTORIAL</B> returns N!. 
+  <LI><B>R_RANDOM</B> returns a random real in a given range. 
+  <LI><B>RAYLEIGH_CDF</B> evaluates the Rayleigh CDF. 
+  <LI><B>RAYLEIGH_CDF_INV</B> inverts the Rayleigh CDF. 
+  <LI><B>RAYLEIGH_CHECK</B> checks the parameter of the Rayleigh PDF. 
+  <LI><B>RAYLEIGH_MEAN</B> returns the mean of the Rayleigh PDF. 
+  <LI><B>RAYLEIGH_PDF</B> evaluates the Rayleigh PDF. 
+  <LI><B>RAYLEIGH_SAMPLE</B> samples the Rayleigh PDF. 
+  <LI><B>RAYLEIGH_VARIANCE</B> returns the variance of the Rayleigh PDF. 
+  <LI><B>RECIPROCAL_CDF</B> evaluates the Reciprocal CDF. 
+  <LI><B>RECIPROCAL_CDF_INV</B> inverts the Reciprocal CDF. 
+  <LI><B>RECIPROCAL_CHECK</B> checks the parameters of the Reciprocal CDF. 
+  <LI><B>RECIPROCAL_MEAN</B> returns the mean of the Reciprocal PDF. 
+  <LI><B>RECIPROCAL_PDF</B> evaluates the Reciprocal PDF. 
+  <LI><B>RECIPROCAL_SAMPLE</B> samples the Reciprocal PDF. 
+  <LI><B>RECIPROCAL_VARIANCE</B> returns the variance of the Reciprocal PDF. 
+  <LI><B>RROW_MAX</B> returns the maximums of rows of a real array. 
+  <LI><B>RROW_MEAN</B> returns the means of rows of a real array. 
+  <LI><B>RROW_MIN</B> returns the minimums of rows of a real array. 
+  <LI><B>RROW_VARIANCE</B> returns the variances of the rows of a real array. 
+  <LI><B>RVEC_COPY</B> copies a real vector. 
+  <LI><B>RVEC_MAX</B> returns the maximum value in a real vector. 
+  <LI><B>RVEC_MEAN</B> returns the mean of a real vector. 
+  <LI><B>RVEC_MIN</B> returns the minimum value of a real array. 
+  <LI><B>RVEC_SUM</B> sums the entries of a real vector. 
+  <LI><B>RVEC_UNIT_SUM</B> normalizes a real vector to have unit sum. 
+  <LI><B>RVEC_VARIANCE</B> returns the variance of a real vector. 
+  <LI><B>SECH</B> returns the hyperbolic secant. 
+  <LI><B>SECH_CDF</B> evaluates the Hyperbolic Secant CDF. 
+  <LI><B>SECH_CDF_INV</B> inverts the Hyperbolic Secant CDF. 
+  <LI><B>SECH_CHECK</B> checks the parameters of the Hyperbolic Secant CDF. 
+  <LI><B>SECH_MEAN</B> returns the mean of the Hyperbolic Secant PDF. 
+  <LI><B>SECH_PDF</B> evaluates the Hypebolic Secant PDF. 
+  <LI><B>SECH_SAMPLE</B> samples the Hyperbolic Secant PDF. 
+  <LI><B>SECH_VARIANCE</B> returns the variance of the Hyperbolic Secant PDF. 
+  <LI><B>SEMICIRCULAR_CDF</B> evaluates the Semicircular CDF. 
+  <LI><B>SEMICIRCULAR_CDF_INV</B> inverts the Semicircular CDF. 
+  <LI><B>SEMICIRCULAR_CHECK</B> checks the parameters of the Semicircular CDF. 
+  <LI><B>SEMICIRCULAR_MEAN</B> returns the mean of the Semicircular PDF. 
+  <LI><B>SEMICIRCULAR_PDF</B> evaluates the Semicircular PDF. 
+  <LI><B>SEMICIRCULAR_SAMPLE</B> samples the Semicircular PDF. 
+  <LI><B>SEMICIRCULAR_VARIANCE</B> returns the variance of the Semicircular PDF. 
+
+  <LI><B>STUDENT_CENTRAL_CDF</B> evaluates the central Student T CDF. 
+  <LI><B>STUDENT_CENTRAL_CHECK</B> checks the parameter of the central Student T 
+  CDF. 
+  <LI><B>STUDENT_CENTRAL_MEAN</B> returns the mean of the central Student T PDF. 
+
+  <LI><B>STUDENT_CENTRAL_PDF</B> evaluates the central Student T PDF. 
+  <LI><B>STUDENT_CENTRAL_SAMPLE</B> samples the central Student T PDF. 
+  <LI><B>STUDENT_CENTRAL_VARIANCE</B> returns the variance of the central 
+  Student T PDF. 
+  <LI><B>STUDENT_NONCENTRAL_CDF</B> evaluates the noncentral Student T CDF. 
+  <LI><B>TFN</B> calculates the T function of Owen. 
+  <LI><B>TRIANGULAR_CDF</B> evaluates the Triangular CDF. 
+  <LI><B>TRIANGULAR_CDF_INV</B> inverts the Triangular CDF. 
+  <LI><B>TRIANGULAR_CHECK</B> checks the parameters of the Triangular CDF. 
+  <LI><B>TRIANGULAR_MEAN</B> returns the mean of the Triangular PDF. 
+  <LI><B>TRIANGULAR_PDF</B> evaluates the Triangular PDF. 
+  <LI><B>TRIANGULAR_SAMPLE</B> samples the Triangular PDF. 
+  <LI><B>TRIANGULAR_VARIANCE</B> returns the variance of the Triangular PDF. 
+  <LI><B>TRIGAMMA</B> calculates trigamma(x) = d**2 log(Gamma(x)) / dx**2. 
+  <LI><B>UNIFORM_01_CDF</B> evaluates the Uniform 01 CDF. 
+  <LI><B>UNIFORM_01_CDF_INV</B> inverts the Uniform 01 CDF. 
+  <LI><B>UNIFORM_01_MEAN</B> returns the mean of the Uniform 01 PDF. 
+  <LI><B>UNIFORM_01_ORDER_SAMPLE</B> samples the Uniform 01 Order PDF. 
+  <LI><B>UNIFORM_01_PDF</B> evaluates the Uniform 01 PDF. 
+  <LI><B>UNIFORM_01_SAMPLE</B> is a portable random number generator. 
+  <LI><B>UNIFORM_01_VARIANCE</B> returns the variance of the Uniform 01 PDF. 
+  <LI><B>UNIFORM_CDF</B> evaluates the Uniform CDF. 
+  <LI><B>UNIFORM_CDF_INV</B> inverts the Uniform CDF. 
+  <LI><B>UNIFORM_CHECK</B> checks the parameters of the Uniform CDF. 
+  <LI><B>UNIFORM_MEAN</B> returns the mean of the Uniform PDF. 
+  <LI><B>UNIFORM_PDF</B> evaluates the Uniform PDF. 
+  <LI><B>UNIFORM_SAMPLE</B> samples the Uniform PDF. 
+  <LI><B>UNIFORM_VARIANCE</B> returns the variance of the Uniform PDF. 
+  <LI><B>UNIFORM_DISCRETE_CDF</B> evaluates the Uniform Discrete CDF. 
+  <LI><B>UNIFORM_DISCRETE_CDF_INV</B> inverts the Uniform Discrete CDF. 
+  <LI><B>UNIFORM_DISCRETE_CHECK</B> checks the parameters of the Uniform 
+  discrete CDF. 
+  <LI><B>UNIFORM_DISCRETE_MEAN</B> returns the mean of the Uniform discrete PDF. 
+
+  <LI><B>UNIFORM_DISCRETE_PDF</B> evaluates the Uniform discrete PDF. 
+  <LI><B>UNIFORM_DISCRETE_SAMPLE</B> samples the Uniform discrete PDF. 
+  <LI><B>UNIFORM_DISCRETE_VARIANCE</B> returns the variance of the Uniform 
+  discrete PDF. 
+  <LI><B>UNIFORM_NSPHERE_SAMPLE</B> samples the Uniform Unit Sphere PDF. 
+  <LI><B>VON_MISES_CDF</B> evaluates the Von Mises CDF. 
+  <LI><B>VON_MISES_CDF_INV</B> inverts the Von Mises CDF. 
+  <LI><B>VON_MISES_CHECK</B> checks the parameters of the Von Mises PDF. 
+  <LI><B>VON_MISES_MEAN</B> returns the mean of the Von Mises PDF. 
+  <LI><B>VON_MISES_PDF</B> evaluates the Von Mises PDF. 
+  <LI><B>VON_MISES_SAMPLE</B> samples the Von Mises PDF. 
+  <LI><B>WEIBULL_CDF</B> evaluates the Weibull CDF. 
+  <LI><B>WEIBULL_CDF_INV</B> inverts the Weibull CDF. 
+  <LI><B>WEIBULL_CHECK</B> checks the parameters of the Weibull CDF. 
+  <LI><B>WEIBULL_MEAN</B> returns the mean of the Weibull PDF. 
+  <LI><B>WEIBULL_PDF</B> evaluates the Weibull PDF. 
+  <LI><B>WEIBULL_SAMPLE</B> samples the Weibull PDF. 
+  <LI><B>WEIBULL_VARIANCE</B> returns the variance of the Weibull PDF. 
+  <LI><B>WEIBULL_DISCRETE_CDF</B> evaluates the Discrete Weibull CDF. 
+  <LI><B>WEIBULL_DISCRETE_CDF_INV</B> inverts the Discrete Weibull CDF. 
+  <LI><B>WEIBULL_DISCRETE_CHECK</B> checks the parameters of the discrete 
+  Weibull CDF. 
+  <LI><B>WEIBULL_DISCRETE_PDF</B> evaluates the discrete Weibull PDF. 
+  <LI><B>WEIBULL_DISCRETE_SAMPLE</B> samples the discrete Weibull PDF. 
+  <LI><B>ZETA</B> estimates the Riemann Zeta function. 
+  <LI><B>ZIPF_CDF</B> evaluates the Zipf CDF. 
+  <LI><B>ZIPF_CHECK</B> checks the parameter of the Zipf PDF. 
+  <LI><B>ZIPF_MEAN</B> returns the mean of the Zipf PDF. 
+  <LI><B>ZIPF_PDF</B> evaluates the Zipf PDF. 
+  <LI><B>ZIPF_SAMPLE</B> samples the Zipf PDF. 
+  <LI><B>ZIPF_VARIANCE</B> returns the variance of the Zipf PDF. </LI></UL>
+<P></P>
+<P>Return to the <A 
+href="http://www.psc.edu/~burkardt/src/prob/fsoftware.html">FORTRAN software 
+page</A>. </P>
+<HR>
+<I>Last revised on 11 July 2000. </I></BODY></HTML>

@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://www.psc.edu/~burkardt/src/fftpack/fftpack.html -->
+<HTML><HEAD><TITLE>FFTPACK - Fast Fourier Transform Package</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>FFTPACK - Fast Fourier Transform Package </H1>
+<P><B>FFTPACK</B> is a set of routines for computing Fast Fourier Transforms. 
+</P>
+<P>Special features include: 
+<UL>
+  <LI>real or complex data can be handled; 
+  <LI>separate routines for forward analysis (data =&gt; Fourier coefficients) 
+  and backward analysis (Fourier coefficients =&gt; data); 
+  <LI>special "easy" routines; 
+  <LI>sine and cosine transform routines; 
+  <LI>quarter wave sine and cosine transform routines; 
+  <LI>the amount of data is NOT required to be a power of 2. </LI></UL>
+<P></P>
+<P>In most cases, you will need to call several routines from FFTPACK in order 
+to get your results. In the simplest case, you will need to call just two 
+routines: 
+<UL>
+  <LI>an initialization routine; 
+  <LI>the corresponding forward or backward computational routine. </LI></UL>
+<P></P>
+<P>In more complicated situations, you might want to call three routines: 
+<UL>
+  <LI>an initialization routine; 
+  <LI>the corresponding forward or backward computational routine; 
+  <LI>the corresponding backward or forward computational routine. </LI></UL>In a 
+few cases, a single routine may be used for both the forward and backward 
+computation. 
+<P></P>
+<P>The following table shows how the routines are grouped: 
+<TABLE border=1>
+  <TBODY>
+  <TR>
+    <TH>Initialization</TH>
+    <TH>Forward</TH>
+    <TH>Backward</TH>
+    <TH>Purpose</TH></TR>
+  <TR>
+    <TD>CFFTI</TD>
+    <TD>CFFTF</TD>
+    <TD>CFFTB</TD>
+    <TD>FFT for complex data</TD></TR>
+  <TR>
+    <TD>COSQI</TD>
+    <TD>COSQF</TD>
+    <TD>COSQB</TD>
+    <TD>Quarter wave cosine FFT</TD></TR>
+  <TR>
+    <TD>COSTI</TD>
+    <TD>COST</TD>
+    <TD>COST</TD>
+    <TD>Even function cosine FFT</TD></TR>
+  <TR>
+    <TD>EZFFTI</TD>
+    <TD>EZFFTF</TD>
+    <TD>EZFFTB</TD>
+    <TD>Easy version of RFFT routines</TD></TR>
+  <TR>
+    <TD>RFFTI</TD>
+    <TD>RFFTF</TD>
+    <TD>RFFTB</TD>
+    <TD>FFT for real data</TD></TR>
+  <TR>
+    <TD>SINQI</TD>
+    <TD>SINQF</TD>
+    <TD>SINQB</TD>
+    <TD>Quarter wave sine FFT</TD></TR>
+  <TR>
+    <TD>SINTI</TD>
+    <TD>SINT</TD>
+    <TD>SINT</TD>
+    <TD>Odd function sine FFT</TD></TR></TBODY></TABLE></P>
+<P>
+<DL>
+  <DT>Reference 1: 
+  <DD>B L Buzbee,<BR>The SLATEC Common Math Library,<BR>in Sources and 
+  Development of Mathematical Software (W. Cowell, editor),<BR>Prentice Hall, 
+  1984, pages 302-318. 
+  <DT>Reference 2: 
+  <DD>David Kahaner, Clever Moler, Steven Nash,<BR>Numerical Methods and 
+  Software,<BR>Prentice Hall, 1988. 
+  <DT>Reference 3: 
+  <DD>P N Swarztrauber,<BR>Vectorizing the FFT's,<BR>in Parallel Computations 
+  (G. Rodrigue, editor),<BR>Academic Press, 1982, pages 51-83. </DD></DL>
+<P></P>
+<P>Files you may copy include: 
+<UL>
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/fftpack/fftpack.f90">FFTPACK.F90, the 
+  source code.</A> 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/fftpack/fftpack_prb.f90">FFTPACK_PRB.F90, 
+  a sample problem.</A> 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/fftpack/fftpack_prb.out">FFTPACK_PRB.OUT, 
+  sample problem output.</A> 
+  <LI><A href="http://www.psc.edu/~burkardt/src/fftpack/elnino.dat">ELNINO.DAT, 
+  some periodic data.</A> </LI></UL>
+<P></P>
+<P>The list of routines includes: 
+<UL>
+  <LI><B>CFFTB</B> computes the backward complex discrete Fourier transform. 
+  <LI><B>CFFTB1</B> is a lower-level routine used by CFFTB. 
+  <LI><B>CFFTF</B> computes the forward complex discrete Fourier transform (the 
+  Fourier analysis). 
+  <LI><B>CFFTF1</B> is a lower level routine used by CFFTF. 
+  <LI><B>CFFTI</B> initializes the WSAVE array used in CFFTF and CFFTB. 
+  <LI><B>CFFTI1</B> is a lower level routine used by CFFTI. 
+  <LI><B>COSQB</B> computes the fast Fourier transform of quarter wave data. 
+  <LI><B>COSQB1</B> is a lower level routine used by COSQB. 
+  <LI><B>COSQF</B> computes the fast Fourier transform of quarter wave data. 
+  <LI><B>COSQF1</B> is a lower level routine used by COSQF. 
+  <LI><B>COSQI</B> initializes the array wsave which is used in both cosqf and 
+  cosqb. 
+  <LI><B>COST</B> computes the discrete Fourier cosine transform of an even 
+  sequence x(i). 
+  <LI><B>COSTI</B> initializes the array wsave which is used in subroutine cost. 
+
+  <LI><B>EZFFT1</B> is a lower level routine used by EZFFTI. 
+  <LI><B>EZFFTB</B> computes a real periodic sequence from its Fourier 
+  coefficients (Fourier synthesis). 
+  <LI><B>EZFFTF</B> computes the Fourier coefficients of a real periodic 
+  sequence (fourier analysis). 
+  <LI><B>EZFFTI</B> initializes the WSAVE array used in EZFFTF and EZFFTB. 
+  <LI><B>PASSB</B> is a lower level routine used by CFFTB1. 
+  <LI><B>PASSB2</B> is a lower level routine used by CFFTB1. 
+  <LI><B>PASSB3</B> is a lower level routine used by CFFTB1. 
+  <LI><B>PASSB4</B> is a lower level routine used by CFFTB1. 
+  <LI><B>PASSB5</B> is a lower level routine used by CFFTB1. 
+  <LI><B>PASSF</B> is a lower level routine used by CFFTF1. 
+  <LI><B>PASSF2</B> is a lower level routine used by CFFTF1. 
+  <LI><B>PASSF3</B> is a lower level routine used by CFFTF1. 
+  <LI><B>PASSF4</B> is a lower level routine used by CFFTF1. 
+  <LI><B>PASSF5</B> is a lower level routine used by CFFTF1. 
+  <LI><B>PIMACH</B> returns the value of pi. 
+  <LI><B>RADB2</B> is a lower level routine used by RFFTB1. 
+  <LI><B>RADB3</B> is a lower level routine used by RFFTB1. 
+  <LI><B>RADB4</B> is a lower level routine used by RFFTB1. 
+  <LI><B>RADB5</B> is a lower level routine used by RFFTB1. 
+  <LI><B>RADBG</B> is a lower level routine used by RFFTB1. 
+  <LI><B>RADF2</B> is a lower level routine used by RFFTF1. 
+  <LI><B>RADF3</B> is a lower level routine used by RFFTF1. 
+  <LI><B>RADF4</B> is a lower level routine used by RFFTF1. 
+  <LI><B>RADF5</B> is a lower level routine used by RFFTF1. 
+  <LI><B>RADFG</B> is a lower level routine used by RFFTF1. 
+  <LI><B>RFFTB</B> computes the real periodic sequence from its Fourier 
+  coefficients (fourier synthesis). 
+  <LI><B>RFFTB1</B> is a lower level routine used by RFFTB. 
+  <LI><B>RFFTF</B> computes the Fourier coefficients of a real periodic sequence 
+  (fourier analysis). 
+  <LI><B>RFFTF1</B> is a lower level routine used by RFFTF and SINT. 
+  <LI><B>RFFTI</B> initializes the WSAVE array used in RFFTF and RFFTB. 
+  <LI><B>RFFTI1</B> is a lower level routine used by RFFTI. 
+  <LI><B>SINQB</B> computes the fast Fourier transform of quarter wave data. 
+  <LI><B>SINQF</B> computes the fast Fourier transform of quarter wave data. 
+  <LI><B>SINQI</B> initializes the WSAVE array used in SINQF and SINQB. 
+  <LI><B>SINT</B> computes the discrete Fourier sine transform of an odd 
+  sequence. 
+  <LI><B>SINT1</B> is a lower level routine used by SINT. 
+  <LI><B>SINTI</B> initializes the WSAVE array used in SINT. </LI></UL>
+<P></P>
+<P>Return to the <A href="http://www.psc.edu/~burkardt/src/f_src.html">FORTRAN 
+software page</A>. </P>
+<HR>
+<I>Last revised on 27 March 2001. </I></BODY></HTML>

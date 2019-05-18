@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0043)http://www.psc.edu/~burkardt/src/f_src.html -->
+<HTML><HEAD><TITLE>FORTRAN Source Codes</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>FORTRAN Source Codes </H1>
+<HR>
+
+<P>Over the years, I have collected, modified, adapted, adopted or created a 
+number of software packages in <B>FORTRAN</B>. You might be able to use one of 
+these libraries, or a routine or two from a library. </P>
+<P>The packages are at different levels of completion. Some are unfinished, 
+others just sketches under development. In some cases, the routines are 
+inaccurate, balky, and unreliable. Don't take anything on faith; if a routine 
+says it computes the Fred function, be sure you know what the Fred function is, 
+and what its values ought to be. </P>
+<P>From time to time, I receive EMAIL from people with software questions. I am 
+always interested in suggestions and error reports. On the other hand, I cannot 
+offer unlimited amounts of my time to rewrite code to your specifications, 
+explain the mathematical background behind an algorithm, convert a program to a 
+language more to your liking, or develop utility programs to run on your PC. 
+While I try at least to respond to reasonable messages, I have found it 
+necessary simply to refuse to respond to thoughtless, impertinent inquiries. 
+</P>
+<P>For each package listed below, if you click on its name, you can see an 
+expanded explanation of its purpose, a list of its contents, and copy the entire 
+source code file, a sample calling program, or the results of running the 
+calling program. </P>
+<P>Available software includes: 
+<UL>
+  <LI><A href="http://www.psc.edu/~burkardt/src/alscal/alscal.html">ALSCAL</A>, 
+  a multidimensional scaling (MDS) program; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/alscal_data_convert/alscal_data_convert.html">ALSCAL_DATA_CONVERT</A>, 
+  converts a simple data file to ALSCAL format; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/bayes_beta/bayes_beta.html">BAYES_BETA</A>, 
+  simple Bayesian Statistics demonstration; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/bayes_dice/bayes_dice.html">BAYES_DICE</A>, 
+  Bayesian dice estimation; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/bayes_weight/bayes_weight.html">BAYES_WEIGHT</A>, 
+  Bayesian estimation of mixture PDF weights; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/bbml/bbml.html">BBML</A>, 
+  Maximum Likelihood Parameter Estimation for the Beta Binomial PDF; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/bdmlib/bdmlib.html">BDMLIB</A>, 
+  Bayesian estimation of weights of a Dirichlet mixture; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/blas/blas.html">BLAS</A>, Basic 
+  Linear Algebra Subprograms; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/blend/blend.html">BLEND</A>, 
+  1/2/3D blending interpolation; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/calpak/calpak.html">CALPAK</A>, 
+  calendar calculations; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/chrpak/chrpak.html">CHRPAK</A>, 
+  a character manipulation library; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/codepack/codepack.html">CODEPACK</A>, 
+  graph codes or "signatures"; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/colors/colors.html">COLORS</A>, 
+  RGB color conversion; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/column/column.html">COLUMN</A>, 
+  extracts a given column from a file; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/combo/combo.html">COMBO</A>, 
+  Kreher and Stinson combinatorial routines; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/convert/convert.html">CONVERT</A>, 
+  converts units of measurement; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/dcdflib/dcdflib.html">DCDFLIB</A>, 
+  probability CDF evaluation; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/dirichlet/dirichlet.html">DIRICHLET</A>, 
+  maximum likelihood estimation of the parameters of a Dirichlet distribution; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/display/display.html">DISPLAY</A>, 
+  graphics for FLOW5 and FLOW6; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/distances/distances.html">DISTANCES</A>, 
+  convert multiple sequence alignment to distance matrix; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/divdif/divdif.html">DIVDIF</A>, 
+  divided difference tables; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/drawcgm/drawcgm.html">DRAWCGM</A>, 
+  CGM/PS/X11 graphics routines; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/eispack/eispack.html">EISPACK</A>, 
+  "ancient" eigenvalue package; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/errors/errors.html">ERRORS</A>, 
+  numerical nonsense; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/extract/extractract.html">EXTRACT</A>, 
+  extracts a module from a FORTRAN file; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/f90/f90.html">F90</A>, simple 
+  FORTRAN90 examples; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/f90split/f90split.html">F90SPLIT</A>, 
+  splits FORTRAN77/FORTRAN90 source into individual files; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/fcode/fcode.html">FCODE</A>, a 
+  preliminary version of a profile/sequence search code; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/femod1/femod1.html">FEMOD1</A>, 
+  1D interactive finite element code; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/femod2/femod2.html">FEMOD2</A>, 
+  2D interactive finite element code; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/fempack/fempack.html">FEMPACK</A>, 
+  simple finite element routines; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/fftpack/fftpack.html">FFTPACK</A>, fast 
+  Fourier transforms; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/filum/filum.html">FILUM</A>, 
+  file utilities; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/flow3/flow3.html">FLOW3</A>, 
+  finite element fluid flow solver, version 3; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/flow4/flow4.html">FLOW4</A>, 
+  finite element fluid flow solver, version 4; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/flow5/flow5.html">FLOW5</A>, 
+  finite element fluid flow solver, version 5; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/flow6/flow6.html">FLOW6</A>, 
+  finite element fluid flow solver, version 6; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/flow7/flow7.html">FLOW7</A>, 
+  finite element fluid flow solver, version 7 (under development); 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/football/football.html">FOOTBALL</A>, 
+  football team rankings; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/geometry/geometry.html">GEOMETRY</A>, 
+  2D/3D geometric calculations; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/getwgt/getwgt.html">GETWGT</A>, 
+  Dirichlet mixture estimation; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/gnufor/gnufor.html">GNUFOR</A>, 
+  GNUPLOT/FORTRAN interface; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/grafpack/grafpack.html">GRAFPACK</A>, 
+  calculations for graphs; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/graph_paper/graph_paper.html">GRAPH_PAPER</A>, 
+  make PostScript graph paper; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/halton/halton.html">HALTON</A>, 
+  the Halton subrandom sequence; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/ivread/ivread.html">IVREAD</A>, 
+  3D graphic file conversion; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/jbar/jbar.html">JBAR</A>, PPM 
+  bar graphs of data in a file; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/lapack/lapack.html">LAPACK</A>, 
+  a linear algebra library; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/linpack/linpack.html">LINPACK</A>, a 
+  linear algebra library; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/linplus/linplus.html">LINPLUS</A>, 
+  routines the LINPACK guys forgot to write; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/matalg/matalg.html">MATALG</A>, 
+  an interactive matrix calculator; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/matman/matman.html">MATMAN</A>, 
+  an interactive matrix manipulator; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/matmul/matmul.html">MATMUL</A>, 
+  an interactive matrix multiplication benchmark; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/mds/mds.html">MDS</A>, sample 
+  data for multidimensional scaling; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/minpack/minpack.html">MINPACK</A>, 
+  least squares minimization; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/mixture/mixture.html">MIXTURE</A>, 
+  simulation of a Dirichlet mixture process; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/mpi/mpi.html">MPI</A>, message 
+  passing interface examples; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/nms/nms.html">NMS</A>, library 
+  for "Numerical Methods and Software"; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/nspcg/nspcg.html">NSPCG</A>, 
+  nonsymmetric preconditioned conjugate gradient package; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/open_mp/open_mp.html">OPEN_MP</A>, 
+  examples of using OpenMP for parallel execution; 
+  <LI><A href="http://www.psc.edu/packer/packer.html">PACKER</A>, manipulate 
+  multidimensional array data; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/pathways/pathways.html">PATHWAYS</A>, a 
+  first stab at detecting pathways; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/pbmlib/pbmlib.html">PBMLIB</A>, 
+  Portable Bit Map read/write; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/pdb_extract/pdb_extract.html">PDB_EXTRACT</A>, 
+  extract certain columns from certain lines of a PDB file; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/pdb_read/pdb_read.html">PDB_READ</A>, 
+  read ATOM records from a PDB file; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/pitcon/pitcon.html">PITCON</A>, 
+  continuation method for nonlinear systems; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/plot_to_ps/plot_to_ps.html">PLOT_TO_PS</A>, 
+  text based PostScript graphics creation; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/plot3dio/plot3dio.html">PLOT3DIO</A>, 
+  PLOT3D graphics file utilities; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/polpak/polpak.html">POLPAK</A>, 
+  recursively defined polynomials; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/pop_ave/pop_ave.html">POP_AVE</A>, 
+  compute time-average of CHARMM data; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/praxis/praxis.html">PRAXIS</A>, 
+  Brent's code for scalar function optimization; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/prob/prob.html">PROB</A>, 
+  probability density functions; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/ps_gg_align/ps_gg_align.html">PS_GG_ALIGN</A>, 
+  profile/sequence global gap alignment; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/ps_lg_align/ps_lg_align.html">PS_LG_ALIGN</A>, 
+  profile/sequence local gap alignment; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/ps_qg_align/ps_qg_align.html">PS_QG_ALIGN</A>, 
+  profile/sequence quasiglobal gap alignment; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/ps_write/ps_write.html">PS_WRITE</A>, 
+  create a PostScript file of line drawings; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/quadrule/rule.html">QUADRULE</A>, 
+  quadrature rules for one dimension; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/quote/quote.html">QUOTE</A>, 
+  print a random quote from a file; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/read_align/read_align.html">READ_ALIGN</A>, 
+  convert an alignment file to PIR format; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/refine/refine.html">REFINE</A>, 
+  extend FLOW6 solution to a refined grid; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/region/region.html">REGION</A>, 
+  groups contiguous voxels into regions; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/regression/regression.html">REGRESSION</A>, 
+  software and tests for linear regression; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/rejoin/rejoin.html">REJOIN</A>, 
+  "rejoin" data that was divvied up evenly over a rectangular array of 
+  processors; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/rkf45/rkf45.html">RKF45</A>, 
+  Runge-Kutta-Fehlberg ODE solver; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/roc/roc.html">ROC</A>, Receiver 
+  Operator Characteristic calculation for sequence analysis; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/root/root.html">ROOT</A>, 
+  interactive root finder; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/sequence/sequence.html">SEQUENCE</A>, 
+  recreational program, fills in missing values in numerical sequences; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/sheet/sheet.html">SHEET</A>, add 
+  arrows marking sheets in a protein plot; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/spacer/spacer.html">SPACER</A>, 
+  performs a principal coordinate analysis; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/spacer_data_convert/spacer_data_convert.html">SPACER_DATA_CONVERT</A>, 
+  converts a simple data file to SPACER format; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/sparspak/sparspak.html">SPARSPAK</A>, 
+  an old version of the Waterloo sparse matrix package; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/spline/spline.html">SPLINE</A>, 
+  interpolation and approximation via splines; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/splpak/splpak.html">SPLPAK</A>, 
+  DeBoor's cubic spline routines; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/ss_gd_align/ss_gd_align.html">SS_GD_ALIGN</A>, 
+  sequence/sequence global distance alignment; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/ss_gg_align/ss_gg_align.html">SS_GG_ALIGN</A>, 
+  sequence/sequence global gap alignment; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/ss_lg_align/ss_lg_align.html">SS_LG_ALIGN</A>, 
+  sequence/sequence local gap alignment; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/ss_qg_align/ss_qg_align.html">SS_QG_ALIGN</A>, 
+  sequence/sequence quasiglobal gap alignment; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/steam/steam.html">STEAM</A>, 
+  steam tables; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/stripper/stripper.html">STRIPPER</A>, 
+  file modification; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/stroud/stroud.html">STROUD</A>, 
+  quadrature over N-dimensional regions; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/subpak/subpak.html">SUBPAK</A>, 
+  a utility library; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/subset/subset.html">SUBSET</A>, 
+  combinatorial routines; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/testapprox/testapprox.html">TESTAPPROX</A>, 
+  test functions for approximation and interpolation. 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/testcon/testcon.html">TESTCON</A>, test 
+  functions for continuation. 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/testint/testint.html">TESTINT</A>, test 
+  integrands for quadrature. 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/testmat/testmat.html">TESTMAT</A>, test 
+  matrices. 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/testnonlin/testnonlin.html">TESTNONLIN</A>, 
+  nonlinear equation test problems. 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/testode/testode.html">TESTODE</A>, 
+  initial value test problems. 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/testopt/testopt.html">TESTOPT</A>, 
+  scalar function optimization test problems. 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/testzero/testzero.html">TESTZERO</A>, 
+  scalar root-finding test problems. 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/tiler_2d/tiler_2d.html">TILER_2D</A>, 
+  2D tiling using transfinite interpolation. 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/tiler_3d/tiler_3d.html">TILER_3D</A>, 
+  3D tiling using transfinite interpolation. 
+  <LI><A href="http://www.psc.edu/~burkardt/src/timer/timer.html">TIMER</A>, 
+  FORTRAN 90 timing routines. 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/toms611d/toms611d.html">TOMS611D</A>, 
+  unconstrained minimization; 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/toms611s/toms611s.html">TOMS611S</A>, 
+  unconstrained minimization; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/upjode/upjode.html">UPJODE</A>, 
+  an interactive ODE solver; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/width/width.html">WIDTH</A>, a 
+  histogram utility for <B>CHARMM</B> 
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/wordsnake/wordsnake.html">WORDSNAKE</A>, 
+  seeks a word snake with a high overlap score. 
+  <LI><A href="http://www.psc.edu/~burkardt/src/zoomin/zoomin.html">ZOOMIN</A>, 
+  a variety of scalar zero finders. </LI></UL>
+<P></P>
+<P>Back to the <A href="http://www.psc.edu/~burkardt/index.html">home page</A>. 
+</P>
+<HR>
+<I>Last revised on 27 February 2001. </I></BODY></HTML>

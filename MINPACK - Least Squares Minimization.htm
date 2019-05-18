@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://www.psc.edu/~burkardt/src/minpack/minpack.html -->
+<HTML><HEAD><TITLE>MINPACK - Least Squares Minimization</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>MINPACK - Least Squares Minimization </H1>
+<P><B>MINPACK</B> is a small collection of routines for the solution of a set of 
+N nonlinear equations in N unknowns using Powell's method, and for the 
+minimization of M nonlinear functions in N unknowns, using the 
+Levenberg-Marquardt method. The user may supply the jacobian matrix or have it 
+approximated by finite differences. </P>
+<P>Files you may copy include: 
+<UL>
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/minpack/minpack.f90">MINPACK.F90, the 
+  source code</A> 
+  <LI><A href="http://www.psc.edu/~burkardt/src/minpack/minprb.f90">MINPRB.F90, 
+  sample calling code</A> 
+  <LI><A href="http://www.psc.edu/~burkardt/src/minpack/minprb.out">MINPRB.OUT, 
+  sample output</A> </LI></UL>
+<P></P>
+<P>The list of routines includes: 
+<UL>
+  <LI><B>CHKDER</B> checks the gradients of M functions of N variables. 
+  <LI><B>DOGLEG</B> determines the minimizing combination of Gauss-Newton and 
+  Gradient steps. 
+  <LI><B>ENORM</B> computes the Euclidean norm of a vector. 
+  <LI><B>FDJAC1</B> estimates an N by N jacobian matrix using forward 
+  differences. 
+  <LI><B>FDJAC2</B> estimates an M by N jacobian matrix using forward 
+  differences. 
+  <LI><B>HYBRD</B> seeks a zero of N nonlinear equations in N variables using 
+  Powell's method. 
+  <LI><B>HYBRD1</B> seeks a zero of N nonlinear equations in N variables using 
+  Powell's method. 
+  <LI><B>HYBRJ</B> seeks a zero of N nonlinear equations in N variables by 
+  Powell's method. 
+  <LI><B>HYBRJ1</B> seeks a zero of N nonlinear equations in N variables by 
+  Powell's method. 
+  <LI><B>LMDER</B> minimizes M functions in N variables using the 
+  Levenberg-Marquardt method. 
+  <LI><B>LMDER1</B> minimizes M functions in N variables using the 
+  Levenberg-Marquardt method. 
+  <LI><B>LMDIF</B> minimizes M functions in N variables using the 
+  Levenberg-Marquardt method. 
+  <LI><B>LMDIF1</B> minimizes M functions in N variables using the 
+  Levenberg-Marquardt method. 
+  <LI><B>LMPAR</B> computes a parameter for the Levenberg-Marquardt method. 
+  <LI><B>LMSTR</B> minimizes M functions in N variables using the 
+  Levenberg-Marquardt method. 
+  <LI><B>LMSTR1</B> minimizes M functions in N variables using the 
+  Levenberg-Marquardt method. 
+  <LI><B>QFORM</B> constructs an orthogonal matrix Q from its factored form. 
+  <LI><B>QRFAC</B> computes a QR factorization using Householder 
+  transformations. 
+  <LI><B>QRSOLV</B> solves a rectangular linear system A*x=b in the least 
+  squares sense. 
+  <LI><B>RWUPDT</B> computes the decomposition of a triangular matrix augmented 
+  by one row. 
+  <LI><B>R1MACH</B> returns single precision machine constants. 
+  <LI><B>R1MPYQ</B> computes A*Q, where Q is the product of Householder 
+  transformations. 
+  <LI><B>R1UPDT</B> re-triangularizes a matrix after a rank one update. </LI></UL>
+<P></P>
+<P>Return to the <A 
+href="http://www.psc.edu/~burkardt/src/minpack/fsoftware.html">FORTRAN software 
+page</A>. </P>
+<HR>
+<I>Last revised on 16 June 2000. </I></BODY></HTML>

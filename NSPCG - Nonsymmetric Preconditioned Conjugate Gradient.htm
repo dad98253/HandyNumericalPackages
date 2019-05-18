@@ -1,0 +1,762 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0049)http://www.psc.edu/~burkardt/src/nspcg/nspcg.html -->
+<HTML><HEAD><TITLE>NSPCG - Nonsymmetric Preconditioned Conjugate Gradient</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>NSPCG - Nonsymmetric Preconditioned Conjugate Gradient </H1>
+<P><B>NSPCG</B> is a package for solving large nonsymmetric systems of linear 
+equations using iterative methods. The package includes a variety of matrix 
+storage formats, preconditioners, and solvers. </P>
+<P>Reference: 
+<BLOCKQUOTE>Thomas Oppe, Wayne Joubert, David Kincaid<BR>NSPCG User's Guide, 
+  Version 1.0<BR>A Package for Solving Large Sparse Linear Systems by Various 
+  Iterative Methods </BLOCKQUOTE>
+<P></P>
+<P>Files you may copy include: 
+<UL>
+  <LI><A href="http://www.psc.edu/~burkardt/src/nspcg/nspcg.f90">NSPCG.F90, the 
+  source code</A> 
+  <LI><A href="http://www.psc.edu/~burkardt/src/nspcg/nspprb.f90">NSPPRB.F90, a 
+  sample problem</A> 
+  <LI><A href="http://www.psc.edu/~burkardt/src/nspcg/nspprb.out">NSPPRB.OUT, 
+  the output of the sample problem</A> </LI></UL>
+<P></P>
+<P>The list of routines includes: 
+<UL>
+  <LI><B>ADINFN</B> computes an upper bound on the spectral radius of 
+  inverse(D)*A. 
+  <LI><B>ADJUST</B> makes adjustments to the JCOEF array. 
+  <LI><B>AINFN</B> calculates the infinity norm of a matrix. 
+  <LI><B>BASIC</B> is the user interface to the basic (unaccelerated) iterative 
+  method, with preconditioning. 
+  <LI><B>BASICW</B> runs the basic (unaccelerated) iterative method, with 
+  preconditioning. 
+  <LI><B>BBS</B> does a banded back substitution. 
+  <LI><B>BBSM</B> does a banded back solve. 
+  <LI><B>BBST</B> does a banded backward substitution. 
+  <LI><B>BBSTM</B> does the backward solve. 
+  <LI><B>BCGS</B> is the user interface to the biconjugate-gradient-squared 
+  algorithm. 
+  <LI><B>BCGSW</B> runs the biconjugate-gradient-squared algorithm. 
+  <LI><B>BDFAC</B> computes the factorization of a dense banded matrix. 
+  <LI><B>BDINV</B> computes the inverse of a dense banded matrix. 
+  <LI><B>BDSOL</B> computes the solution to a dense banded matrix. 
+  <LI><B>BDSOLT</B> computes the transpose solution to a nonsymmetric dense 
+  banded matrix. 
+  <LI><B>BFAC</B> computes a factorization to a single banded symmetric matrix. 
+  <LI><B>BFACM</B> computes factorizations to multiple banded symmetric 
+  matrices. 
+  <LI><B>BFACMY</B> computes a block factorization. (multicolor nonsymmetric 
+  diagonal) 
+  <LI><B>BFACMZ</B> computes a block factorization. (nonsymmetric diagonal) 
+  <LI><B>BFACN</B> computes a factorization to a single banded nonsymmetric 
+  matrix. 
+  <LI><B>BFACNM</B> computes a factorization to multiple banded nonsymmetric 
+  matrices. 
+  <LI><B>BFACS</B> computes a block factorization. (symmetric diagonal) 
+  <LI><B>BFS</B> does a forward substitution. 
+  <LI><B>BFSM</B> does the forward solve. 
+  <LI><B>BFST</B> does a banded forward substitution. 
+  <LI><B>BFSTM</B> does a forward solve. 
+  <LI><B>BIC2</B> drives the block factorization (version 1) method. 
+  <LI><B>BIC3</B> drives the block factorization (version 1) method. 
+  <LI><B>BIC7</B> drives the block factorization (version 1) method. 
+  (multi-color ordering) 
+  <LI><B>BICOLOR</B> determines whether or not a matrix is bi-colorable. 
+  <LI><B>BICX2</B> drives the block factorization (version 2) method. 
+  <LI><B>BICX3</B> drives the block factorization (version 2) method. 
+  <LI><B>BICX7</B> drives the block factorization (version 2) method 
+  (multi-color ordering) 
+  <LI><B>BINV</B> computes an approximate inverse to a single banded symmetric 
+  matrix. 
+  <LI><B>BINVN</B> computes an approximate inverse to a single banded 
+  nonsymmetric matrix. 
+  <LI><B>BLKDEF</B> defines various block constants for a constant block size 
+  matrix. 
+  <LI><B>BMUL</B> computes y = A*x, where A is a banded symmetric matrix. 
+  <LI><B>BMULN</B> computes y = A*x, where A is in nonsymmetric band format. 
+  <LI><B>BMULNT</B> computes y = (A**t)*x, where A is in nonsymmetric band 
+  format. 
+  <LI><B>BSOL</B> solves A*x = y for a banded and symmetric matrix A. 
+  <LI><B>BSOLM</B> solves the system A*x = y where A is multiple symmetric 
+  banded matrices 
+  <LI><B>BSOLN</B> solves A*x = y for a banded and nonsymmetric matrix. 
+  <LI><B>BSOLNM</B> solves A*x = y for a banded and nonsymmetric matrix. 
+  <LI><B>BSOLNT</B> solves (A**t)*x = y for a banded and nonsymmetric matrix. 
+  <LI><B>BSONTM</B> solves (A**t)*x = y for a banded and nonsymmetric matrix. 
+  <LI><B>CG</B> is the user interface to the conjugate gradient algorithm. 
+  <LI><B>CGCR</B> implements the constrained residual method. 
+  <LI><B>CGCRPR</B> is a right preconditioner routine to use with the CGCR 
+  method. 
+  <LI><B>CGNR</B> is the user interfact to the conjugate gradient algorithm on 
+  the normal equations. 
+  <LI><B>CGNRW</B> runs the conjugate gradient algorithm on the normal 
+  equations. 
+  <LI><B>CGW</B> drives the conjugate gradient algorithm. 
+  <LI><B>CHGCON</B> computes the new estimates for the largest and smallest 
+  eigenvalues. 
+  <LI><B>CHGSI</B> adapts on the iteration parameters. 
+  <LI><B>CKCONV</B> checks if the iterative method has stagnated or had other 
+  misfortunes. 
+  <LI><B>COLOR</B> expands a color pattern to a full grid color array. 
+  <LI><B>COPY</B> does a vector copy (null preconditioner). 
+  <LI><B>DEFCON</B> defines block constants for block-structured matrices. 
+  <LI><B>DEFINE</B> defines block constants for block-structured matrices. 
+  <LI><B>DETERM</B> computes the determinant of a symmetric tridiagonal matrix. 
+  <LI><B>DETSYM</B> determines if the matrix is symmetric. 
+  <LI><B>DFAULT</B> sets the default values of IPARM and RPARM. 
+  <LI><B>ECHALL</B> initializes the package common blocks. 
+  <LI><B>EIGVSS</B> computes a selected eigenvalue of a symmetric tridiagonal 
+  matrix. 
+  <LI><B>ELIM</B> removes certains rows of the matrix. 
+  <LI><B>ELIM1</B> removes certina rows of the matrix. 
+  <LI><B>ELIM2</B> removes certain rows of the matrix. 
+  <LI><B>ELIM3</B> removes certain rows of the matrix. 
+  <LI><B>ELIM4</B> removes certain rows of the matrix. 
+  <LI><B>ELIM5</B> removes certain rows of the matrix. 
+  <LI><B>ERSHOW</B> prints an appropriate error message for the error numbered 
+  IER. 
+  <LI><B>FILLB</B> calculates block fill-in for block factorization methods. 
+  <LI><B>FILLBC</B> sets up WKSP for block factorization methods. 
+  <LI><B>FILLBN</B> calculates block fill-in for block factorization methods. 
+  <LI><B>FILLN</B> determines the fill-in diagonals for nonsymmetric diagonal 
+  storage. 
+  <LI><B>FILLNP</B> determines the fill-in structure. 
+  <LI><B>FILLS</B> determines the fill-in diagonals for symmetric diagonal 
+  storage. 
+  <LI><B>FILLSP</B> determines the fill-in structure. 
+  <LI><B>GAUSS</B> is a Gaussian elimination routine. 
+  <LI><B>GETBLK</B> computes and factors the matrix (C**t)*A*C and factors it. 
+  <LI><B>GMRES</B> is the user interface to the truncated/restarted GMRES 
+  algorithm. 
+  <LI><B>GMRESW</B> runs the truncated/restarted GMRES algorithm. 
+  <LI><B>HESEST</B> calculates the extremal eigenvalue moduli of a banded 
+  Hessenberg matrix. 
+  <LI><B>HQR</B> finds the eigenvalues of a real upper Hessenberg matrix by the 
+  QR method. 
+  <LI><B>IBBS</B> does an incomplete block backward pass. 
+  <LI><B>IBBSN</B> does an incomplete block backward solve. 
+  <LI><B>IBBSNT</B> does an incomplete block transpose backward solve. 
+  <LI><B>IBFCN1</B> does an incomplete block factorization. 
+  <LI><B>IBFCN2</B> does an incomplete block factorization. 
+  <LI><B>IBFCN3</B> does an incomplete block factorization. 
+  <LI><B>IBFCN4</B> does an incomplete block factorization. 
+  <LI><B>IBFCS1</B> does an incomplete block factorization. 
+  <LI><B>IBFCS2</B> does an incomplete block factorization. 
+  <LI><B>IBFCS3</B> does an incomplete block factorization. 
+  <LI><B>IBFCS4</B> does an incomplete block factorization. 
+  <LI><B>IBFS</B> does an incomplete block forward pass. 
+  <LI><B>IBFSN</B> does an incomplete block forward solve. 
+  <LI><B>IBFSNT</B> does an incomplete block transpose forward solve. 
+  <LI><B>IBSL</B> does an incomplete block solution. 
+  <LI><B>IBSLN</B> does an incomplete block solution. 
+  <LI><B>IBSLN1</B> does an incomplete block forward pass. 
+  <LI><B>IBSLN2</B> does an incomplete block backward pass. 
+  <LI><B>IBSLN3</B> does an incomplete block transpose back solve. 
+  <LI><B>IBSLN4</B> does an incomplete block transpose forward pass. 
+  <LI><B>IBSLNT</B> does an incomplete block transpose solution. 
+  <LI><B>IC1</B> drives the IC preconditioner. 
+  <LI><B>IC2</B> drives the symmetric IC preconditioner. 
+  <LI><B>IC3</B> drives the nonsymmetric IC preconditioner. 
+  <LI><B>IC6</B> drives the IC preconditioner. 
+  <LI><B>ICBS</B> does an IC back solve (natural ordering, diagonal storage). 
+  <LI><B>ICBSCP</B> does a back IC solve. (Purdue storage, multicolor) 
+  <LI><B>ICBSCT</B> does a transpose back IC solve. (Purdue storage, multicolor) 
+
+  <LI><B>ICBSP</B> does an IC back solve (natural ordering, Purdue storage). 
+  <LI><B>ICBST</B> does an iC back solve (natural ordering, diagonal storage). 
+  <LI><B>ICBSTP</B> does a transpose IC back solve (natural ordering, Purdue 
+  storage). 
+  <LI><B>ICF</B> computes an incomplete factorization. (symmetric diagonal 
+  storage) 
+  <LI><B>ICFCP</B> computes an incomplete factorization. (Purdue storage, 
+  multicolor) 
+  <LI><B>ICFN</B> computes an incomplete factorization. (nonsymmetric diagonal 
+  storage) 
+  <LI><B>ICFNP</B> computes an incomplete factorization. (Purdue storage, 
+  nonsymmetric matrix) 
+  <LI><B>ICFP</B> computes an incomplete factorization. (Purdue storage, 
+  symmetric matrix) 
+  <LI><B>ICFS</B> does an IC forward solve (natural ordering, diagonal storage). 
+
+  <LI><B>ICFSCP</B> does a forward IC solve. (Purdue storage, multicolor) 
+  <LI><B>ICFSCT</B> does a transpose forward ic solve. (Purdue storage, 
+  multicolor) 
+  <LI><B>ICFSP</B> does an IC forward solve (natural ordering, Purdue storage). 
+  <LI><B>ICFST</B> does an IC forward solve (natural ordering, diagonal 
+  storage). 
+  <LI><B>ICFSTP</B> does a transpose IC forward solve (natural ordering, Purdue 
+  storage). 
+  <LI><B>ICFV</B> computes an incomplete factorization. (symmetric diagonal 
+  storage, vectorized version) 
+  <LI><B>ICS</B> does an IC solution (natural ordering, symmetric diagonal 
+  storage). 
+  <LI><B>ICS1</B> does an IC forward solution (natural ordering, symmetric 
+  diagonal storage). 
+  <LI><B>ICS2</B> does an IC back solution (natural ordering, symmetric diagonal 
+  storage). 
+  <LI><B>ICS3</B> does an IC transpose backward solution (natural ordering, 
+  symmetric diagonal storage). 
+  <LI><B>ICS4</B> does an IC transpose forward solution (natural ordering, 
+  symmetric diagonal storage). 
+  <LI><B>ICSCP</B> does an IC solve. (Purdue storage, multicolor) 
+  <LI><B>ICSCP1</B> does an IC forward solve. (Purdue storage, multicolor) 
+  <LI><B>ICSCP2</B> does an IC back solve. (Purdue storage, multicolor) 
+  <LI><B>ICSCP3</B> does a transpose IC forward solve. (Purdue storage, 
+  multicolor) 
+  <LI><B>ICSCP4</B> does a transpose IC back solve. (Purdue storage, multicolor) 
+
+  <LI><B>ICSCPT</B> does a transpose IC solve. (Purdue storage, multicolor) 
+  <LI><B>ICSN</B> does an IC solution (natural ordering, nonsymmetric diagonal 
+  storage). 
+  <LI><B>ICSN1</B> does an IC forward pass (natural ordering, nonsymmetric 
+  diagonal storage). 
+  <LI><B>ICSN2</B> does an IC back pass (natural ordering, nonsymmetric diagonal 
+  storage). 
+  <LI><B>ICSN3</B> does an IC transpose back pass (natural ordering, 
+  nonsymmetric diagonal storage). 
+  <LI><B>ICSN4</B> does an IC transpose forward pass (natural ordering, 
+  nonsymmetric diagonal storage). 
+  <LI><B>ICSNP</B> does an IC solution (natural ordering, Purdue storage, 
+  nonsymmetric matrix). 
+  <LI><B>ICSNP1</B> does an IC forward solution (natural ordering, Purdue 
+  storage, nonsymmetric matrix). 
+  <LI><B>ICSNP2</B> does an IC back solution (natural ordering, Purdue storage, 
+  nonsymmetric matrix). 
+  <LI><B>ICSNP3</B> does a transpose IC forward solution (natural ordering, 
+  Purdue storage, nonsymmetric matrix). 
+  <LI><B>ICSNP4</B> does a transpose IC back solution (natural ordering, Purdue 
+  storage, nonsymmetric matrix). 
+  <LI><B>ICSNT</B> does a transpose IC solution (natural ordering, nonsymmetric 
+  diagonal storage). 
+  <LI><B>ICSNTP</B> does a transpose IC solution (natural ordering, Purdue 
+  storage, nonsymmetric matrix). 
+  <LI><B>ICSP</B> does an IC solution (natural ordering, Purdue storage, 
+  symmetric matrix). 
+  <LI><B>ICSP1</B> does an IC forward solution (natural ordering, Purdue 
+  storage, symmetric matrix). 
+  <LI><B>ICSP2</B> does an IC back solution (natural ordering, Purdue storage, 
+  symmetric matrix). 
+  <LI><B>ICSP3</B> does an IC transpose forward solution (natural ordering, 
+  Purdue storage, symmetric matrix). 
+  <LI><B>ICSP4</B> does an IC transpose back solution (natural ordering, Purdue 
+  storage, symmetric matrix). 
+  <LI><B>INITHV</B> initializes dot and vector "haves" to FALSE. 
+  <LI><B>IOM</B> is the user interface to the (truncated) IOM algorithm. 
+  <LI><B>IOMW</B> runs the (truncated) IOM algorithm. 
+  <LI><B>IPSTR</B> finds a suitable exponent for OMEGA-1. 
+  <LI><B>IPTGEN</B> generates the pointer vector to block rows. 
+  <LI><B>ITCG</B> does the conjugate gradient iterations. 
+  <LI><B>ITERM</B> produces the iteration summary line at the end of each 
+  iteration. 
+  <LI><B>ITSI</B> does the semi-iterative iterations. 
+  <LI><B>ITSOR</B> does the SOR iterations. 
+  <LI><B>ITSRCG</B> does the SSOR conjugate gradient iterations. 
+  <LI><B>ITSRSI</B> does the SSOR semi-iterative iterations. 
+  <LI><B>JAC1</B> drives the Jacobi preconditioner. 
+  <LI><B>JAC2</B> drives the Jacobi preconditioner. 
+  <LI><B>JAC3</B> drives the Jacobi preconditioner. 
+  <LI><B>JAC4</B> drives the Jacobi preconditioner. 
+  <LI><B>JAC5</B> drives the Jacobi preconditioner. 
+  <LI><B>LANDIR</B> is the user interface to the Lanczos/ORTHODIR algorithm. 
+  <LI><B>LANMIN</B> is the user interface to the Lanczos/ORTHOMIN algorithm. 
+  <LI><B>LANRES</B> is the user interface to the Lanczos/ORTHORES algorithm. 
+  <LI><B>LDIRW</B> runs the Lanczos/ORTHODIR algorithm. 
+  <LI><B>LFACT</B> computes a line factorization. 
+  <LI><B>LINV</B> computes a line approximate inverse. 
+  <LI><B>LJAC2</B> drives the line Jacobi preconditioner. 
+  <LI><B>LJAC3</B> drives the line Jacobi preconditioner. 
+  <LI><B>LJACX2</B> drives the line Jacobi preconditioner. 
+  <LI><B>LJACX3</B> drives the line Jacobi preconditioner. 
+  <LI><B>LLSP2</B> drives the line least squares polynomial preconditioner. 
+  <LI><B>LLSP3</B> drives the line least squares polynomial preconditioner. 
+  <LI><B>LMINW</B> runs the Lanczos/ORTHOMIN algorithm. 
+  <LI><B>LNEU2</B> drives the line Neumann polynomial preconditioner. 
+  <LI><B>LNEU3</B> drives the line Neumann polynomial preconditioner. 
+  <LI><B>LRESW</B> runs the Lanczos/ORTHORES algorithm. 
+  <LI><B>LSOR2</B> drives the line SOR method. 
+  <LI><B>LSOR3</B> drives the line SOR method. 
+  <LI><B>LSP1</B> drives the least squares polynomial preconditioner. 
+  <LI><B>LSP2</B> drives the least squares polynomial preconditioner. 
+  <LI><B>LSP3</B> drives the least squares polynomial preconditioner. 
+  <LI><B>LSP4</B> drives the least squares polynomial preconditioner. 
+  <LI><B>LSP5</B> drives the least squares polynomial preconditioner. 
+  <LI><B>LSQR</B> is the user interface to the LSQR algorithm. 
+  <LI><B>LSQRW</B> runs the LSQR algorithm. 
+  <LI><B>LSSOR2</B> drives the line SSOR method. 
+  <LI><B>LSSOR3</B> drives the line SSOR method. 
+  <LI><B>MBIC2</B> drives the block factorization (version 1, modified) method. 
+  <LI><B>MBIC3</B> drives the block factorization (version 1, modified) method. 
+  <LI><B>MBIC7</B> drives the block factorization (version 1, modified) method. 
+  <LI><B>MBICX2</B> drives the block factorization (version 2, modified) method. 
+
+  <LI><B>MBICX3</B> drives the block factorization (version 2, modified) method. 
+
+  <LI><B>MBICX7</B> drives the block factorization (version 2, modified method). 
+
+  <LI><B>MCOPY</B> copies an array into array. 
+  <LI><B>ME</B> is the user interface to the minimal error algorithm of Fridman. 
+
+  <LI><B>MEW</B> runs the minimal error algorithm of Fridman. 
+  <LI><B>MFACT</B> computes a line factorization of a multi-color matrix. 
+  <LI><B>MIC1</B> drives the MIC preconditioner. 
+  <LI><B>MIC2</B> drives the symmetric MIC preconditioner. 
+  <LI><B>MIC3</B> drives the nonsymmetric MIC preconditioner. 
+  <LI><B>MIC6</B> drives the MIC preconditioner. 
+  <LI><B>MOVE1</B> moves the data structure to the form d/t/b. 
+  <LI><B>MOVE2</B> moves the data structure to the form d/t/b. 
+  <LI><B>MOVE3</B> moves the data structure to the form d/t/b. 
+  <LI><B>MOVE4</B> moves the data structure to the form dc/tc/bc. 
+  <LI><B>MOVE5</B> moves the data structure to the form dc/tc/bc. 
+  <LI><B>MUL1T</B> computes y = (A**t)*x, a matrix-vector product. 
+  <LI><B>MUL2NT</B> computes y = (A**t)*x, a matrix-vector product. 
+  <LI><B>MUL3NT</B> computes y = (A**t)*x, a matrix-vector product. 
+  <LI><B>MULDC</B> computes y = A*x for a matrix permuted to an ncolor x ncolor 
+  block matrix.. 
+  <LI><B>MULDCT</B> computes y = (A**t)*x for a matrix permuted to an ncolor x 
+  ncolor block matrix. 
+  <LI><B>MULT1</B> computes y = A*x, a matrix-vector product. 
+  <LI><B>MULT2N</B> computes y = A*x, a matrix-vector product. 
+  <LI><B>MULT2S</B> computes y = A*x, a matrix-vector product. 
+  <LI><B>MULT3</B> computes y = A*x, a matrix-vector product. 
+  <LI><B>MULT3N</B> computes y = A*x, a matrix-vector product. 
+  <LI><B>NEEDW</B> determines if enough integer or real workspace is available. 
+  <LI><B>NEU1</B> drives the Neumann polynomial preconditioner. 
+  <LI><B>NEU2</B> drives the Neumann polynomial preconditioner. 
+  <LI><B>NEU3</B> drives the Neumann polynomial preconditioner. 
+  <LI><B>NEU4</B> drives the Neumann polynomial preconditioner. 
+  <LI><B>NEU5</B> drives the Neumann polynomial preconditioner. 
+  <LI><B>NMCALC</B> calculates the quantities 
+  <LI><B>NOADP</B> is a dummy routine to do no adaption. 
+  <LI><B>NSPCG</B> is the driver for the NSPCG package. 
+  <LI><B>NULLPL</B> applies the left preconditioner. 
+  <LI><B>NULLPR</B> applies the right preconditioner. 
+  <LI><B>ODIR</B> is the user interface to the ORTHODIR algorithm. 
+  <LI><B>ODIRW</B> implements ORTHODIR. 
+  <LI><B>OMGCHG</B> changes ALPHAB and BETAB for a new estimate of OMEGA. 
+  <LI><B>OMIN</B> is the user interface to the truncated/restarted ORTHOMIN 
+  algorithm. 
+  <LI><B>OMINGW</B> is a generalized version of the OMINW routine. 
+  <LI><B>OMINW</B> implements the truncated/restarted ORTHOMIN algorithm. 
+  <LI><B>ORES</B> is the user interface to the ORTHORES algorithm. 
+  <LI><B>ORESW</B> implements ORTHORES. 
+  <LI><B>OUT</B> prints the residual and solution vectors. 
+  <LI><B>PARSI</B> computes the iteration parameters. 
+  <LI><B>PBNEU</B> computes a block Neumann polynomial approximation to 
+  inverse(A). 
+  <LI><B>PBPII</B> computes a block least squares polynomial approximation to 
+  inverse(A). 
+  <LI><B>PBS</B> does a penta-diagonal back substitution. 
+  <LI><B>PBSM</B> does a penta-diagonal back substitution. 
+  <LI><B>PERMAS</B> permutes the rows and columns of a sparse matrix. 
+  <LI><B>PERMAT</B> permutes the rows and columns of a Purdue sparse matrix. 
+  <LI><B>PERMD</B> permutes the matrix, U, UBAR, and RHS. (diagonal format) 
+  <LI><B>PERMP</B> permutes the matrix, U, UBAR, and RHS. (Purdue format) 
+  <LI><B>PERMS</B> permutes the matrix, U, UBAR, and RHS. (sparse format) 
+  <LI><B>PERMUT</B> permutes the matrix, U, UBAR, and RHS. 
+  <LI><B>PERROR2</B> computes the residual, R = RHS - A*U. 
+  <LI><B>PERVEC</B> permutes a vector as dictated by the permutation vector. 
+  <LI><B>PFAC</B> computes a factorization of a single symmetric pentadiagonal 
+  matrix. 
+  <LI><B>PFACM</B> factors multiple independent symmetric pentadiagonal 
+  matrices. 
+  <LI><B>PFACN</B> factors a nonsymmetric pentadiagonal matrix. 
+  <LI><B>PFACNM</B> factors multiple independent nonsymmetric pentadiagonal 
+  matrices. 
+  <LI><B>PFACT1</B> computes a point incomplete factorization. 
+  <LI><B>PFACT2</B> computes a point incomplete factorization. 
+  <LI><B>PFACT3</B> computes a point incomplete factorization. 
+  <LI><B>PFACTC</B> computes a point incomplete factorization. (multicolor 
+  ordering) 
+  <LI><B>PFS</B> does a penta-diagonal forward substitution. 
+  <LI><B>PFSM</B> does a penta-diagonal forward substitution. 
+  <LI><B>PGEN</B> constructs the permutation and its inverse for a given 
+  coloring. 
+  <LI><B>PJAC</B> does the point Jacobi preconditioning. 
+  <LI><B>PMDG</B> permutes the matrix according to and index vector. 
+  <LI><B>PNEU</B> computes a point Neumann polynomial approximation to 
+  inverse(A). 
+  <LI><B>POINTR</B> adjusts pointers according to IFACT. 
+  <LI><B>PPII</B> computes the least squares polynomial approximation to 
+  inverse(A). 
+  <LI><B>PRBBLK</B> determines if the matrix has block property A. 
+  <LI><B>PRBNDX</B> determines if the matrix has property A. 
+  <LI><B>PREP</B> puts the diagonal entries of the matrix into column 1 of COEF. 
+
+  <LI><B>PREP1</B> puts the diagonal elements of the matrix in column 1 of COEF 
+  (Purdue data structure) 
+  <LI><B>PREP2</B> puts the diagonal entries of the matrix into column 1 of 
+  COEF. (diagonal data structure) 
+  <LI><B>PREP3</B> puts the diagonal elements of the matrix into the data 
+  structure. 
+  <LI><B>PRICH</B> does the Richardson preconditioning. 
+  <LI><B>PSOLN</B> solves the system A*x = y for x, where A is a pentadiagonal 
+  system. 
+  <LI><B>PSOLNM</B> solves the system A*x = y for x, where a contains multiple 
+  pentadiagonal systems. 
+  <LI><B>PSTOP</B> is an interface to the PSTOPG routine using NULLPL and 
+  NULLPR. 
+  <LI><B>PSTOPG</B> computes one of the stopping tests. 
+  <LI><B>PSTOPS</B> performs a test to see if the iterative method has 
+  converged. 
+  <LI><B>PVEC</B> performs generalized Gram-Schmidt on a collection of vectors. 
+  <LI><B>QRUPD</B> updates the QR factorization of a banded upper Hessenberg 
+  matrix. 
+  <LI><B>REDBLK</B> determines if the matrix has property A. 
+  <LI><B>RICH1</B> drives the Richardson preconditioner. 
+  <LI><B>RICH2</B> drives the Richardson preconditioner. 
+  <LI><B>RICH3</B> drives the Richardson preconditioner. 
+  <LI><B>RICH4</B> drives the Richardson preconditioner. 
+  <LI><B>RICH5</B> drives the Richardson preconditioner. 
+  <LI><B>ROWISE</B> determines whether a row-wise or diagonal-wise algorithm 
+  should be used. 
+  <LI><B>ROWSUM</B> computes the row sum of a matrix. 
+  <LI><B>RS6</B> drives the reduced system method (Purdue storage with red-black 
+  coloring). 
+  <LI><B>RS7</B> drives the reduced system method (diagonal storage with 
+  red-black coloring). 
+  <LI><B>RSAD</B> computes C = ( DR - T * inverse(DB) * B ) * B. 
+  <LI><B>RSAP</B> computes C = ( DR - T * inverse(DB) * B ) * B. 
+  <LI><B>RSATD</B> computes C = ((dr**t) - (b**t)*(db**(-t))*(t**t))*b. 
+  <LI><B>RSATP</B> computes C = (dr - (b**t)*inv(db)*(t**t))*b. 
+  <LI><B>RSBEGD</B> computes CR = br - t*inv(db)*bb. 
+  <LI><B>RSBEGP</B> computes cr = br - t*inv(db)*bb. 
+  <LI><B>RSENDD</B> computes xb = inv(db)*(bb - b*xr). 
+  <LI><B>RSENDP</B> computes xb = inv(db)*(bb - b*xr). 
+  <LI><B>RSMATD</B> computes RS = dr - ah*inv(db)*ak. 
+  <LI><B>RSMATP</B> computes RS = dr - ah*inv(db)*ak. 
+  <LI><B>RSNSP</B> is the driver for explicitly computed reduced systems. 
+  <LI><B>RSPOST</B> is the postprocessor for explicitly-computed reduced 
+  systems. 
+  <LI><B>RSPREP</B> is the preprocessor for explicitly-computed reduced systems. 
+
+  <LI><B>RSRHSD</B> computes cr = br - t*inv(db)*bb. 
+  <LI><B>RSXBD</B> computes xb = inv(db)*(bb - b*xr). 
+  <LI><B>SBBS</B> does an block SSOR backward pass. 
+  <LI><B>SBBSN</B> does an block SSOR backward solve. 
+  <LI><B>SBBSNT</B> does an block SSOR transpose backward solve. 
+  <LI><B>SBFS</B> does an block SSOR forward pass. 
+  <LI><B>SBFSN</B> does an block SSOR forward solve. 
+  <LI><B>SBFSNT</B> does an block SSOR transpose forward solve. 
+  <LI><B>SBSL</B> does an block SSOR solution. 
+  <LI><B>SBSLN</B> does an block SSOR solution. 
+  <LI><B>SBSLN1</B> does an block SSOR forward solution. 
+  <LI><B>SBSLN2</B> does an block SSOR back solution. 
+  <LI><B>SBSLN3</B> does an block SSOR transpose forward solution. 
+  <LI><B>SBSLN4</B> does an block SSOR transpose back solution. 
+  <LI><B>SBSLNT</B> does an block SSOR transpose solution. 
+  <LI><B>SCAL1</B> scales the original matrix to a unit diagonal matrix. 
+  <LI><B>SCAL2</B> scales the original matrix to a unit diagonal matrix. 
+  <LI><B>SCAL3</B> scales the original matrix to a unit diagonal matrix. 
+  <LI><B>SCALE</B> scales the matrix, U, UBAR, and RHS. 
+  <LI><B>SCALED</B> scales the matrix, U, UBAR, and RHS. 
+  <LI><B>SCALEP</B> scales the matrix, U, UBAR, and RHS. 
+  <LI><B>SCALES</B> scales the matrix, U, UBAR, and RHS. (sparse format) 
+  <LI><B>SELDOT</B> computes a dot product from a selected pair of vectors. 
+  <LI><B>SI</B> is the user interface to the Chebyshev acceleration algorithm. 
+  <LI><B>SIW</B> drives the Chebyshev acceleration algorithm. 
+  <LI><B>SOR</B> is the user interface to the SOR algorithm. 
+  <LI><B>SOR1</B> drives the point SOR method. 
+  <LI><B>SOR2</B> drives the point SOR method. 
+  <LI><B>SOR3</B> drives the point SOR method. 
+  <LI><B>SOR6</B> drives the multi-color SOR method. 
+  <LI><B>SOR7</B> drives the multi-color SOR method. 
+  <LI><B>SORCP</B> does an SOR solve. 
+  <LI><B>SORDB</B> does an SOR pass 
+  <LI><B>SORDMB</B> does an SOR pass. 
+  <LI><B>SORDN</B> does an SOR solve (natural ordering, nonsymmetric diagonal 
+  storage). 
+  <LI><B>SORDNB</B> does an SOR pass. 
+  <LI><B>SORDS</B> does an SOR solve (natural ordering, 
+  <LI><B>SORP</B> does an SOR solve. 
+  <LI><B>SORSTP</B> tests if the SOR method has converged. 
+  <LI><B>SORW</B> drives the successive over-relaxation algorithm. 
+  <LI><B>SPLIT</B> determines how to apply the splitting based on IQLR. 
+  <LI><B>SRBS</B> does an SOR back solve (natural ordering, diagonal storage). 
+  <LI><B>SRBSCP</B> does a back SOR solve. (Purdue storage, multicolor) 
+  <LI><B>SRBSCT</B> does a transpose back SOR solve. 
+  <LI><B>SRBSP</B> does an SOR backward solve (natural ordering, Purdue 
+  storage). 
+  <LI><B>SRBST</B> does an SOR transpose back solve (natural ordering, diagonal 
+  storage). 
+  <LI><B>SRBSTP</B> does an SOR transpose back solve (natural ordering, Purdue 
+  storage). 
+  <LI><B>SRCG</B> is the user interface to the SSOR conjugate gradient 
+  algorithm. 
+  <LI><B>SRCGW</B> drives the SSOR conjugate gradient algorithm. 
+  <LI><B>SRFS</B> does an SOR forward solve (natural ordering, diagonal 
+  storage). 
+  <LI><B>SRFSCP</B> does a forward SOR solve. (Purdue storage, multicolor) 
+  <LI><B>SRFSCT</B> does a transpose forward SOR solve. (Purdue storage, 
+  multicolor) 
+  <LI><B>SRFSP</B> does an SOR forward solve (natural ordering, Purdue storage). 
+
+  <LI><B>SRFST</B> does an SOR transpose forward solve (natural ordering, 
+  diagonal storage). 
+  <LI><B>SRFSTP</B> does an SOR transpose forward solve (natural ordering, 
+  Purdue storage). 
+  <LI><B>SRS</B> does an SSOR solution (natural ordering, symmetric diagonal 
+  storage). 
+  <LI><B>SRS1</B> does an SSOR forward solve (natural ordering, symmetric 
+  diagonal storage). 
+  <LI><B>SRS2</B> does an SSOR back solve (natural ordering, symmetric diagonal 
+  storage). 
+  <LI><B>SRS3</B> does an SSOR transpose forward solve (natural ordering, 
+  symmetric diagonal storage). 
+  <LI><B>SRS4</B> does an SSOR transpose back solve (natural ordering, symmetric 
+  diagonal storage). 
+  <LI><B>SRSCP</B> does an SSOR solve. (Purdue storage, multicolor) 
+  <LI><B>SRSCP1</B> does an SSOR forward solve. (Purdue storage, multicolor) 
+  <LI><B>SRSCP2</B> does an SSOR back solve. (Purdue storage, multicolor) 
+  <LI><B>SRSCP3</B> does a transpose SSOR back solve. (Purdue storage, 
+  multicolor) 
+  <LI><B>SRSCP4</B> does a transpose ssor forward solve. (Purdue storage, 
+  multicolor) 
+  <LI><B>SRSCPT</B> does a transpose SSOR solve. (Purdue storage, multicolor) 
+  <LI><B>SRSI</B> is the user interface to the SSOR Chebyshev acceleration 
+  algorithm. 
+  <LI><B>SRSIW</B> drives the SSOR Chebyshev acceleration algorithm. 
+  <LI><B>SRSN</B> does an SSOR solution (natural ordering, nonsymmetric diagonal 
+  storage). 
+  <LI><B>SRSN1</B> does an SSOR forward pass (natural ordering, nonsymmetric 
+  diagonal storage). 
+  <LI><B>SRSN2</B> does an SSOR backward pass (natural ordering, nonsymmetric 
+  diagonal storage). 
+  <LI><B>SRSN3</B> does a transpose SSOR back pass (natural ordering, 
+  nonsymmetric diagonal storage). 
+  <LI><B>SRSN4</B> does a transpose SSOR forward pass (natural ordering, 
+  nonsymmetric diagonal storage). 
+  <LI><B>SRSNT</B> does a transpose SSOR solution (natural ordering, 
+  nonsymmetric diagonal storage). 
+  <LI><B>SRSNTP</B> does an SSOR transpose solution (natural ordering, Purdue 
+  storage). 
+  <LI><B>SRSP</B> does an SSOR solution (natural ordering Purdue storage). 
+  <LI><B>SRSP1</B> does an SSOR forward solve (natural ordering, Purdue 
+  storage). 
+  <LI><B>SRSP2</B> does an SSOR back solve (natural ordering, Purdue storage). 
+  <LI><B>SRSP3</B> does an SSOR transpose back solve (natural ordering, Purdue 
+  storage). 
+  <LI><B>SRSP4</B> does an SSOR transpose forward solve (natural ordering, 
+  Purdue storage). 
+  <LI><B>SSOR1</B> drives the point SSOR method. 
+  <LI><B>SSOR2</B> drives the point SSOR method. 
+  <LI><B>SSOR3</B> drives the point SSOR method. 
+  <LI><B>SSOR6</B> drives the multi-color SSOR method. 
+  <LI><B>SSOR7</B> drives the multi-color SSOR method. 
+  <LI><B>SSORAD</B> does the SSOR adaptive process. 
+  <LI><B>SSORD</B> computes pdp = (p,d*p) and pldup = (p,l*inv(d)*u*p). 
+  <LI><B>SSORDN</B> computes pdp = (p,d*p) and pldup = (p,l*inv(d)*u*p). 
+  <LI><B>SSORP</B> computes pdp = (p,d*p) and pldup = (p,l*inv(d)*u*p). 
+  <LI><B>SSORPN</B> computes pdp = (p,d*p) and pldup = (p,l*inv(d)*u*p). 
+  <LI><B>SSRCD</B> computes pdp = (p,d*p) and pldup = (p,l*inv(d)*u*p). 
+  <LI><B>SSRCDM</B> computes pdp = (p,d*p) and pldup = (p,l*inv(d)*u*p). 
+  <LI><B>SSRCDN</B> computes pdp = (p,d*p) and pldup = (p,l*inv(d)*u*p). 
+  <LI><B>SSRCP</B> computes pdp = (p,d*p) and pldup = (p,l*inv(d)*u*p). 
+  <LI><B>SSRCPN</B> computes pdp = (p,d*p) and pldup = (p,l*inv(d)*u*p). 
+  <LI><B>SUB100</B> calls the SRSCP3 preconditioner. 
+  <LI><B>SUB101</B> calls the SRSCP2 preconditioner. 
+  <LI><B>SUB102</B> calls the SRSCP4 preconditioner. 
+  <LI><B>SUB103</B> calls the SSRCP or SSRCPN adaption routine. 
+  <LI><B>SUB104</B> calls the ICSCP preconditioner. 
+  <LI><B>SUB105</B> calls the ICSCPT preconditioner. 
+  <LI><B>SUB106</B> calls the ICSCP1 preconditioner. 
+  <LI><B>SUB107</B> calls the ICSCP3 preconditioner. 
+  <LI><B>SUB104</B> calls the ICSCP2 preconditioner. 
+  <LI><B>SUB109</B> calls the ICSCP4 preconditioner. 
+  <LI><B>SUB110</B> calls PPII, for LSPOLY preconditioning. 
+  <LI><B>SUB111</B> calls PNEU, for Neumann polynomial preconditioning. 
+  <LI><B>SUB112</B> calls PPII for LSPOLY preconditioning. 
+  <LI><B>SUB113</B> calls PPII for LSPOLY preconditioning. 
+  <LI><B>SUB114</B> calls PNEU for Neumann polynomial preconditioning. 
+  <LI><B>SUB115</B> calls PNEU for Neumann polynomial preconditioning. 
+  <LI><B>SUBA1</B> calls MULT2S. 
+  <LI><B>SUBA10</B> calls RSAP. 
+  <LI><B>SUBA11</B> calls RSATP. 
+  <LI><B>SUBA12</B> calls MULT3. 
+  <LI><B>SUBA13</B> calls MULT3N. 
+  <LI><B>SUBA14</B> calls MUL3NT. 
+  <LI><B>SUBA2</B> calls MULDC. 
+  <LI><B>SUBA3</B> calls MULDCT. 
+  <LI><B>SUBA4</B> calls MULT2N. 
+  <LI><B>SUBA5</B> calls MUL2NT. 
+  <LI><B>SUBA6</B> calls RSAD. 
+  <LI><B>SUBA7</B> calls RSATD. 
+  <LI><B>SUBA8</B> calls MULT1. 
+  <LI><B>SUBA9</B> calls MUL1T. 
+  <LI><B>SUBQ1</B> calls PJAC for Jacobi preconditioning. 
+  <LI><B>SUBQ10</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ11</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ12</B> calls the SSOR adaption routine. 
+  <LI><B>SUBQ13</B> calls ICS for IC(S) preconditioning. 
+  <LI><B>SUBQ14</B> calls ICS1 for IC(S) preconditioning. 
+  <LI><B>SUBQ15</B> calls ICS3 for IC(S) preconditioning. 
+  <LI><B>SUBQ16</B> calls ICS2 for IC(S) preconditioning. 
+  <LI><B>SUBQ17</B> calls ICS4 for IC(S) preconditioning. 
+  <LI><B>SUBQ18</B> calls PPII for LSPOLY preconditioning. 
+  <LI><B>SUBQ19</B> calls PNEU for Neumann polynomial preconditioning. 
+  <LI><B>SUBQ2</B> calls BDSOL for line Jacobi preconditioning. 
+  <LI><B>SUBQ20</B> calls the basic LSOR iterative step. 
+  <LI><B>SUBQ21</B> calls the LSSOR preconditioner. 
+  <LI><B>SUBQ22</B> calls the LSSOR adaption routine. 
+  <LI><B>SUBQ23</B> calls PBPII for line LSPOLY preconditioning. 
+  <LI><B>SUBQ24</B> calls PBNEU for line Neumann polynomial preconditioning. 
+  <LI><B>SUBQ25</B> calls IBSL for BIC preconditioning. 
+  <LI><B>SUBQ26</B> calls the basic multi-color SOR iterative step 
+  <LI><B>SUBQ27</B> calls the MSSOR preconditioner. 
+  <LI><B>SUBQ28</B> calls the MSSOR preconditioner. 
+  <LI><B>SUBQ29</B> calls the MSSOR preconditioner. 
+  <LI><B>SUBQ3</B> calls BDSOLT for line Jacobi preconditioning. 
+  <LI><B>SUBQ30</B> calls the MSSOR preconditioner. 
+  <LI><B>SUBQ31</B> calls the MSSOR preconditioner. 
+  <LI><B>SUBQ32</B> calls the MSSOR preconditioner. 
+  <LI><B>SUBQ33</B> calls the MSSOR adaption routine. 
+  <LI><B>SUBQ34</B> calls IBSLN for multi-color BIC preconditioning. 
+  <LI><B>SUBQ35</B> calls IBSLNT for multi-color bic preconditioning. 
+  <LI><B>SUBQ36</B> calls IBSLN1 for multi-color BIC preconditioning. 
+  <LI><B>SUBQ37</B> calls IBSLN3 for multi-color BIC preconditioning. 
+  <LI><B>SUBQ38</B> calls IBSLN2 for multi-color BIC preconditioning. 
+  <LI><B>SUBQ39</B> calls IBSLN4 for multi-color BIC preconditioning. 
+  <LI><B>SUBQ4</B> call BMUL or BMULN, for line Jacobi preconditioning 
+  <LI><B>SUBQ40</B> calls the basic SOR iterative step 
+  <LI><B>SUBQ41</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ42</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ43</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ44</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ45</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ46</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ47</B> calls the SSOR adaption routine. 
+  <LI><B>SUBQ48</B> calls ICSN for IC(S) preconditioning. 
+  <LI><B>SUBQ49</B> calls ICSNT for IC(S) preconditioning. 
+  <LI><B>SUBQ5</B> calls BMUL or BMULNT for line Jacobi preconditioning 
+  <LI><B>SUBQ50</B> calls ICSN1 for IC(S) preconditioning. 
+  <LI><B>SUBQ51</B> calls ICSN3 for IC(S) preconditioning. 
+  <LI><B>SUBQ52</B> calls ICSN2 for IC(S) preconditioning. 
+  <LI><B>SUBQ53</B> calls ICSN4 for IC(S) preconditioning. 
+  <LI><B>SUBQ54</B> calls PPII for LSPOLY preconditioning. 
+  <LI><B>SUBQ55</B> calls PPII for LSPOLY preconditioning. 
+  <LI><B>SUBQ56</B> calls PNEU for Neumann polynomial preconditioning. 
+  <LI><B>SUBQ57</B> calls PNEU for Neumann polynomial preconditioning. 
+  <LI><B>SUBQ58</B> calls the basic LSOR iterative step 
+  <LI><B>SUBQ59</B> calls the LSSOR preconditioner. 
+  <LI><B>SUBQ6</B> calls the basic SOR iterative step 
+  <LI><B>SUBQ60</B> calls the LSSOR preconditioner. 
+  <LI><B>SUBQ61</B> calls the LSSOR preconditioner. 
+  <LI><B>SUBQ62</B> calls the LSSOR preconditioner. 
+  <LI><B>SUBQ63</B> calls the LSSOR preconditioner. 
+  <LI><B>SUBQ64</B> calls the LSSOR preconditioner. 
+  <LI><B>SUBQ65</B> calls the LSSOR adaption routine. 
+  <LI><B>SUBQ66</B> calls PBPII for line LSPOLY preconditioning. 
+  <LI><B>SUBQ67</B> calls PBPII for line LSPOLY preconditioning. 
+  <LI><B>SUBQ68</B> calls PBNEU for line Neumann polynomial preconditioning. 
+  <LI><B>SUBQ69</B> calls PBNEU for line Neumann polynomial preconditioning. 
+  <LI><B>SUBQ7</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ70</B> calls IBSLN for BIC preconditioning. 
+  <LI><B>SUBQ71</B> calls IBSLNT for BIC preconditioning. 
+  <LI><B>SUBQ72</B> calls IBSLN1 for BIC preconditioning. 
+  <LI><B>SUBQ73</B> calls IBSLN3 for BIC preconditioning. 
+  <LI><B>SUBQ74</B> calls IBSLN2 for BIC preconditioning. 
+  <LI><B>SUBQ75</B> calls IBSLN4 for BIC preconditioning. 
+  <LI><B>SUBQ76</B> calls BDSOL for RS preconditioning. 
+  <LI><B>SUBQ77</B> calls BDSOLT for RS preconditioning. 
+  <LI><B>SUBQ78</B> calls the basic SOR iterative step 
+  <LI><B>SUBQ79</B> calls the SRSP preconditioner. 
+  <LI><B>SUBQ8</B> calls the SRS1 preconditioner. 
+  <LI><B>SUBQ80</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ81</B> calls the SRSP1 preconditioner. 
+  <LI><B>SUBQ82</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ83</B> calls the SRSP2 preconditioner. 
+  <LI><B>SUBQ84</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ85</B> calls the SSOR adaption routine. 
+  <LI><B>SUBQ86</B> calls ICS for IC(S) preconditioning. 
+  <LI><B>SUBQ87</B> calls ICS for IC(S) preconditioning. 
+  <LI><B>SUBQ88</B> calls ICS for IC(S) preconditioning. 
+  <LI><B>SUBQ89</B> calls ICS for IC(S) preconditioning. 
+  <LI><B>SUBQ9</B> calls the SSOR preconditioner. 
+  <LI><B>SUBQ90</B> calls ICS for IC(S) preconditioning. 
+  <LI><B>SUBQ91</B> calls ICS for IC(S) preconditioning. 
+  <LI><B>SUBQ92</B> calls PPII for LSPOLY preconditioning. 
+  <LI><B>SUBQ93</B> calls PPII for LSPOLY preconditioning. 
+  <LI><B>SUBQ94</B> calls PNEU for Neumann polynomial preconditioning. 
+  <LI><B>SUBQ95</B> calls PNEU for Neumann polynomial preconditioning. 
+  <LI><B>SUBQ96</B> calls the basic multi-color SOR iterative step 
+  <LI><B>SUBQ97</B> calls the SRSCP preconditioner. 
+  <LI><B>SUBQ98</B> calls the SRSCPT preconditioner. 
+  <LI><B>SUBQ99</B> calls the SRSCP1 preconditioner. 
+  <LI><B>T1PROD</B> computes D = D - C*A*B restricted to the sparsity pattern of 
+  D. 
+  <LI><B>T2PROD</B> computes D = D - (C**t)*A*B restricted to the sparsity 
+  pattern of D. 
+  <LI><B>TAU</B> sets TAU for the SOR method. 
+  <LI><B>TBS</B> does a back substitution. 
+  <LI><B>TBSM</B> does a back substitution. 
+  <LI><B>TFAC</B> computes a factorization of a single symmetric tridiagonal 
+  matrix. 
+  <LI><B>TFACM</B> factors of multiple independent symmetric tridiagonal 
+  matrices. 
+  <LI><B>TFACN</B> factors a nonsymmetric tridiagonal matrix. 
+  <LI><B>TFACNM</B> factors multiple independent nonsymmetric tridiagonal 
+  matrices. 
+  <LI><B>TFS</B> does a forward substitution. 
+  <LI><B>TFSM</B> does a forward substitution. 
+  <LI><B>TIMER</B> is a routine to return the execution time in seconds. 
+  <LI><B>TINV</B> computes an approximate inverse to a single tridiagonal 
+  symmetric matrix. 
+  <LI><B>TINVM</B> computes an approximate inverse to multiple tridiagonal 
+  symmetric matrices. 
+  <LI><B>TINVN</B> computes an approximate inverse to a single tridiagonal 
+  nonsymmetric matrix. 
+  <LI><B>TINVNM</B> computes an approximate inverse to multiple tridiagonal 
+  nonsymmetric matrices. 
+  <LI><B>TMULT</B> omputes the product of the t-matrix with a vector. 
+  <LI><B>TSOLN</B> solves A*x = y for x, for a tridiagonal system. 
+  <LI><B>TSOLNM</B> solves A*x = y for x, for multiple tridiagonal systems A. 
+  <LI><B>TSUM</B> computes the row and column sum of (C**t)*A*B restricted to 
+  the sparsity pattern of JD. 
+  <LI><B>TSUMN</B> computes the row sum of C*A*B restricted to the sparsity 
+  pattern of JD. 
+  <LI><B>UNPMDG</B> reverses the permutation done by PMDIAG. 
+  <LI><B>USCAL1</B> reverses the scaling done in routine SCAL1. 
+  <LI><B>USCAL2</B> reverses the scaling done in routine SCAL2. 
+  <LI><B>USCAL3</B> reverses the scaling done in SCAL3. 
+  <LI><B>USLQW</B> runs the USYMLQ algorithm. 
+  <LI><B>USQRW</B> runs the USYMQR algorithm. 
+  <LI><B>USYMLQ</B> is the user interface to the USYMLQ algorithm. 
+  <LI><B>USYMQR</B> is the user interface to the USYMQR algorithm. 
+  <LI><B>VADD</B> adds the elements of a vector. 
+  <LI><B>VADDD</B> computes y = y + A*x. (diagonal storage) 
+  <LI><B>VADDDT</B> computes y = y + (A**t)*x. (diagonal storage) 
+  <LI><B>VADDP</B> does y = y + A*x (Purdue format) 
+  <LI><B>VADDPT</B> does y = y + (A**t)*x (Purdue format) 
+  <LI><B>VADDS</B> does y = y + A*x (sparse format) 
+  <LI><B>VCOPY</B> copies vector x to vector y. 
+  <LI><B>VDOT</B> computes the dot product of two vectors. 
+  <LI><B>VEMTXY</B> computes v = -x * y where v, x, and y are vectors. 
+  <LI><B>VEXOPY</B> computes v = x op y where op is one of the operations + - * 
+  / . 
+  <LI><B>VFILL</B> fills a vector with a constant value. 
+  <LI><B>VGATHI</B> gathers elements from an array. 
+  <LI><B>VGATHR</B> gathers elements from an array. 
+  <LI><B>VICOPY</B> copies one integer vector to another. 
+  <LI><B>VIFILL</B> fills an integer vector with a value. 
+  <LI><B>VINV</B> computes v = 1/v. 
+  <LI><B>VMAX</B> determines the maximum element of a vector. 
+  <LI><B>VMIN</B> determines the minimum element of a vector v. 
+  <LI><B>VSCATI</B> scatters elements from consecutive locations in an array. 
+  <LI><B>VSCATR</B> scatters elements from consecutive locations in an array. 
+  <LI><B>VSQRT</B> computes the square root of the entries of a vector. 
+  <LI><B>VSRTA1</B> sorts the sparse data structure by rows and then columns. 
+  <LI><B>VSUBD</B> computes y = y - A*x. (diagonal storage) 
+  <LI><B>VSUBDT</B> computes y = y - (A**t)*x. (diagonal storage) 
+  <LI><B>VSUBP</B> does y = y - A*x (Purdue format). 
+  <LI><B>VSUBPT</B> does y = y - (A**t)*x (Purdue format). 
+  <LI><B>VSUBS</B> does y = y - A*x (sparse format). 
+  <LI><B>VTRIAD</B> computes C = A + CON*B or C = CON*B. 
+  <LI><B>ZBRENT</B> finds a zero of a function in a change of sign interval. 
+  </LI></UL>
+<P></P>
+<P>Return to the <A 
+href="http://www.psc.edu/~burkardt/src/nspcg/fsoftware.html">FORTRAN software 
+page</A>. </P>
+<HR>
+<I>Last revised on 4 May 2000. </I></BODY></HTML>

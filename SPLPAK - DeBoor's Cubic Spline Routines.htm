@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0051)http://www.psc.edu/~burkardt/src/splpak/splpak.html -->
+<HTML><HEAD><TITLE>SPLPAK - DeBoor's Cubic Spline Routines</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>SPLPAK - DeBoor's Cubic Spline Routines </H1>
+<P><B>SPLPAK</B> is a version of Carl DeBoor's cubic spline package. The code is 
+only partially documented. </P>
+<P>Files you may copy include: 
+<UL>
+  <LI><A href="http://www.psc.edu/~burkardt/src/splpak/splpak.f90">SPLPAK.F90, 
+  the source code</A> 
+  <LI><A href="http://www.psc.edu/~burkardt/src/splpak/splprb.f90">SPLPRB.F90, a 
+  sample problem</A> 
+  <LI><A href="http://www.psc.edu/~burkardt/src/splpak/splprb.out">SPLPRB.OUT, 
+  the output from the sample problem</A> </LI></UL>
+<P></P>
+<P>The list of routines includes: 
+<UL>
+  <LI><B>BANFAC</B> factors a banded matrix without pivoting. 
+  <LI><B>BANSLV</B> solves a banded linear system X * X = B factored by BANFAC. 
+  <LI><B>BCHFAC</B> constructs a Cholesky factorization of a matrix. 
+  <LI><B>BCHSLV</B> solves a banded symmetric positive definite system. 
+  <LI><B>BSPLPP</B> converts from B-spline to piecewise polynomial form. 
+  <LI><B>BSPLVB</B> calculates all possibly nonzero B-splines at X of order 
+  <LI><B>BSPLVD</B> calculates the nonvanishing B-splines and derivatives at X. 
+  <LI><B>BSPP2D</B> converts a spline from B-spline to piecewise polynomial 
+  representation. 
+  <LI><B>BVALUE</B> evaluates a derivative of a spline from its B-spline 
+  representation. 
+  <LI><B>CHOL1D</B> constructs the upper three diagonals of 
+  <LI><B>COLLOC</B> solves an ordinary differential equation by collocation. 
+  <LI><B>COLPNT</B> supplies collocation points. 
+  <LI><B>CSPINT</B> estimates an integral using a spline interpolant. 
+  <LI><B>CUBSET</B> sets up a simple cubic spline interpolant. 
+  <LI><B>CUBSLO</B> solves for slopes defining a cubic spline. 
+  <LI><B>CUBSPL</B> defines an interpolatory cubic spline. 
+  <LI><B>CWIDTH</B> is a variation of the theme in the algorithm bandet1 
+  <LI><B>DIFEQU</B> returns information about a differential equation. 
+  <LI><B>DTBLOK</B> gets the determinant of an almost block diagonal matrix. 
+  <LI><B>EQBLOK</B> is to be called in COLLOC. 
+  <LI><B>EVNNOT</B> is a "fake" version of NEWNOT. 
+  <LI><B>FACTRB</B> constructs a partial PLU factorization. 
+  <LI><B>FCBLOK</B> supervises the PLU factorization with pivoting of 
+  <LI><B>SPLINE_HERMITE_SET</B> sets up a piecewise cubic Hermite interpolant. 
+  <LI><B>SPLINE_HERMITE_VAL</B> evaluates a piecewise cubic Hermite interpolant. 
+
+  <LI><B>INTERV</B> computes LEFT, the maximum value of I so that 
+  <LI><B>KNOTS</B> is to be called in COLLOC. 
+  <LI><B>L2APPR</B> constructs the (weighted discrete) l2-approximation by 
+  <LI><B>L2ERR</B> computes errors of an L2 approximation. 
+  <LI><B>L2KNTS</B> converts breakpoints to knots. 
+  <LI><B>NEWNOT</B> returns lnew+1 knots which are equidistributed on (a,b). 
+  <LI><B>PPVALU</B> calculates the value at X of the JDERIV-th derivative of 
+  <LI><B>PUTIT</B> puts together one block of the collocation equation system 
+  <LI><B>SBBLOK</B> supervises the solution (by forward and backward 
+  <LI><B>SETUPQ</B> is to be called in SMOOTH. 
+  <LI><B>SHIFTB</B> shifts the rows in current block, ai, not used as pivot 
+  <LI><B>SLVBLK</B> solves the almost block diagonal linear system A*x=b. 
+  <LI><B>SMOOTH</B> constructs the cubic smoothing spline F to given data 
+  <LI><B>SPLI2D</B> is an extended version of SPLINT, for use in tensor 
+  <LI><B>SPLINT</B> produces the B-spline coefficients BCOEF of the spline of 
+  <LI><B>SPLOPT</B> computes the knots T for the optimal recovery scheme 
+  <LI><B>SUBBAK</B> carries out backsubstitution for the current block. 
+  <LI><B>SUBFOR</B> carries out the forward pass of substitution for the 
+  <LI><B>TAUTSP</B> constructs a cubic spline interpolant to given data. 
+</LI></UL>
+<P></P>
+<P>Return to the <A 
+href="http://www.psc.edu/~burkardt/src/splpak/fsoftware.html">FORTRAN software 
+page</A>. </P>
+<HR>
+<I>Last revised on 12 August 2000. </I></BODY></HTML>

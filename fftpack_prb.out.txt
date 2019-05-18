@@ -1,0 +1,433 @@
+  
+ FFTPACK_PRB
+   A set of tests for FFTPACK.
+  
+   Today's date: 20010314
+   Today's time: 114611.798
+  
+ TEST01
+   EZFFTI initializes the EZ FFT routines.
+   EZFFTF does a forward FFT;
+   EZFFTB does a backward FFT.
+  
+   The number of data items is N =         4096
+  
+   The first 10 data values:
+  
+   1.00000    
+  0.999989    
+  0.999958    
+  0.999905    
+  0.999830    
+  0.999735    
+  0.999619    
+  0.999481    
+  0.999322    
+  0.999142    
+  
+   Compute FFT coefficients from data.
+  
+   The first 10 FFT coefficients:
+  
+  0.244142E-03
+  0.549318E-03 -0.415433E-06
+  0.878569E-03 -0.134682E-05
+   1.00012     -0.230128E-02
+ -0.628493E-03  0.192959E-05
+ -0.274856E-03  0.105692E-05
+ -0.162864E-03  0.751328E-06
+ -0.109956E-03  0.592423E-06
+ -0.799437E-04  0.488815E-06
+ -0.610599E-04  0.421697E-06
+ -0.483156E-04  0.369428E-06
+  
+   Retrieve data from FFT coeficients.
+  
+   The first 10 data values:
+  
+   1.00000    
+  0.999990    
+  0.999958    
+  0.999905    
+  0.999830    
+  0.999735    
+  0.999618    
+  0.999481    
+  0.999322    
+  0.999142    
+  
+ TEST02
+   EZFFTI initializes the EZ FFT routines.
+   EZFFTF does a forward FFT;
+   EZFFTB does a backward FFT.
+  
+   The number of data items is N =         3087
+   which is not a multiple of two!
+  
+   The first 10 data values:
+  
+   1.00000    
+  0.999981    
+  0.999925    
+  0.999832    
+  0.999702    
+  0.999534    
+  0.999328    
+  0.999086    
+  0.998806    
+  0.998489    
+  
+   Compute FFT coefficients from data.
+  
+   The first 10 FFT coefficients:
+  
+  0.323944E-03
+  0.728803E-03 -0.733495E-06
+  0.116560E-02 -0.238294E-05
+   1.00016     -0.305360E-02
+ -0.834110E-03  0.340920E-05
+ -0.364799E-03  0.185148E-05
+ -0.216147E-03  0.132230E-05
+ -0.145886E-03  0.104315E-05
+ -0.106086E-03  0.868061E-06
+ -0.810380E-04  0.738312E-06
+ -0.641083E-04  0.651817E-06
+  
+   Retrieve data from FFT coeficients.
+  
+   The first 10 data values:
+  
+   1.00000    
+  0.999981    
+  0.999925    
+  0.999832    
+  0.999701    
+  0.999533    
+  0.999328    
+  0.999086    
+  0.998806    
+  0.998489    
+  
+ TEST03
+   RFFTF can compute the Fourier transform of a real
+   vector of data.  In this case, the vector is
+  
+     (1,1,1,...,1)
+  
+   and the transform should be
+  
+     (N,0,0,...,0), 
+  
+   where N is the number of entries, N =           36
+  
+   The maximum error in computation is   0.0000000E+00
+  
+ TEST04
+   RFFTB can recover a real vector of data from Fourier
+   coefficients.  In this case, the coefficients are:
+  
+     (1,0,0,...,0)
+  
+   and the data should be:
+  
+     (1,1,1,...,1).
+  
+   The maximum error in computation is   0.0000000E+00
+  
+ TEST05
+   EZFFTF can take the Fourier transform of a real vector
+   of data.  In this case, the vector is
+  
+     (1,1,1,...,1)
+  
+   and the transform should be
+  
+     (N,0,0,...,0),
+  
+   where N is the number of entries,           36
+  
+   The maximum error in computation is   0.0000000E+00
+  
+ TEST06
+   EZFFTB can be used to recover a real data vector
+   from a Fourier coefficient vector.
+  
+   In this test, the Fourier coefficient vector is:
+  
+     (1,0,0,...,0)
+  
+   and the recovered data vector should be
+  
+     (1,1,1,...,1).
+  
+   The maximum error in the computation was   0.0000000E+00
+  
+ TEST07
+   For two dimensional complex data:
+   CFFTF_2D computes the forward FFT transform;
+   CFFTB_2D computes the backward FFT transform.
+  
+  
+   Maximum error in CFFT2D calculation:
+  
+  1.1920929E-07
+  
+ TEST08
+   For Fourier analysis of complex data,
+   CFFTI initializes the FFT routines.
+   CFFTF does a forward FFT;
+   CFFTB does a backward FFT.
+  
+   The number of data items is N =         4096
+  
+   The first 10 data values:
+  
+   4.93023       2.34070    
+  0.939305E-01   3.69013    
+   4.96658       3.30653    
+   2.78684       3.39150    
+  0.861189       4.00580    
+  0.425908       3.23806    
+   2.13810      0.992881E-01
+   3.73524       3.25739    
+   2.00024       3.08216    
+   1.92646       2.93561    
+  
+   Compute the FFT coefficients from data.
+  
+   The first 10 FFT coefficients:
+  
+   10349.1       10355.4    
+  -20.5879       56.5993    
+  -11.3760      -21.5694    
+   10.6254       21.9756    
+   104.662       41.2749    
+  -68.0318       4.59901    
+   133.769       72.0352    
+   100.488      -107.681    
+   185.740       48.4149    
+  -10.8513      -40.2610    
+  
+   Retrieve data from FFT coeficients.
+  
+   The first 10 data values:
+  
+   4.93023       2.34070    
+  0.939302E-01   3.69013    
+   4.96658       3.30653    
+   2.78684       3.39150    
+  0.861189       4.00580    
+  0.425908       3.23806    
+   2.13810      0.992885E-01
+   3.73525       3.25739    
+   2.00024       3.08216    
+   1.92645       2.93561    
+  
+ TEST09
+   For cosine analysis of real quarter wave data,
+   COSQI initializes the FFT routines.
+   COSQF does a forward FFT;
+   COSQB does a backward FFT.
+  
+   The number of data items is N =         4096
+  
+   The first 10 data values:
+  
+  0.532407E-01
+   4.81689    
+   2.53907    
+   4.10966    
+   1.13678    
+  0.887716    
+   4.83637    
+   4.86197    
+  0.203888    
+   1.75340    
+  
+   Compute the cosine coefficients from data.
+  
+   The first 10 cosine coefficients:
+  
+   13094.1    
+  -4298.68    
+   2766.25    
+  -1958.17    
+   1462.55    
+  -929.246    
+   1120.15    
+  -1022.87    
+   754.408    
+  -676.573    
+  
+   Retrieve data from coeficients.
+  
+   The first 10 data values:
+  
+  0.532410E-01
+   4.81689    
+   2.53907    
+   4.10966    
+   1.13678    
+  0.887716    
+   4.83637    
+   4.86197    
+  0.203889    
+   1.75340    
+  
+ TEST10
+   For real data,
+   EZFFTF takes the fast Fourier transform.
+   RSFTF computes the "slow" Fourier transform.
+  
+   The number of data values, N =           36
+  
+   Fast    Slow
+  
+   A coefficients:
+  
+  0   2.77827       2.77827    
+  1 -0.914880E-01 -0.914877E-01
+  2  0.408540      0.408540    
+  3  0.567104E-02  0.567113E-02
+  4  0.662205E-01  0.662205E-01
+  5  0.156648      0.156648    
+  6 -0.392553     -0.392551    
+  7  0.387622      0.387621    
+  8  0.300723      0.300722    
+  9  0.800863      0.800863    
+ 10  0.416422      0.416423    
+ 11  0.467250E-01  0.467257E-01
+ 12 -0.114781     -0.114780    
+ 13 -0.248546E-01 -0.248535E-01
+ 14 -0.366111     -0.366111    
+ 15 -0.198299     -0.198298    
+ 16 -0.887223E-01 -0.887252E-01
+ 17 -0.350977E-01 -0.350970E-01
+ 18 -0.101818     -0.101818    
+  
+   B coefficients:
+  
+  1  0.203549      0.203549    
+  2  0.338722E-01  0.338723E-01
+  3 -0.254789     -0.254788    
+  4  0.889357E-02  0.889342E-02
+  5  0.564680E-01  0.564679E-01
+  6 -0.428167E-01 -0.428170E-01
+  7  0.640561      0.640562    
+  8  0.334266      0.334266    
+  9 -0.725782     -0.725781    
+ 10  0.235005      0.235005    
+ 11 -0.829238E-01 -0.829237E-01
+ 12  0.427805      0.427804    
+ 13  0.248552      0.248552    
+ 14 -0.272402     -0.272406    
+ 15 -0.777106E-01 -0.777113E-01
+ 16  0.356584      0.356583    
+ 17 -0.285339     -0.285338    
+ 18   0.00000      0.210991E-06
+  
+ TEST10
+   For real data,
+   RSFTF computes the forward transform.
+   RSFTB computes the backward transform.
+  
+   The number of data values, N =           36
+  
+   First 10 data values:
+  
+  1   2.63229    
+  2  0.952508    
+  3   3.80349    
+  4  0.303689    
+  5   4.10626    
+  6   3.85633    
+  7   3.31239    
+  8   1.26573    
+  9   3.11819    
+ 10   2.40616    
+  
+   First 10 recovered data values:
+  
+  1   2.63229    
+  2  0.952509    
+  3   3.80350    
+  4  0.303686    
+  5   4.10626    
+  6   3.85633    
+  7   3.31239    
+  8   1.26573    
+  9   3.11819    
+ 10   2.40615    
+  
+ TEST12
+   For sine analysis of real quarter wave data,
+   SINQI initializes the FFT routines.
+   SINQF does a forward FFT;
+   SINQB does a backward FFT.
+  
+   The number of data items is N =         4096
+  
+   The first 10 data values:
+  
+   4.35497    
+   3.90673    
+  0.372344    
+   2.98697    
+   1.99353    
+  0.212184    
+   1.17261    
+   3.10222    
+   3.94764    
+   3.02614    
+  
+   Compute the sine coefficients from data.
+  
+   The first 10 sine coefficients:
+  
+   13008.0    
+   4177.32    
+   2769.10    
+   1890.25    
+   1205.07    
+   1199.24    
+   902.909    
+   937.099    
+   911.356    
+   660.525    
+  
+   Retrieve data from coeficients.
+  
+   The first 10 data values:
+  
+   4.35497    
+   3.90673    
+  0.372344    
+   2.98697    
+   1.99353    
+  0.212184    
+   1.17261    
+   3.10222    
+   3.94764    
+   3.02614    
+  
+ TEST13
+   For cosine analysis of real data,
+   COSTI initializes the FFT routines.
+   COST does a forward or backward FFT.
+  
+   The number of data items is N =         4096
+  
+   The first 10 data values:
+  
+   3.06901    
+  0.889869    
+   1.03478    
+   1.46663    
+   4.60603    
+   3.46382    
+   1.37538    
+   1.03609    
+   3.57655    
+   1.09211    
+  
+   Compute the cosine coefficients from data.

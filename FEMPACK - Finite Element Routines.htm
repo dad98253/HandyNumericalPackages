@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://www.psc.edu/~burkardt/src/fempack/fempack.html -->
+<HTML><HEAD><TITLE>FEMPACK - Finite Element Routines</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>FEMPACK - Finite Element Routines </H1>
+<P><B>FEMPACK</B> is a collection of some simple routines for implementing the 
+finite element method. The emphasis is on simplicity and clarity. Currently, 
+only the 2D case is handled, with a choice of low order triangular and 
+quadrilateral elements. </P>
+<P>Files you may copy include: 
+<UL>
+  <LI><A 
+  href="http://www.psc.edu/~burkardt/src/fempack/fempack.f90">FEMPACK.F90, the 
+  source code</A>; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/fempack/femprb.f90">FEMPRB.F90, 
+  the calling program</A>; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/fempack/femprb.out">FEMPRB.OUT, 
+  the sample output</A>. </LI></UL>
+<P></P>
+<P>The list of routines includes: 
+<UL>
+  <LI><B>BASE_BIL</B> evalutes basis functions for a rectangular bilinear 
+  element. 
+  <LI><B>DIV_BIL</B> estimates the divergence and vorticity of a discrete field. 
+
+  <LI><B>ELEMENT_CODE</B> returns the code for each element. 
+  <LI><B>ORDER_CODE</B> returns the order for each element. 
+  <LI><B>GRID</B> returns the grid associated with any available element. 
+  <LI><B>GRID_TEST</B> tests the grid routines. 
+  <LI><B>GRID_WIDTH</B> computes the width of a given grid. 
+  <LI><B>GRID_Q4</B> produces a grid of 4 node quadrilaterals. 
+  <LI><B>GRID_Q8</B> produces a grid of 8 node quadrilaterals. 
+  <LI><B>GRID_Q9</B> produces a grid of 9 node quadrilaterals. 
+  <LI><B>GRID_Q12</B> produces a grid of 12 node quadrilaterals. 
+  <LI><B>GRID_Q16</B> produces a grid of 16 node quadrilaterals. 
+  <LI><B>GRID_QL</B> produces a grid of 6 node quadratics/linears. 
+  <LI><B>GRID_T3</B> produces a grid of pairs of 3 node triangles. 
+  <LI><B>GRID_T6</B> produces a grid of pairs of 6 node triangles. 
+  <LI><B>GRID_T10</B> produces a grid of pairs of 10 node triangles. 
+  <LI><B>INTERP</B> interpolates a quantity in an element from basis node 
+  values. 
+  <LI><B>MAP</B> returns the interpolation matrix for any available element. 
+  <LI><B>MAP_TEST</B> tests the map routines. 
+  <LI><B>NODE</B> returns the basis nodes for any available element. 
+  <LI><B>NODE_Q4</B> returns the basis nodes for a 4 node quadrilateral. 
+  <LI><B>NODE_Q8</B> returns the basis nodes for an 8 node quadrilateral. 
+  <LI><B>NODE_Q9</B> returns the basis nodes for a 9 node quadrilateral. 
+  <LI><B>NODE_Q12</B> returns the basis nodes for a 12 node quadrilateral. 
+  <LI><B>NODE_Q16</B> returns the basis nodes for a 16 node quadrilateral. 
+  <LI><B>NODE_QL</B> returns the basis nodes for a quadratic/linear. 
+  <LI><B>NODE_T3</B> returns the basis nodes for the 3 node triangle. 
+  <LI><B>NODE_T6</B> returns the basis nodes for a 6 node triangle. 
+  <LI><B>NODE_T10</B> returns the basis nodes for a 10 node triangle. 
+  <LI><B>POLY</B> returns the polynomials associated with any available element. 
+
+  <LI><B>POLY_Q4</B> returns the polynomials associated with a 4 node 
+  quadrilateral. 
+  <LI><B>POLY_Q8</B> returns the polynomials associated with an 8 node 
+  quadrilateral. 
+  <LI><B>POLY_Q9</B> returns the polynomials associated with a 9 node 
+  quadrilateral. 
+  <LI><B>POLY_Q12</B> returns the polynomials associated with a 12 node 
+  quadrilateral. 
+  <LI><B>POLY_Q16</B> returns the polynomials associated with a 16 node 
+  quadrilateral. 
+  <LI><B>POLY_QL</B> returns the polynomials for a quadratic/linear 
+  quadrilateral. 
+  <LI><B>POLY_T3</B> returns the polynomials associated with a 3 node triangle. 
+  <LI><B>POLY_T6</B> returns the polynomials associated with a 6 node triangle. 
+  <LI><B>POLY_T10</B> returns the polynomials associated with a 10 node 
+  triangle. 
+  <LI><B>QUAD_1D</B> computes abscissas and weights for Gauss-Legendre 
+  quadrature. 
+  <LI><B>QUAD_T</B> returns a quadrature rule for a triangle. 
+  <LI><B>SERENE</B> interpolates data using a serendipity quadrilateral. 
+  <LI><B>SGE_FA</B> factors a general matrix. 
+  <LI><B>SGE_INV</B> computes the inverse of a matrix factored by SGE_FA. 
+  <LI><B>SHAPE</B> evaluates shape functions for any available element. 
+  <LI><B>SHAPE_TEST</B> verifies the shape function values at the basis nodes. 
+  <LI><B>SHAPE_Q4</B> evaluates shape functions for a 4 node quadrilateral. 
+  <LI><B>SHAPE_Q8</B> evaluates shape functions for an 8 node quadrilateral. 
+  <LI><B>SHAPE_Q9</B> evaluates shape functions for a 9 node quadrilateral. 
+  <LI><B>SHAPE_Q12</B> evaluates shape functions for a 12 node quadrilateral. 
+  <LI><B>SHAPE_Q16</B> evaluates shape functions for a 16 node quadrilateral. 
+  <LI><B>SHAPE_QL</B> evaluates shape functions for a 6 node quadratic/linear. 
+  <LI><B>SHAPE_T3</B> evaluates shape functions for a 3 node triangle. 
+  <LI><B>SHAPE_T6</B> evaluates shape functions for a 6 node triangle. 
+  <LI><B>SHAPE_T10</B> evaluates shape functions for a 10 node triangle. 
+</LI></UL>
+<P></P>
+<P>Back to <A href="http://www.psc.edu/~burkardt/src/fempack/fsoftware.html">the 
+FORTRAN software page.</A> </P>
+<HR>
+<I>Last revised on 02 June 2000. </I></BODY></HTML>

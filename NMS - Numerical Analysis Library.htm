@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0045)http://www.psc.edu/~burkardt/src/nms/nms.html -->
+<HTML><HEAD><TITLE>NMS - Numerical Analysis Library</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 5.50.4522.1800" name=GENERATOR></HEAD>
+<BODY vLink=#000055 aLink=#ff3300 link=#cc0000 bgColor=#eeeeee>
+<H1>NMS - Numerical Analysis Library </H1>
+<P><B>NMS</B> is a good beginner's mathematical library, with well tested 
+routines for standard problems. <B>NMS</B> accompanies the text "Numerical 
+Methods and Software". The book is a very modern discussion of current numerical 
+algorithms and software. The software that comes with the book has been 
+extracted from standard software libraries, particularly the SLATEC library. 
+Thus the book is also a good introduction to the use of the SLATEC library, 
+which does not have a solid hardcopy reference. </P>
+<P>
+<DL>
+  <DT>Reference: 
+  <DD>Kahaner, Moler, and Nash,<BR>Numerical Methods and Software,<BR>Prentice 
+  Hall, 1988 </DD></DL>
+<P></P>
+<P>Files you may copy include: 
+<UL>
+  <LI><A href="http://www.psc.edu/~burkardt/src/nms/nms.f90">NMS.F90, the source 
+  code</A>; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/nms/nms_prb.f90">NMS_PRB.F90, 
+  the calling program</A>; 
+  <LI><A href="http://www.psc.edu/~burkardt/src/nms/nms_prb.out">NMS_PRB.OUT, 
+  the sample output</A>. 
+  <LI><A href="http://www.psc.edu/~burkardt/src/nms/elnino.dat">ELNINO.DAT, 
+  sample data needed for a test</A>. </LI></UL>
+<P></P>
+<P>The list of routines includes: 
+<UL>
+  <LI><B>ALNGAM</B> computes the log of the absolute value of the gamma 
+  function. 
+  <LI><B>ASYJY</B> computes high order Bessel functions J and Y. 
+  <LI><B>BAKSLV</B> solves A*x=b where A is an upper triangular matrix. 
+  <LI><B>BESI0</B> computes the hyperbolic Bessel function of the first kind of 
+  order zero. 
+  <LI><B>BESI0E</B> computes the exponentially scaled hyperbolic Bessel function 
+  of the first kind of order ze 
+  <LI><B>BESJ</B> computes an N member sequence of J Bessel functions. 
+  <LI><B>BP</B> evaluates the N+1 Bernstein basis functions of degree N on 
+  [0,1]. 
+  <LI><B>CFFTB</B> computes the backward complex discrete Fourier transform. 
+  <LI><B>CFFTB1</B> is a lower-level routine used by CFFTB. 
+  <LI><B>CFFTB_2D</B> computes a backward two dimensional complex fast Fourier 
+  transform. 
+  <LI><B>CFFTF</B> computes the forward complex discrete Fourier transform. 
+  <LI><B>CFFTF1</B> is a lower level routine used by CFFTF. 
+  <LI><B>CFFTF_2D</B> computes a two dimensional complex fast Fourier transform. 
+
+  <LI><B>CFFTI</B> initializes WSAVE, used in CFFTF and CFFTB. 
+  <LI><B>CFFTI1</B> is a lower level routine used by CFFTI. 
+  <LI><B>CHFDV</B> evaluates a cubic polynomial and its derivative given in 
+  Hermite form. 
+  <LI><B>CHFEV</B> evaluates a cubic polynomial given in Hermite form. 
+  <LI><B>CHFIV</B> evaluates the integral of a cubic polynomial in Hermite form. 
+
+  <LI><B>CHFMC</B> determines the monotonicity properties of a cubic polynomial. 
+
+  <LI><B>CHKDER</B> checks the gradients of M nonlinear functions in N 
+  variables. 
+  <LI><B>CHLHSN</B> finds the l(l-transpose) [written ll+] decomposition of the 
+  perturbed 
+  <LI><B>CHOLDC</B> finds the perturbed l(l-transpose) [written ll+] 
+  decomposition 
+  <LI><B>COSQB</B> computes the fast cosine transform of quarter wave data. 
+  <LI><B>COSQB1</B> is a lower level routine used by COSQB. 
+  <LI><B>COSQF</B> computes the fast cosine transform of quarter wave data. 
+  <LI><B>COSQF1</B> is a lower level routine used by COSQF. 
+  <LI><B>COSQI</B> initializes WSAVE, used in COSQF and COSQB. 
+  <LI><B>COST</B> computes the discrete Fourier cosine transform of an even 
+  sequence. 
+  <LI><B>COSTI</B> initializes WSAVE, used in COST. 
+  <LI><B>CSEVL</B> evaluates an N term Chebyshev series. 
+  <LI><B>CVEC_RANDOM</B> returns a random complex vector in a given range. 
+  <LI><B>D1FCN</B> is a dummy routine. 
+  <LI><B>D1MACH</B> returns double precision machine constants. 
+  <LI><B>D2FCN</B> ?? 
+  <LI><B>DFAULT</B> sets default values for the optimization algorithm. 
+  <LI><B>DOGDRV</B> finds a next newton iterate (xpls) by the double dogleg 
+  method. 
+  <LI><B>DOGLEG</B> ?? 
+  <LI><B>DOGSTP</B> finds a new step by double dogleg algorithm. 
+  <LI><B>EA</B> performs extrapolation to accelerate the convergence of a 
+  sequence. 
+  <LI><B>ERF</B> computes the error function. 
+  <LI><B>ERFC</B> computes the complementary error function. 
+  <LI><B>EZFFTB</B> computes a real periodic sequence from its Fourier 
+  coefficients. 
+  <LI><B>EZFFTF</B> computes the Fourier coefficients of a real periodic 
+  sequence. 
+  <LI><B>EZFFTI</B> initializes WSAVE, used in EZFFTF and EZFFTB. 
+  <LI><B>EZFFTI1</B> is a lower level routine used by EZFFTI. 
+  <LI><B>FDJAC1</B> computes a forward-difference approximation to a jacobian 
+  matrix. 
+  <LI><B>FMIN</B> seeks a minimizer of a scalar function of a scalar variable. 
+  <LI><B>FORSLV</B> solves A*x=b where A is lower triangular matrix. 
+  <LI><B>FSTOCD</B> approximates the gradient of a function using central 
+  differences. 
+  <LI><B>FSTOFD</B> finds first order forward finite difference approximation 
+  "a" to the 
+  <LI><B>FZERO</B> searches for a zero of a function F(X) in a given interval. 
+  <LI><B>GAMLIM</B> computes the minimum and maximum bounds for X in GAMMA(X). 
+  <LI><B>GAMMA</B> computes the gamma function. 
+  <LI><B>GL15T</B> computes integral of g(x) over (a,b), with error estimate. 
+  <LI><B>GRDCHK</B> checks an analytic gradient against an estimated gradient. 
+  <LI><B>HESCHK</B> checks an analytic hessian against a computed estimate. 
+  <LI><B>HOOKDR</B> finds the next Newton iterate by the More-Hebdon method. 
+  <LI><B>HOOKST</B> finds the new step by the More-Hebdon algorithm. 
+  <LI><B>HSNINT</B> provides initial hessian when using secant updates. 
+  <LI><B>I1MACH</B> returns integer machine constants. 
+  <LI><B>I_FACTOR</B> factors an integer. 
+  <LI><B>INITS</B> estimates the order of an orthogonal series guaranteeing a 
+  given accuracy. 
+  <LI><B>ISAMAX</B> finds the index of the vector element of maximum absolute 
+  value. 
+  <LI><B>J4SAVE</B> saves variables needed by the library error handling 
+  routines. 
+  <LI><B>JAIRY</B> computes the Airy function and its derivative. 
+  <LI><B>LLTSLV</B> solves A*x=b where A = L * Transpose(L), and only L is 
+  stored. 
+  <LI><B>LNSRCH</B> finds a next newton iterate by line search. 
+  <LI><B>MVMLTL</B> computes y = L*x where l is a lower triangular matrix stored 
+  in A. 
+  <LI><B>MVMLTS</B> computes y = A*x where "a" is a symmetric (n*n) matrix 
+  stored in its lower 
+  <LI><B>MVMLTU</B> computes y=(l+)x where l is a lower triangular matrix stored 
+  in a 
+  <LI><B>NUMXER</B> returns the most recent error number. 
+  <LI><B>OPTCHK</B> checks the input to the optimization routine. 
+  <LI><B>OPTDRV</B> is a driver for the nonlinear optimization package. 
+  <LI><B>OPTIF0</B> provides simplest interface to minimization package. 
+  <LI><B>OPTSTP:</B> unconstrained minimization stopping criteria 
+  <LI><B>PASSB</B> is a lower level routine used by CFFTB1. 
+  <LI><B>PASSB2</B> is a lower level routine used by CFFTB1. 
+  <LI><B>PASSB3</B> is a lower level routine used by CFFTB1. 
+  <LI><B>PASSB4</B> is a lower level routine used by CFFTB1. 
+  <LI><B>PASSB5</B> is a lower level routine used by CFFTB1. 
+  <LI><B>PASSF</B> is a lower level routine used by CFFTF1. 
+  <LI><B>PASSF2</B> is a lower level routine used by CFFTF1. 
+  <LI><B>PASSF3</B> is a lower level routine used by CFFTF1. 
+  <LI><B>PASSF4</B> is a lower level routine used by CFFTF1. 
+  <LI><B>PASSF5</B> is a lower level routine used by CFFTF1. 
+  <LI><B>PCHCE</B> is called by pchic to set end derivatives as requested by the 
+  user. 
+  <LI><B>PCHCI</B> sets derivatives for a monotone piecewise cubic hermite 
+  interpolant. 
+  <LI><B>PCHCS</B> is called by pchic to adjust the values of d in the vicinity 
+  of a 
+  <LI><B>PCHDF</B> approximates a derivative using divided differences of data. 
+  <LI><B>PCHEV</B> evaluates the function and first derivative of a piecewise 
+  <LI><B>PCHEZ</B> carries out easy to use spline or cubic hermite 
+  interpolation. 
+  <LI><B>PCHFD</B> evaluates a piecewise cubic hermite function and its first 
+  <LI><B>PCHFE</B> evaluates a piecewise cubic hermite function at an array of 
+  points. 
+  <LI><B>PCHIA</B> evaluates the integral of a piecewise cubic Hermite function. 
+
+  <LI><B>PCHIC</B> sets derivatives needed to determine a piecewise monotone 
+  <LI><B>PCHID</B> evaluates the definite integral of a piecewise cubic 
+  <LI><B>PCHIM</B> sets derivatives for a piecewise cubic Hermite interpolant. 
+  <LI><B>PCHMC:</B> piecewise cubic hermite monotonicity checker. 
+  <LI><B>PCHQA:</B> easy to use cubic hermite or spline integration 
+  <LI><B>PCHSP:</B> set derivatives needed to determine the hermite represen- 
+  <LI><B>PCHST:</B> pchip sign-testing routine. 
+  <LI><B>PCHSW:</B> pchcs switch excursion limiter. 
+  <LI><B>PI</B> returns the value of pi. 
+  <LI><B>PIMACH</B> returns the value of pi. 
+  <LI><B>Q1DA</B> approximates the definite integral of a user defined function 
+  of one variable. 
+  <LI><B>Q1DAX</B> approximates the integral of a function of one variable. 
+  <LI><B>QAGI</B> calculates an approximation result to a given 
+  <LI><B>QAGIE</B> ?? 
+  <LI><B>QFORM</B> produces the explicit QR factorization of a matrix from its 
+  implicit form. 
+  <LI><B>QK15</B> carries out a 15 point Gauss-Kronrod quadrature rule. 
+  <LI><B>QK15I</B> ?? 
+  <LI><B>QPSRT</B> ?? 
+  <LI><B>QRAUX1</B> interchanges rows i,i+1 of the upper hessenberg matrix r, 
+  columns i to n 
+  <LI><B>QRAUX2</B> pre-multiplies r by the jacobi rotation j(i,i+1,a,b) 
+  <LI><B>QRFAC</B> uses householder transformations with column 
+  <LI><B>QRUPDT</B> updates a QR factorization. 
+  <LI><B>R1MACH</B> returns single precision machine constants. 
+  <LI><B>R1MPYQ</B> is given an m by n matrix a, this subroutine computes a*q 
+  where 
+  <LI><B>R1UPDT</B> is given an m by n lower trapezoidal matrix s, an m-vector 
+  u, 
+  <LI><B>R9LGMC</B> computes the log gamma correction factor so that 
+  <LI><B>R_RANDOM</B> returns a random real in a given range. 
+  <LI><B>R_SWAP</B> swaps two real values. 
+  <LI><B>RADB2</B> is a lower level routine used by RFFTB1. 
+  <LI><B>RADB3</B> is a lower level routine used by RFFTB1. 
+  <LI><B>RADB4</B> is a lower level routine used by RFFTB1. 
+  <LI><B>RADB5</B> is a lower level routine used by RFFTB1. 
+  <LI><B>RADBG</B> is a lower level routine used by RFFTB1. 
+  <LI><B>RADF2</B> is a lower level routine used by RFFTF1. 
+  <LI><B>RADF3</B> is a lower level routine used by RFFTF1. 
+  <LI><B>RADF4</B> is a lower level routine used by RFFTF1. 
+  <LI><B>RADF5</B> is a lower level routine used by RFFTF1. 
+  <LI><B>RADFG</B> is a lower level routine used by RFFTF1. 
+  <LI><B>RANDOM_INITIALIZE</B> initializes the FORTRAN 90 random number seed. 
+  <LI><B>RESULT</B> prints information about the optimization process. 
+  <LI><B>RFFTB</B> computes a real periodic sequence from its Fourier 
+  coefficients. 
+  <LI><B>RFFTB1</B> is a lower level routine used by RFFTB. 
+  <LI><B>RFFTF</B> computes the Fourier coefficients of a real periodic 
+  sequence. 
+  <LI><B>RFFTF1</B> is a lower level routine used by RFFTF and SINT. 
+  <LI><B>RFFTI</B> initializes WSAVE, used in RFFTF and RFFTB. 
+  <LI><B>RFFTI1</B> is a lower level routine used by RFFTI. 
+  <LI><B>RNOR</B> generates normal random numbers. 
+  <LI><B>RSFTB</B> computes a "slow" backward Fourier transform of real data. 
+  <LI><B>RSFTF</B> computes a "slow" forward Fourier transform of real data. 
+  <LI><B>RUNGE</B> evaluates Runge's function. 
+  <LI><B>RVEC_RANDOM</B> returns a random real vector in a given range. 
+  <LI><B>RVEC_REVERSE</B> reverses the elements of a real vector. 
+  <LI><B>SAMAX</B> returns the maximum absolute value of the entries in a 
+  vector. 
+  <LI><B>SASUM</B> sums the absolute values of the entries of a vector. 
+  <LI><B>SAXPY</B> adds a constant times one vector to another. 
+  <LI><B>SDCOR</B> computes corrections to the y array of SDRIV3. 
+  <LI><B>SDCST</B> sets coefficients used by the core integrator SDSTP. 
+  <LI><B>SDNTL</B> sets parameters for SDSTP. 
+  <LI><B>SDNTP</B> interpolates the k-th derivative of y at tout, 
+  <LI><B>SDOT</B> forms the dot product of two vectors. 
+  <LI><B>SDPSC</B> computes the predicted yh values by effectively 
+  <LI><B>SDPST</B> is called to reevaluate the partials. 
+  <LI><B>SDRIV1</B> solves ordinary differential equations of the form 
+  <LI><B>SDRIV2</B> solves n ordinary differential 
+  <LI><B>SDRIV3</B> solves n ordinary differential 
+  <LI><B>SDSCL</B> rescales the YH array whenever the ODE step size is changed. 
+  <LI><B>SDSTP</B> performs one step of the integration of an initial value 
+  <LI><B>SDZRO</B> is a special purpose version of zeroin, modified for use with 
+
+  <LI><B>SECFAC</B> updates the hessian by the bfgs factored method. 
+  <LI><B>SECUNF</B> updates hessian by the bfgs unfactored method 
+  <LI><B>SGBFA</B> factors a real band matrix by elimination. 
+  <LI><B>SGBSL</B> solves a banded linear system factored by SGBCO or SGBFA. 
+  <LI><B>SGECO</B> factors a real matrix by gaussian elimination 
+  <LI><B>SGEFA</B> factors a real matrix by gaussian elimination. 
+  <LI><B>SGEFS</B> solves a general nxn system of single 
+  <LI><B>SGESL</B> solves a linear system factored by SGEFA or SGECO. 
+  <LI><B>SINQB</B> computes the fast sine transform of quarter wave data. 
+  <LI><B>SINQF</B> computes the fast sine transform of quarter wave data. 
+  <LI><B>SINQI</B> initializes WSAVE, used in SINQF and SINQB. 
+  <LI><B>SINT</B> computes the discrete Fourier sine transform of an odd 
+  sequence. 
+  <LI><B>SINT1</B> is a lower level routine used by SINT. 
+  <LI><B>SINTI</B> initializes WSAVE, used in SINT. 
+  <LI><B>SNDOFD</B> approximates a Hessian with a second order finite 
+  difference. 
+  <LI><B>SNRM2</B> computes the Euclidean norm of a vector. 
+  <LI><B>SNSQ</B> finds a zero of a system of n nonlinear functions in n 
+  variables. 
+  <LI><B>SNSQE</B> is the easy-to-use version of SNSQ. 
+  <LI><B>SQRANK</B> computes the QR factorization of a rectangular matrix. 
+  <LI><B>SQRDC</B> computes the QR factorization of a rectangular matrix. 
+  <LI><B>SQRLS</B> solves an linear system in the least squares sense. 
+  <LI><B>SQRLSS</B> solves a linear system in a least squares sense. 
+  <LI><B>SQRSL</B> applies the output of sqrdc to compute coordinate 
+  <LI><B>SROT</B> applies a plane rotation. 
+  <LI><B>SROTG</B> constructs a Givens plane rotation. 
+  <LI><B>SSCAL</B> scales a vector by a constant. 
+  <LI><B>SSVDC</B> computes the singular value decomposition of a rectangular 
+  matrix. 
+  <LI><B>SSWAP</B> interchanges two vectors. 
+  <LI><B>TREGUP</B> decides whether to accept the next optimization iterate. 
+  <LI><B>UNCMIN</B> minimizes a smooth nonlinear function of n variables. 
+  <LI><B>UNI</B> generates real uniform random numbers on [0,1). 
+  <LI><B>UNIFORM_01_SAMPLE</B> is a portable random number generator. 
+  <LI><B>XERABT</B> aborts program execution and prints error message. 
+  <LI><B>XERCLR</B> resets current error number to zero. 
+  <LI><B>XERCTL</B> allows user control over handling of individual errors. 
+  <LI><B>XERDMP</B> prints the error tables and then clears them. 
+  <LI><B>XERMAX</B> sets maximum number of times any error message is to be 
+  printed. 
+  <LI><B>XERPRT</B> prints a message on each file indicated by xgetua. 
+  <LI><B>XERROR</B> processes an error (diagnostic) message. 
+  <LI><B>XERRWV</B> processes error message allowing 2 integer and two real 
+  <LI><B>XERSAV</B> records that an error occurred. 
+  <LI><B>XGETF</B> returns current value of error control flag. 
+  <LI><B>XGETUA</B> returns unit number(s) to which error messages are being 
+  sent. 
+  <LI><B>XGETUN</B> returns the (first) output file to which messages are being 
+  sent. 
+  <LI><B>XSETF</B> sets the error control flag. 
+  <LI><B>XSETUA</B> sets up to 5 unit numbers to which messages are to be sent. 
+  <LI><B>XSETUN</B> sets the output file to which error messages are to be sent. 
+  </LI></UL>
+<P></P>
+<P>Return to the <A href="http://www.psc.edu/~burkardt/src/f_src.html">FORTRAN 
+software page</A>. </P>
+<HR>
+<I>Last revised on 27 March 2001. </I></BODY></HTML>
